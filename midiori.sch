@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L midiori-rescue:x68000_expansion-x68k J1
+L midiori-rescue:x68000_expansion-x68k-midiori-rescue J1
 U 1 1 5BFF029F
 P 2150 -1050
 F 0 "J1" H 1750 -5050 50  0000 C CNN
@@ -453,7 +453,7 @@ Wire Wire Line
 Text Label 6150 4750 2    50   ~ 0
 AS
 $Comp
-L midiori-rescue:ym3802-x-x68k U6
+L midiori-rescue:ym3802-x-x68k-midiori-rescue U6
 U 1 1 5BFF5246
 P 8100 4850
 F 0 "U6" H 8400 5015 50  0000 C CNN
@@ -608,23 +608,12 @@ Wire Wire Line
 Text Label 5550 5100 2    50   ~ 0
 RW
 $Comp
-L Oscillator:CXO_DIP8 X1
-U 1 1 5C01CB41
-P 6550 9450
-F 0 "X1" H 6891 9496 50  0000 L CNN
-F 1 "CXO_DIP8" H 6891 9405 50  0000 L CNN
-F 2 "Oscillator:Oscillator_DIP-8" H 7000 9100 50  0001 C CNN
-F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 6450 9450 50  0001 C CNN
-	1    6550 9450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Oscillator:CXO_DIP8 X2
+L x68k:SG5032CAN X2
 U 1 1 5C01D210
 P 9050 9450
 F 0 "X2" H 9391 9496 50  0000 L CNN
-F 1 "CXO_DIP8" H 9391 9405 50  0000 L CNN
-F 2 "Oscillator:Oscillator_DIP-8" H 9500 9100 50  0001 C CNN
+F 1 "4.9152MHz" H 9391 9405 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm" H 9500 9100 50  0001 C CNN
 F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 8950 9450 50  0001 C CNN
 	1    9050 9450
 	1    0    0    -1  
@@ -1041,7 +1030,6 @@ Wire Wire Line
 	6250 9450 6250 9150
 Wire Wire Line
 	6250 9150 6550 9150
-Connection ~ 6550 9150
 $Comp
 L power:GND #PWR0122
 U 1 1 5C0AA314
@@ -1574,17 +1562,6 @@ F 3 "~" H 1150 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
-U 1 1 5C2379F1
-P 2100 1250
-F 0 "C2" H 2215 1296 50  0000 L CNN
-F 1 "u1" H 2215 1205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2138 1100 50  0001 C CNN
-F 3 "~" H 2100 1250 50  0001 C CNN
-	1    2100 1250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C3
 U 1 1 5C237E3F
 P 3000 1250
@@ -1728,12 +1705,6 @@ $EndComp
 Connection ~ 5500 750 
 Wire Wire Line
 	5500 750  5850 750 
-Wire Wire Line
-	2100 1100 2100 750 
-Connection ~ 2100 750 
-Connection ~ 2100 1750
-Wire Wire Line
-	2100 1400 2100 1750
 $Comp
 L power:GND #PWR0137
 U 1 1 5C332539
@@ -1754,39 +1725,6 @@ F 1 "+5V" H 8765 4473 50  0000 C CNN
 F 2 "" H 8750 4300 50  0001 C CNN
 F 3 "" H 8750 4300 50  0001 C CNN
 	1    8750 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C15
-U 1 1 5C3357D0
-P 9450 4450
-F 0 "C15" H 9565 4496 50  0000 L CNN
-F 1 "u1" H 9565 4405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9488 4300 50  0001 C CNN
-F 3 "~" H 9450 4450 50  0001 C CNN
-	1    9450 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0139
-U 1 1 5C335BF0
-P 9450 4600
-F 0 "#PWR0139" H 9450 4350 50  0001 C CNN
-F 1 "GND" H 9455 4427 50  0000 C CNN
-F 2 "" H 9450 4600 50  0001 C CNN
-F 3 "" H 9450 4600 50  0001 C CNN
-	1    9450 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0140
-U 1 1 5C342736
-P 9450 4300
-F 0 "#PWR0140" H 9450 4150 50  0001 C CNN
-F 1 "+5V" H 9465 4473 50  0000 C CNN
-F 2 "" H 9450 4300 50  0001 C CNN
-F 3 "" H 9450 4300 50  0001 C CNN
-	1    9450 4300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1823,7 +1761,6 @@ Wire Wire Line
 	6550 9750 6000 9750
 Wire Wire Line
 	6000 9750 6000 9600
-Connection ~ 6550 9750
 Wire Wire Line
 	6000 9300 6000 9150
 Wire Wire Line
@@ -1944,7 +1881,7 @@ U 1 1 5C02762B
 P 3850 3050
 F 0 "U2" H 3850 3375 50  0000 C CNN
 F 1 "74LS27" H 3850 3284 50  0000 C CNN
-F 2 "" H 3850 3050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3850 3050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 3850 3050 50  0001 C CNN
 	1    3850 3050
 	1    0    0    -1  
@@ -1955,7 +1892,7 @@ U 2 1 5C02913D
 P 3850 3550
 F 0 "U2" H 3850 3875 50  0000 C CNN
 F 1 "74LS27" H 3850 3784 50  0000 C CNN
-F 2 "" H 3850 3550 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3850 3550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 3850 3550 50  0001 C CNN
 	2    3850 3550
 	1    0    0    -1  
@@ -1966,7 +1903,7 @@ U 3 1 5C02B75B
 P 3850 4050
 F 0 "U2" H 3850 4375 50  0000 C CNN
 F 1 "74LS27" H 3850 4284 50  0000 C CNN
-F 2 "" H 3850 4050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3850 4050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 3850 4050 50  0001 C CNN
 	3    3850 4050
 	1    0    0    -1  
@@ -1985,28 +1922,20 @@ U 4 1 5C03F9B7
 P 1450 1250
 F 0 "U2" H 1680 1296 50  0000 L CNN
 F 1 "74LS27" H 1680 1205 50  0000 L CNN
-F 2 "" H 1450 1250 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1450 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 1450 1250 50  0001 C CNN
 	4    1450 1250
 	1    0    0    -1  
 $EndComp
 Connection ~ 1450 750 
-Wire Wire Line
-	1450 750  2100 750 
 Connection ~ 1450 1750
-Wire Wire Line
-	1450 1750 2100 1750
-Wire Wire Line
-	2100 750  2400 750 
-Wire Wire Line
-	2100 1750 2400 1750
 $Comp
 L 74xx:74LS30 U3
 U 1 1 5C0424B1
 P 4650 3750
 F 0 "U3" H 4650 4275 50  0000 C CNN
 F 1 "74LS30" H 4650 4184 50  0000 C CNN
-F 2 "" H 4650 3750 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4650 3750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 4650 3750 50  0001 C CNN
 	1    4650 3750
 	1    0    0    -1  
@@ -2017,7 +1946,7 @@ U 1 1 5C0552C7
 P 4650 4550
 F 0 "U12" H 4650 5075 50  0000 C CNN
 F 1 "74LS30" H 4650 4984 50  0000 C CNN
-F 2 "" H 4650 4550 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4650 4550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 4650 4550 50  0001 C CNN
 	1    4650 4550
 	1    0    0    -1  
@@ -2056,38 +1985,21 @@ Wire Wire Line
 Wire Wire Line
 	4350 4850 4350 4950
 $Comp
-L 74xx:74LS30 U?
-U 2 1 5C14CD3F
-P 2400 1250
-F 0 "U?" H 2630 1296 50  0000 L CNN
-F 1 "74LS30" H 2630 1205 50  0000 L CNN
-F 2 "" H 2400 1250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 2400 1250 50  0001 C CNN
-	2    2400 1250
-	1    0    0    -1  
-$EndComp
-Connection ~ 2400 750 
-Wire Wire Line
-	2400 750  3000 750 
-Connection ~ 2400 1750
-Wire Wire Line
-	2400 1750 3000 1750
-$Comp
 L 74xx:74LS30 U12
 U 2 1 5C14E02C
 P 10000 1250
 F 0 "U12" H 10230 1296 50  0000 L CNN
 F 1 "74LS30" H 10230 1205 50  0000 L CNN
-F 2 "" H 10000 1250 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 10000 1250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 10000 1250 50  0001 C CNN
 	2    10000 1250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C17
 U 1 1 5C14FD68
 P 9700 1250
-F 0 "C?" H 9815 1296 50  0000 L CNN
+F 0 "C17" H 9815 1296 50  0000 L CNN
 F 1 "u1" H 9815 1205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9738 1100 50  0001 C CNN
 F 3 "~" H 9700 1250 50  0001 C CNN
@@ -2110,4 +2022,21 @@ Wire Wire Line
 Connection ~ 9700 750 
 Wire Wire Line
 	9700 750  10000 750 
+Wire Wire Line
+	1450 750  3000 750 
+Wire Wire Line
+	1450 1750 3000 1750
+Connection ~ 6550 9150
+Connection ~ 6550 9750
+$Comp
+L x68k:SG5032CAN X1
+U 1 1 5C01CB41
+P 6550 9450
+F 0 "X1" H 6891 9496 50  0000 L CNN
+F 1 "16MHz" H 6891 9405 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm" H 7000 9100 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 6450 9450 50  0001 C CNN
+	1    6550 9450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

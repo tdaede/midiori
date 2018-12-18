@@ -1,3 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP SG-8002CA
+D CMOS Clock Oscillator
+K Crystal Clock Oscillator
+F https://support.epson.biz/td/api/doc_check.php?mode=dl&lang=en&Parts=SG-8002DC
+$ENDCMP
+#
+$CMP SG5032CAN
+D CMOS Clock Oscillator
+K Crystal Clock Oscillator
+F https://support.epson.biz/td/api/doc_check.php?dl=brief_SG7050CAN&lang=en
+$ENDCMP
+#
 #End Doc Library

@@ -732,32 +732,11 @@ X B 3 250 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Oscillator_CXO_DIP8
+# midiori-rescue_x68000_expansion-x68k-midiori-rescue
 #
-DEF Oscillator_CXO_DIP8 X 0 10 Y Y 1 F N
-F0 "X" -200 250 50 H V L CNN
-F1 "Oscillator_CXO_DIP8" 50 -250 50 H V L CNN
-F2 "Oscillator:Oscillator_DIP-8" 450 -350 50 H I C CNN
-F3 "" -100 0 50 H I C CNN
-ALIAS TFT660
-$FPLIST
- Oscillator*DIP*8*
-$ENDFPLIST
-DRAW
-S -200 200 200 -200 0 1 10 f
-P 9 0 1 0 -75 -25 -50 -25 -50 25 -25 25 -25 -25 0 -25 0 25 25 25 25 -25 N
-X EN 1 -300 0 100 R 50 50 1 1 I
-X GND 4 0 -300 100 U 50 50 1 1 W
-X OUT 5 300 0 100 L 50 50 1 1 O
-X Vcc 8 0 300 100 D 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
-# midiori-rescue_x68000_expansion-x68k
-#
-DEF midiori-rescue_x68000_expansion-x68k J 0 40 Y Y 1 F N
+DEF midiori-rescue_x68000_expansion-x68k-midiori-rescue J 0 40 Y Y 1 F N
 F0 "J" -400 -4050 50 H V C CNN
-F1 "midiori-rescue_x68000_expansion-x68k" -400 -3900 50 H V C CNN
+F1 "midiori-rescue_x68000_expansion-x68k-midiori-rescue" -400 -3900 50 H V C CNN
 F2 "" -800 -4000 50 H I C CNN
 F3 "" -800 -4000 50 H I C CNN
 DRAW
@@ -865,11 +844,11 @@ X AB5 B9 150 -5200 150 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# midiori-rescue_ym3802-x-x68k
+# midiori-rescue_ym3802-x-x68k-midiori-rescue
 #
-DEF midiori-rescue_ym3802-x-x68k U 0 40 Y Y 1 F N
+DEF midiori-rescue_ym3802-x-x68k-midiori-rescue U 0 40 Y Y 1 F N
 F0 "U" 300 150 50 H V C CNN
-F1 "midiori-rescue_ym3802-x-x68k" 300 50 50 H V C CNN
+F1 "midiori-rescue_ym3802-x-x68k-midiori-rescue" 300 50 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -938,6 +917,26 @@ F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# x68k_SG5032CAN
+#
+DEF x68k_SG5032CAN X 0 10 Y Y 1 F N
+F0 "X" -200 250 50 H V L CNN
+F1 "x68k_SG5032CAN" 50 -250 50 H V L CNN
+F2 "Oscillator:Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm" 700 -350 50 H I C CNN
+F3 "" -100 0 50 H I C CNN
+$FPLIST
+ Oscillator*SMD*SeikoEpson*SG8002CA*7.0x5.0mm*
+$ENDFPLIST
+DRAW
+S -200 200 200 -200 0 1 10 f
+P 10 0 1 0 -50 -30 -40 -30 -40 30 -20 30 -20 -30 0 -30 0 30 20 30 20 -30 30 -30 N
+X OE 1 -300 0 100 R 50 50 1 1 I
+X GND 2 0 -300 100 U 50 50 1 1 W
+X OUT 3 300 0 100 L 50 50 1 1 O
+X V+ 4 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
