@@ -1236,8 +1236,6 @@ Wire Wire Line
 Wire Wire Line
 	12000 4900 12000 4550
 Wire Wire Line
-	12000 4550 11800 4550
-Wire Wire Line
 	8800 4950 9600 4950
 Wire Wire Line
 	9600 4950 9600 4900
@@ -2160,4 +2158,106 @@ Wire Wire Line
 	14950 4200 14950 4300
 Connection ~ 14950 4200
 Connection ~ 14950 4300
+$Comp
+L Connector:AudioJack3 J7
+U 1 1 5C2C5BFE
+P 12600 4750
+F 0 "J7" H 12320 4683 50  0000 R CNN
+F 1 "AudioJack3" H 12320 4774 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ1-3533NG_Horizontal" H 12600 4750 50  0001 C CNN
+F 3 "~" H 12600 4750 50  0001 C CNN
+	1    12600 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack3 J5
+U 1 1 5C2C7414
+P 12550 5750
+F 0 "J5" H 12270 5683 50  0000 R CNN
+F 1 "AudioJack3" H 12270 5774 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ1-3533NG_Horizontal" H 12550 5750 50  0001 C CNN
+F 3 "~" H 12550 5750 50  0001 C CNN
+	1    12550 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:AudioJack3 J6
+U 1 1 5C2C7C33
+P 12550 6750
+F 0 "J6" H 12270 6683 50  0000 R CNN
+F 1 "AudioJack3" H 12270 6774 50  0000 R CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ1-3533NG_Horizontal" H 12550 6750 50  0001 C CNN
+F 3 "~" H 12550 6750 50  0001 C CNN
+	1    12550 6750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11200 6400 11200 6350
+Connection ~ 11200 6350
+Wire Wire Line
+	12350 6850 11850 6850
+Wire Wire Line
+	11850 6850 11850 6350
+Wire Wire Line
+	11850 6350 11200 6350
+Wire Wire Line
+	12350 5850 12050 5850
+Wire Wire Line
+	12050 5850 12050 5350
+Wire Wire Line
+	12050 5350 11500 5350
+Wire Wire Line
+	11500 5350 11500 5300
+Connection ~ 11500 5300
+Wire Wire Line
+	11500 4350 12100 4350
+Wire Wire Line
+	12100 4350 12100 4850
+Wire Wire Line
+	12100 4850 12400 4850
+Connection ~ 11500 4350
+Wire Wire Line
+	11200 4550 11200 4100
+Wire Wire Line
+	11200 4100 12200 4100
+Wire Wire Line
+	12200 4100 12200 4750
+Wire Wire Line
+	12200 4750 12400 4750
+Connection ~ 11200 4550
+Wire Wire Line
+	11200 5500 11200 5150
+Wire Wire Line
+	11200 5150 12150 5150
+Wire Wire Line
+	12150 5150 12150 5750
+Wire Wire Line
+	12150 5750 12350 5750
+Connection ~ 11200 5500
+Wire Wire Line
+	10900 6550 10900 6100
+Wire Wire Line
+	10900 6100 11950 6100
+Wire Wire Line
+	11950 6100 11950 6750
+Wire Wire Line
+	11950 6750 12350 6750
+Connection ~ 10900 6550
+Wire Wire Line
+	11750 6550 12350 6550
+Wire Wire Line
+	12350 6550 12350 6650
+Connection ~ 11750 6550
+Wire Wire Line
+	11950 5500 12350 5500
+Wire Wire Line
+	12350 5500 12350 5650
+Connection ~ 11950 5500
+Wire Wire Line
+	12400 4550 12400 4650
+Wire Wire Line
+	11800 4550 12000 4550
+Connection ~ 12000 4550
+Wire Wire Line
+	12000 4550 12400 4550
 $EndSCHEMATC
