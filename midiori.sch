@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:midiori-cache
 EELAYER 29 0
 EELAYER END
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L x68k:x68000_expansion J1
+L midiori-rescue:x68000_expansion-x68k J1
 U 1 1 5BFF029F
 P 2150 -1050
 F 0 "J1" H 1750 -5050 50  0000 C CNN
@@ -308,7 +308,7 @@ Wire Wire Line
 Connection ~ 6250 9150
 Connection ~ 6550 9750
 $Comp
-L x68k:SG5032CAN X1
+L midiori-rescue:SG5032CAN-x68k X1
 U 1 1 5C01CB41
 P 6550 9450
 F 0 "X1" H 6891 9496 50  0000 L CNN
@@ -353,7 +353,7 @@ Connection ~ 14350 2500
 Wire Wire Line
 	14350 2500 14750 2500
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U4
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U4
 U 1 1 5CB81A7A
 P 4550 1600
 F 0 "U4" H 4150 2570 50  0000 C CNN
@@ -383,7 +383,7 @@ AB6
 Text Label 3450 1300 0    50   ~ 0
 AB7
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U5
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U5
 U 1 1 5CB84A17
 P 4550 3200
 F 0 "U5" H 4150 4170 50  0000 C CNN
@@ -415,7 +415,7 @@ AB14
 Text Label 3400 2800 0    50   ~ 0
 AB15
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U6
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U6
 U 1 1 5CB8623F
 P 4550 4800
 F 0 "U6" H 4150 5770 50  0000 C CNN
@@ -478,7 +478,7 @@ IRQ2
 Text Label 1550 9500 2    50   ~ 0
 IRQ4
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U8
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U8
 U 1 1 5CB8F4D5
 P 4550 8000
 F 0 "U8" H 4150 8970 50  0000 C CNN
@@ -512,7 +512,7 @@ B
 Text Label 3650 8300 2    50   ~ 0
 C
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U9
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U9
 U 1 1 5CB9618A
 P 4550 9600
 F 0 "U9" H 4150 10570 50  0000 C CNN
@@ -534,7 +534,7 @@ IACK4
 Text Label 3650 9400 2    50   ~ 0
 IDDIR
 $Comp
-L ICE40HX1K-VQ100:ICE40HX1K-VQ100 U10
+L midiori-rescue:ICE40HX1K-VQ100-ICE40HX1K-VQ100 U10
 U 1 1 5CBA3357
 P 8650 4600
 F 0 "U10" H 8650 7467 50  0000 C CNN
@@ -590,7 +590,7 @@ U 1 1 5CBB23A0
 P 13950 7100
 F 0 "H1" H 14050 7146 50  0000 L CNN
 F 1 "MountingHole" H 14050 7055 50  0000 L CNN
-F 2 "" H 13950 7100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 13950 7100 50  0001 C CNN
 F 3 "~" H 13950 7100 50  0001 C CNN
 	1    13950 7100
 	1    0    0    -1  
@@ -601,7 +601,7 @@ U 1 1 5CBB25DA
 P 14950 7100
 F 0 "H2" H 15050 7146 50  0000 L CNN
 F 1 "MountingHole" H 15050 7055 50  0000 L CNN
-F 2 "" H 14950 7100 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 14950 7100 50  0001 C CNN
 F 3 "~" H 14950 7100 50  0001 C CNN
 	1    14950 7100
 	1    0    0    -1  
@@ -717,32 +717,10 @@ Text Label 4650 5000 0    50   ~ 0
 a17
 Text Label 4650 5100 0    50   ~ 0
 a16
-Text Label 9650 4700 0    50   ~ 0
-a23
-Text Label 9650 4800 0    50   ~ 0
-a22
-Text Label 9650 4900 0    50   ~ 0
-a21
-Text Label 9650 5000 0    50   ~ 0
-a20
-Text Label 9650 5200 0    50   ~ 0
-a19
-Text Label 9650 5300 0    50   ~ 0
-a18
-Text Label 9650 5400 0    50   ~ 0
-a17
-Text Label 9650 5500 0    50   ~ 0
-a16
 Text Label 7550 5500 0    50   ~ 0
 a7
 Text Label 7550 5600 0    50   ~ 0
 a6
-Text Label 7550 5700 0    50   ~ 0
-a5
-Text Label 7550 5800 0    50   ~ 0
-a4
-Text Label 7550 5900 0    50   ~ 0
-a3
 Text Label 7550 6000 0    50   ~ 0
 a2
 Text Label 7550 6100 0    50   ~ 0
@@ -777,8 +755,6 @@ Text Label 4650 6600 0    50   ~ 0
 d1
 Text Label 4650 6700 0    50   ~ 0
 d0
-Text Label 7550 4500 0    50   ~ 0
-d7
 Text Label 7550 4600 0    50   ~ 0
 d6
 Text Label 7550 4700 0    50   ~ 0
@@ -825,16 +801,10 @@ Text Label 4650 2900 0    50   ~ 0
 ab14
 Text Label 4650 2800 0    50   ~ 0
 ab15
-Text Label 7450 4400 0    50   ~ 0
-ab8
 Text Label 7450 4300 0    50   ~ 0
 ab9
 Text Label 7450 4200 0    50   ~ 0
 ab10
-Text Label 7450 4100 0    50   ~ 0
-ab11
-Text Label 7450 4000 0    50   ~ 0
-ab12
 Text Label 7450 3900 0    50   ~ 0
 ab13
 Text Label 7450 3800 0    50   ~ 0
@@ -911,12 +881,6 @@ Text Label 4650 9300 0    50   ~ 0
 iack4
 Text Label 4650 9400 0    50   ~ 0
 iddir
-Text Label 9650 3500 0    50   ~ 0
-iack2
-Text Label 9650 3600 0    50   ~ 0
-iack4
-Text Label 9650 3700 0    50   ~ 0
-iddir
 Wire Wire Line
 	9650 5800 12450 5800
 Wire Wire Line
@@ -926,12 +890,6 @@ irq2
 Text Label 2150 9500 0    50   ~ 0
 irq4
 Text Label 2150 10050 0    50   ~ 0
-dtack
-Text Label 9650 3800 0    50   ~ 0
-irq2
-Text Label 9650 3900 0    50   ~ 0
-irq4
-Text Label 9650 4000 0    50   ~ 0
 dtack
 Wire Wire Line
 	9650 2100 9850 2100
@@ -975,7 +933,7 @@ L Regulator_Linear:TPS76912 U3
 U 1 1 5CCAF6D1
 P 14900 4500
 F 0 "U3" H 14900 4842 50  0000 C CNN
-F 1 "TPS76912" H 14900 4751 50  0000 C CNN
+F 1 "TPS70912" H 14900 4751 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 14900 4825 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/tps769.pdf" H 14900 4450 50  0001 C CNN
 	1    14900 4500
@@ -986,7 +944,7 @@ L Regulator_Linear:TPS76933 U11
 U 1 1 5CCB0E7A
 P 13650 4500
 F 0 "U11" H 13650 4842 50  0000 C CNN
-F 1 "TPS76933" H 13650 4751 50  0000 C CNN
+F 1 "TPS70933" H 13650 4751 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13650 4825 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/symlink/tps769.pdf" H 13650 4450 50  0001 C CNN
 	1    13650 4500
@@ -1030,36 +988,10 @@ F 3 "~" H 15400 4550 50  0001 C CNN
 	1    15400 4550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R1
-U 1 1 5CCC388A
-P 14150 4850
-F 0 "R1" H 14220 4896 50  0000 L CNN
-F 1 "1" H 14220 4805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 14080 4850 50  0001 C CNN
-F 3 "~" H 14150 4850 50  0001 C CNN
-	1    14150 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5CCC412A
-P 15400 4850
-F 0 "R2" H 15470 4896 50  0000 L CNN
-F 1 "1" H 15470 4805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 15330 4850 50  0001 C CNN
-F 3 "~" H 15400 4850 50  0001 C CNN
-	1    15400 4850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	14150 5050 13650 5050
 Wire Wire Line
 	13650 5050 13650 4800
-Wire Wire Line
-	14150 5000 14150 5050
-Wire Wire Line
-	15400 5000 15400 5050
 Connection ~ 14150 5050
 Wire Wire Line
 	13250 4500 13250 5050
@@ -1068,7 +1000,7 @@ Wire Wire Line
 Connection ~ 13650 5050
 Connection ~ 14500 5050
 Wire Wire Line
-	14500 5050 14150 5050
+	14500 5050 14300 5050
 Wire Wire Line
 	15300 4400 15400 4400
 $Comp
@@ -1209,7 +1141,7 @@ $EndComp
 Wire Wire Line
 	7650 3000 6900 3000
 $Comp
-L Connector:Conn_ARM_JTAG_SWD_10 J2
+L midiori-rescue:Conn_ARM_JTAG_SWD_10-Connector J2
 U 1 1 5CD4062E
 P 8500 8400
 F 0 "J2" H 8057 8446 50  0000 R CNN
@@ -1812,7 +1744,7 @@ Wire Wire Line
 	3650 3600 3650 3700
 Connection ~ 3650 3700
 $Comp
-L SN74LVC8T245DWR:SN74LVC8T245DWR U7
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U7
 U 1 1 5CB89CCF
 P 4550 6400
 F 0 "U7" H 4150 7370 50  0000 C CNN
@@ -1987,10 +1919,10 @@ F 3 "" H 3650 8900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0121
 U 1 1 5CE95695
 P 6550 9150
-F 0 "#PWR?" H 6550 9000 50  0001 C CNN
+F 0 "#PWR0121" H 6550 9000 50  0001 C CNN
 F 1 "+3V3" H 6565 9323 50  0000 C CNN
 F 2 "" H 6550 9150 50  0001 C CNN
 F 3 "" H 6550 9150 50  0001 C CNN
@@ -1998,4 +1930,64 @@ F 3 "" H 6550 9150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 6550 9150
+Text Label 7450 4000 0    50   ~ 0
+ab11
+Text Label 7450 4100 0    50   ~ 0
+ab12
+Text Label 7450 4400 0    50   ~ 0
+d7
+Text Label 7550 4500 0    50   ~ 0
+ab8
+Text Label 7550 5800 0    50   ~ 0
+a5
+Text Label 7550 5900 0    50   ~ 0
+a4
+Text Label 7550 5700 0    50   ~ 0
+a3
+Wire Wire Line
+	14150 4700 14150 5050
+Wire Wire Line
+	15400 4700 15400 5050
+Text Label 9650 3700 0    50   ~ 0
+iack2
+Text Label 9650 3600 0    50   ~ 0
+iack4
+Text Label 9650 3500 0    50   ~ 0
+iddir
+Text Label 9650 3800 0    50   ~ 0
+dtack
+Text Label 9650 3900 0    50   ~ 0
+irq4
+Text Label 9650 4000 0    50   ~ 0
+irq2
+Text Label 9650 4700 0    50   ~ 0
+a16
+Text Label 9650 4800 0    50   ~ 0
+a17
+Text Label 9650 4900 0    50   ~ 0
+a18
+Text Label 9650 5000 0    50   ~ 0
+a19
+Text Label 9650 5200 0    50   ~ 0
+a20
+Text Label 9650 5300 0    50   ~ 0
+a21
+Text Label 9650 5400 0    50   ~ 0
+a22
+Text Label 9650 5500 0    50   ~ 0
+a23
+$Comp
+L power:GND #PWR0151
+U 1 1 5CC3FD20
+P 14300 5050
+F 0 "#PWR0151" H 14300 4800 50  0001 C CNN
+F 1 "GND" H 14305 4877 50  0000 C CNN
+F 2 "" H 14300 5050 50  0001 C CNN
+F 3 "" H 14300 5050 50  0001 C CNN
+	1    14300 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 14300 5050
+Wire Wire Line
+	14300 5050 14150 5050
 $EndSCHEMATC
