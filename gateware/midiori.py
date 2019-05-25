@@ -98,7 +98,7 @@ class Midiori(Module):
                    # enable xltr early
                    self.xltr_oe.eq(0),
                    If(self._lds == 0,
-                       If((self._rw == 0),
+                       If((self._rw == 1),
                            NextState("RDATA"),
                        ).Else(
                            NextState("WDATA"),
@@ -111,6 +111,8 @@ class Midiori(Module):
                 If(self.addr_num == 0,
                    # irq vector register
                    self.data.o.eq(0x10)
+                ).Elif(self.addr_num == 2,
+                    self.data.o.eq(0x90)
                 ),
                 If(self._as == 1,
                    NextState("IDLE")
