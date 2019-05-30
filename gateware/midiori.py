@@ -2,6 +2,7 @@
 
 from migen import *
 from migen.fhdl import verilog
+from migen.genlib.fifo import *
 import midiori_platform
 
 base_addr = Constant(0xeafa00 >> 1)
@@ -76,6 +77,13 @@ class Midiori(Module):
     def __init__(self):
         self.tx = Signal()
         self.uart = UART(self.tx, 16000000, 31250)
+        self.submodules += self.uart
+        self.fifo = SyncFIFO(8, 16)
+        self.submodules += self.fifo
+        self.tx_running = Signal()
+        self.comb += self.uart.tx_ready.eq(self.fifo.readable)
+        self.comb += self.fifo.re.eq(self.uart.tx_ack)
+        self.comb += self.uart.tx_data.eq(self.fifo.dout)
         self.addr = Signal(23)
         self._as = Signal()
         self._lds = Signal()
@@ -113,22 +121,90 @@ class Midiori(Module):
                    self.data.o.eq(0x10)
                 ).Elif(self.addr_num == 2,
                     self.data.o.eq(0x90)
+                ).Else(
+                    self.data.o.eq(0x00)
                 ),
                 If(self._as == 1,
                    NextState("IDLE")
                 )
         )
         fsm.act("WDATA",
+                self._dtready.eq(0),
+                If(self.addr_num == 0x01,
+                   NextValue(self.group_num, self.data.i[0:4])
+                ).Else(
+                    If(self.register_num == 0x56,
+                       NextValue(self.fifo.we, 1),
+                       NextValue(self.fifo.din, self.data.i)
+                    )
+                ),
+                #only spend one cycle in WDATA
+                #so that writes only happen once
+                NextState("WWAIT")
+        )
+        fsm.act("WWAIT",
+                NextValue(self.fifo.we, 0),
                 If(self._as == 1,
                    NextState("IDLE")
                 )
         )
 
+def midi_read(m, reg):
+    yield m.addr.eq(base_addr+1)
+    yield m._as.eq(0)
+    yield m._lds.eq(0)
+    yield m._rw.eq(0)
+    yield m.data.i.eq(reg >> 4)
+    while (yield m._dtready == 1):
+        yield
+    yield m._as.eq(1)
+    yield m._lds.eq(1)
+    while (yield m._dtready == 0):
+        yield
+    yield m._rw.eq(1)
+    yield m.addr.eq(base_addr+(reg&0x0F))
+    yield m._as.eq(0)
+    yield m._lds.eq(0)
+    while (yield m._dtready == 1):
+        yield
+    yield m._as.eq(1)
+    yield m._lds.eq(1)
+    while (yield m._dtready == 0):
+        yield
+
+def midi_write(m, reg, value):
+    yield m.addr.eq(base_addr+1)
+    yield m._as.eq(0)
+    yield m._lds.eq(0)
+    yield m._rw.eq(0)
+    yield m.data.i.eq(reg >> 4)
+    while (yield m._dtready == 1):
+        yield
+    yield m._as.eq(1)
+    yield m._lds.eq(1)
+    while (yield m._dtready == 0):
+        yield
+    yield m._rw.eq(0)
+    yield m.data.i.eq(value)
+    yield m.addr.eq(base_addr+(reg&0x0F))
+    yield m._as.eq(0)
+    yield m._lds.eq(0)
+    while (yield m._dtready == 1):
+        yield
+    yield m._as.eq(1)
+    yield m._lds.eq(1)
+    while (yield m._dtready == 0):
+        yield
+
+def midi_wait_empty(m):
+    while (yield m.fifo.level > 0):
+        yield
+
 def test(m):
     yield m.addr.eq(0)
     yield m._as.eq(1)
     yield m._lds.eq(1)
-    yield m._rw.eq(0)
+    yield m._rw.eq(1)
     yield
     yield m.addr.eq(base_addr)
     yield
@@ -139,6 +215,12 @@ def test(m):
     yield m._lds.eq(1)
     yield
     yield
+    yield from midi_read(m, 0x16)
+    for i in range(1,17):
+        yield from midi_write(m, 0x56, i)
+    yield from midi_wait_empty(m)
+    for i in range(1, 10000):
+        yield
 
 if __name__ == "__main__":
     import sys

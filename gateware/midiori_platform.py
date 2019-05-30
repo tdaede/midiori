@@ -26,6 +26,7 @@ _io = [
     ("data", 0, Pins("28 27 26 25 24 21 20 19"), IOStandard("LVCMOS33")),
 
     ("xltr_oe", 0, Pins("51"), IOStandard("LVCMOS33")),
+    ("tx", 0, Pins("66"), IOStandard("LVCMOS33"))
 ]
 
 _connectors = [
