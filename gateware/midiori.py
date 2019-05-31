@@ -93,6 +93,32 @@ class Midiori(Module):
         self.group_num = Signal(4)
         self.addr_num = Signal(3)
         self.register_num = Signal(8)
+
+        # internal read-only registers
+
+        self.txemp = Signal()
+        self.comb += self.txemp.eq(self.fifo.level == 0)
+        #self.comb += self.txemp.eq(1)
+        self.txrdy = Signal()
+        #self.comb += self.txrdy.eq(self.fifo.writable)
+        self.comb += self.txrdy.eq(1)
+        self.txidl = Signal()
+        self.comb += self.txidl.eq(1)
+        self.txbsy = Signal()
+        self.comb += self.txbsy.eq(0)
+        self.tsr = Signal(8)
+        self.comb += self.tsr.eq(Cat(self.txbsy,0,self.txidl,0,0,0,self.txrdy,self.txemp))
+
+        # irq controller
+        self.isr = Signal(8, reset=0x10) #rx break detected at start
+
+        # irq sets
+        self.previous_empty = Signal()
+        self.sync += If((self.previous_empty == 0) & (self.txemp == 1),
+                        self.isr[6].eq(1)
+        )
+        self.sync += self.previous_empty.eq(self.txemp)
+
         self.xltr_oe = Signal()
         self.comb += self.addr_num.eq(self.addr[0:3])
         self.comb += self.register_num.eq(Cat(self.addr_num, 0, self.group_num))
@@ -122,7 +148,19 @@ class Midiori(Module):
                 ).Elif(self.addr_num == 2,
                     self.data.o.eq(0x90)
                 ).Else(
-                    self.data.o.eq(0x00)
+                    If(self.register_num == 0x34,
+                       self.data.o.eq(0x04)
+                    ).Elif(self.register_num == 0x36,
+                           self.data.o.eq(0x00)
+                    ).Elif(self.register_num == 0x54,
+                           self.data.o.eq(self.tsr)
+                    ).Elif(self.register_num == 0x64,
+                           self.data.o.eq(0xa0)
+                    ).Elif(self.register_num == 0x74,
+                           self.data.o.eq(0x00)
+                    ).Elif(self.register_num == 0x96,
+                           self.data.o.eq(0xFF)
+                    )
                 ),
                 If(self._as == 1,
                    NextState("IDLE")
@@ -135,7 +173,9 @@ class Midiori(Module):
                 ).Else(
                     If(self.register_num == 0x56,
                        NextValue(self.fifo.we, 1),
-                       NextValue(self.fifo.din, self.data.i)
+                       NextValue(self.fifo.din, self.data.i),
+                       # clear tx empty isr
+                       NextValue(self.isr[6], 0)
                     )
                 ),
                 #only spend one cycle in WDATA
@@ -215,6 +255,7 @@ def test(m):
     yield m._lds.eq(1)
     yield
     yield
+    yield from midi_read(m, 0x34)
     yield from midi_read(m, 0x16)
     for i in range(1,17):
         yield from midi_write(m, 0x56, i)
@@ -238,4 +279,5 @@ if __name__ == "__main__":
         m.specials += m.data.get_tristate(plat.request("data"))
         m.comb += plat.request("xltr_oe").eq(m.xltr_oe)
         m.comb += m.data.oe.eq(~plat.request("iddir"))
+        m.comb += plat.request("tx").eq(m.tx)
         plat.build(m)
