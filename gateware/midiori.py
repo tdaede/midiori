@@ -78,19 +78,20 @@ class Midiori(Module):
         self.tx = Signal()
         self.uart = UART(self.tx, 16000000, 31250)
         self.submodules += self.uart
-        self.fifo = SyncFIFO(8, 16)
+        self.fifo = SyncFIFOBuffered(8, 16)
         self.submodules += self.fifo
         self.tx_running = Signal()
         self.comb += self.uart.tx_ready.eq(self.fifo.readable)
         self.comb += self.fifo.re.eq(self.uart.tx_ack)
         self.comb += self.uart.tx_data.eq(self.fifo.dout)
         self.addr = Signal(23)
+        self._irq = Signal(reset=1)
+        self._iack = Signal()
         self._as = Signal()
         self._lds = Signal()
-        self._dtready = Signal()
+        self._dtready = Signal(reset=1)
         self._rw = Signal()
         self.data = TSTriple(8)
-        self.group_num = Signal(4)
         self.addr_num = Signal(3)
         self.register_num = Signal(8)
 
@@ -100,8 +101,8 @@ class Midiori(Module):
         self.comb += self.txemp.eq(self.fifo.level == 0)
         #self.comb += self.txemp.eq(1)
         self.txrdy = Signal()
-        #self.comb += self.txrdy.eq(self.fifo.writable)
-        self.comb += self.txrdy.eq(1)
+        self.comb += self.txrdy.eq(self.fifo.writable)
+        #self.comb += self.txrdy.eq(1)
         self.txidl = Signal()
         self.comb += self.txidl.eq(1)
         self.txbsy = Signal()
@@ -109,8 +110,38 @@ class Midiori(Module):
         self.tsr = Signal(8)
         self.comb += self.tsr.eq(Cat(self.txbsy,0,self.txidl,0,0,0,self.txrdy,self.txemp))
 
+        # internal read-write registers
+        self.group_num = Signal(4)
+        self.ier = Signal(8)
+        self.ivo = Signal(3)
+
         # irq controller
-        self.isr = Signal(8, reset=0x10) #rx break detected at start
+        self.isr = Signal(8, reset=0x00)
+        self.ivr = Signal(8)
+        self.vec = Signal(4)
+        self.isr_masked = Signal(8)
+        self.comb += self.isr_masked.eq(self.isr & self.ier)
+        self.comb += If(self.isr_masked[0] == 1,
+                        self.vec.eq(0)
+                     ).Elif(self.isr_masked[1] == 1,
+                            self.vec.eq(1)
+                     ).Elif(self.isr_masked[2] == 1,
+                            self.vec.eq(2)
+                     ).Elif(self.isr_masked[3] == 1,
+                            self.vec.eq(3)
+                     ).Elif(self.isr_masked[4] == 1,
+                            self.vec.eq(4)
+                     ).Elif(self.isr_masked[5] == 1,
+                            self.vec.eq(5)
+                     ).Elif(self.isr_masked[6] == 1,
+                            self.vec.eq(6),
+                     ).Elif(self.isr_masked[7] == 1,
+                            self.vec.eq(7)
+                     ).Else(
+                         self.vec.eq(8)
+                     )
+        self.comb += self.ivr.eq(Cat(0,self.vec,self.ivo))
+        self.comb += self._irq.eq(self.isr_masked == 0)
 
         # irq sets
         self.previous_empty = Signal()
@@ -127,7 +158,11 @@ class Midiori(Module):
         fsm.act("IDLE",
                 self._dtready.eq(1),
                 self.xltr_oe.eq(1),
-                If((self._as == 0) &
+                If((self._iack == 0) & (self._irq == 0),
+                   #enable xltr early
+                   self.xltr_oe.eq(0),
+                   NextState("IACK")
+                ).Elif((self._as == 0) &
                    (self.addr[3:24] == base_addr[3:24]),
                    # enable xltr early
                    self.xltr_oe.eq(0),
@@ -140,13 +175,20 @@ class Midiori(Module):
                    )
                 )
         )
+        fsm.act("IACK",
+                self._dtready.eq(0),
+                self.data.o.eq(self.ivr),
+                If(self._iack == 1,
+                   NextState("IDLE")
+                )
+        )
         fsm.act("RDATA",
                 self._dtready.eq(0),
                 If(self.addr_num == 0,
                    # irq vector register
-                   self.data.o.eq(0x10)
+                   self.data.o.eq(self.ivr)
                 ).Elif(self.addr_num == 2,
-                    self.data.o.eq(0x90)
+                    self.data.o.eq(self.isr)
                 ).Else(
                     If(self.register_num == 0x34,
                        self.data.o.eq(0x04)
@@ -170,8 +212,14 @@ class Midiori(Module):
                 self._dtready.eq(0),
                 If(self.addr_num == 0x01,
                    NextValue(self.group_num, self.data.i[0:4])
+                ).Elif(self.addr_num == 0x03,
+                      NextValue(self.isr, self.isr & ~self.data.i)
                 ).Else(
-                    If(self.register_num == 0x56,
+                    If(self.register_num == 0x04,
+                       NextValue(self.ivo, self.data.i[5:8])
+                    ).Elif(self.register_num == 0x06,
+                           NextValue(self.ier, self.data.i)
+                    ).Elif(self.register_num == 0x56,
                        NextValue(self.fifo.we, 1),
                        NextValue(self.fifo.din, self.data.i),
                        # clear tx empty isr
@@ -183,6 +231,7 @@ class Midiori(Module):
                 NextState("WWAIT")
         )
         fsm.act("WWAIT",
+                self._dtready.eq(0),
                 NextValue(self.fifo.we, 0),
                 If(self._as == 1,
                    NextState("IDLE")
@@ -240,11 +289,22 @@ def midi_wait_empty(m):
     while (yield m.fifo.level > 0):
         yield
 
+def midi_iack(m):
+    while (yield m._irq == 1):
+        yield
+    yield m._iack.eq(0)
+    while (yield m._dtready == 1):
+        yield
+    yield m._iack.eq(1)
+    while (yield m._dtready == 0):
+        yield
+
 def test(m):
     yield m.addr.eq(0)
     yield m._as.eq(1)
     yield m._lds.eq(1)
     yield m._rw.eq(1)
+    yield m._iack.eq(1)
     yield
     yield m.addr.eq(base_addr)
     yield
@@ -257,11 +317,14 @@ def test(m):
     yield
     yield from midi_read(m, 0x34)
     yield from midi_read(m, 0x16)
-    for i in range(1,17):
+    yield from midi_write(m, 0x04, 0xE0)
+    yield from midi_write(m, 0x06, 0x40) #tx irq only
+    for i in range(1,2):
         yield from midi_write(m, 0x56, i)
+    yield from midi_iack(m)
     yield from midi_wait_empty(m)
-    for i in range(1, 10000):
-        yield
+    #for i in range(1, 10000):
+    #    yield
 
 if __name__ == "__main__":
     import sys
@@ -280,4 +343,6 @@ if __name__ == "__main__":
         m.comb += plat.request("xltr_oe").eq(m.xltr_oe)
         m.comb += m.data.oe.eq(~plat.request("iddir"))
         m.comb += plat.request("tx").eq(m.tx)
+        m.comb += plat.request("irq2").eq(m._irq)
+        m.comb += m._iack.eq(plat.request("iack2"))
         plat.build(m)
