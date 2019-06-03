@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-from migen import *
-from migen.fhdl import verilog
-from migen.genlib.fifo import *
+from nmigen import *
+from nmigen.compat import *
+from nmigen.compat.fhdl import verilog
+from nmigen.compat.genlib.fifo import *
 import midiori_platform
 import subprocess
 
