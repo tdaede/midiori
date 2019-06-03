@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L midiori-rescue:x68000_expansion-x68k J1
+L midiori-rescue:x68000_expansion-x68k-midiori-rescue J1
 U 1 1 5BFF029F
 P 2150 -1050
 F 0 "J1" H 1750 -5050 50  0000 C CNN
@@ -308,7 +308,7 @@ Wire Wire Line
 Connection ~ 6250 9150
 Connection ~ 6550 9750
 $Comp
-L midiori-rescue:SG5032CAN-x68k X1
+L midiori-rescue:SG5032CAN-x68k-midiori-rescue X1
 U 1 1 5C01CB41
 P 6550 9450
 F 0 "X1" H 6891 9496 50  0000 L CNN
@@ -353,7 +353,7 @@ Connection ~ 14350 2500
 Wire Wire Line
 	14350 2500 14750 2500
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U4
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U4
 U 1 1 5CB81A7A
 P 4550 1600
 F 0 "U4" H 4150 2570 50  0000 C CNN
@@ -383,7 +383,7 @@ AB6
 Text Label 3450 1300 0    50   ~ 0
 AB7
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U5
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U5
 U 1 1 5CB84A17
 P 4550 3200
 F 0 "U5" H 4150 4170 50  0000 C CNN
@@ -415,7 +415,7 @@ AB14
 Text Label 3400 2800 0    50   ~ 0
 AB15
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U6
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U6
 U 1 1 5CB8623F
 P 4550 4800
 F 0 "U6" H 4150 5770 50  0000 C CNN
@@ -478,7 +478,7 @@ IRQ2
 Text Label 1550 9500 2    50   ~ 0
 IRQ4
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U8
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U8
 U 1 1 5CB8F4D5
 P 4550 8000
 F 0 "U8" H 4150 8970 50  0000 C CNN
@@ -512,7 +512,7 @@ B
 Text Label 3650 8300 2    50   ~ 0
 C
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U9
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U9
 U 1 1 5CB9618A
 P 4550 9600
 F 0 "U9" H 4150 10570 50  0000 C CNN
@@ -534,7 +534,7 @@ IACK4
 Text Label 3650 9400 2    50   ~ 0
 IDDIR
 $Comp
-L midiori-rescue:ICE40HX1K-VQ100-ICE40HX1K-VQ100 U10
+L midiori-rescue:ICE40HX1K-VQ100-ICE40HX1K-VQ100-midiori-rescue U10
 U 1 1 5CBA3357
 P 8650 4600
 F 0 "U10" H 8650 7467 50  0000 C CNN
@@ -929,28 +929,6 @@ F 3 "" H 9850 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:TPS76912 U3
-U 1 1 5CCAF6D1
-P 14900 4500
-F 0 "U3" H 14900 4842 50  0000 C CNN
-F 1 "TPS70912" H 14900 4751 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 14900 4825 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/tps769.pdf" H 14900 4450 50  0001 C CNN
-	1    14900 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:TPS76933 U11
-U 1 1 5CCB0E7A
-P 13650 4500
-F 0 "U11" H 13650 4842 50  0000 C CNN
-F 1 "TPS70933" H 13650 4751 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13650 4825 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/tps769.pdf" H 13650 4450 50  0001 C CNN
-	1    13650 4500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C1
 U 1 1 5CCB22B1
 P 14150 4550
@@ -972,10 +950,6 @@ F 3 "" H 13250 4400 50  0001 C CNN
 	1    13250 4400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	14050 4400 14150 4400
-Wire Wire Line
-	14150 4400 14500 4400
 Connection ~ 14150 4400
 $Comp
 L Device:C C2
@@ -993,16 +967,6 @@ Wire Wire Line
 Wire Wire Line
 	13650 5050 13650 4800
 Connection ~ 14150 5050
-Wire Wire Line
-	13250 4500 13250 5050
-Wire Wire Line
-	13250 5050 13650 5050
-Connection ~ 13650 5050
-Connection ~ 14500 5050
-Wire Wire Line
-	14500 5050 14300 5050
-Wire Wire Line
-	15300 4400 15400 4400
 $Comp
 L power:+3V3 #PWR0109
 U 1 1 5CCE608D
@@ -1108,11 +1072,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 6700 7650 6700
 Wire Wire Line
-	14500 5050 14900 5050
-Wire Wire Line
 	14900 4800 14900 5050
-Wire Wire Line
-	14500 4500 14500 5050
 Connection ~ 14900 5050
 Wire Wire Line
 	14900 5050 15400 5050
@@ -1141,7 +1101,7 @@ $EndComp
 Wire Wire Line
 	7650 3000 6900 3000
 $Comp
-L midiori-rescue:Conn_ARM_JTAG_SWD_10-Connector J2
+L midiori-rescue:Conn_ARM_JTAG_SWD_10-Connector-midiori-rescue J2
 U 1 1 5CD4062E
 P 8500 8400
 F 0 "J2" H 8057 8446 50  0000 R CNN
@@ -1153,7 +1113,7 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex
 $EndComp
 Text Label 7250 3000 0    50   ~ 0
 reset
-Text Label 9000 8100 0    50   ~ 0
+Text Label 9000 8600 0    50   ~ 0
 reset
 $Comp
 L power:GND #PWR0114
@@ -1186,15 +1146,15 @@ Text Label 6350 8300 0    50   ~ 0
 ss
 Text Label 9000 8300 0    50   ~ 0
 sck
-Text Label 9000 8400 0    50   ~ 0
+Text Label 9000 8500 0    50   ~ 0
 ss
 Text Label 7300 6500 0    50   ~ 0
 so
 Text Label 6500 6150 0    50   ~ 0
 si
-Text Label 9000 8600 0    50   ~ 0
+Text Label 9000 8400 0    50   ~ 0
 si
-Text Label 9000 8500 0    50   ~ 0
+Text Label 9000 8100 0    50   ~ 0
 so
 $Comp
 L Device:C C17
@@ -1744,7 +1704,7 @@ Wire Wire Line
 	3650 3600 3650 3700
 Connection ~ 3650 3700
 $Comp
-L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR U7
+L midiori-rescue:SN74LVC8T245DWR-SN74LVC8T245DWR-midiori-rescue U7
 U 1 1 5CB89CCF
 P 4550 6400
 F 0 "U7" H 4150 7370 50  0000 C CNN
@@ -1990,4 +1950,288 @@ $EndComp
 Connection ~ 14300 5050
 Wire Wire Line
 	14300 5050 14150 5050
+$Comp
+L Regulator_Linear:TLV73333PDBV U11
+U 1 1 5CF4BDB9
+P 13650 4500
+F 0 "U11" H 13650 4842 50  0000 C CNN
+F 1 "TLV73333PDBV" H 13650 4751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 13650 4825 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 13650 4500 50  0001 C CNN
+	1    13650 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TLV73312PDBV U3
+U 1 1 5CF504FD
+P 14900 4500
+F 0 "U3" H 14900 4842 50  0000 C CNN
+F 1 "TLV73312PDBV" H 14900 4751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 14900 4825 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv733p.pdf" H 14900 4500 50  0001 C CNN
+	1    14900 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14300 5050 14900 5050
+Wire Wire Line
+	14150 4400 14600 4400
+Wire Wire Line
+	15200 4400 15400 4400
+Wire Wire Line
+	14600 4500 14600 4400
+Connection ~ 14600 4400
+Wire Wire Line
+	13350 4500 13350 4400
+Wire Wire Line
+	13250 4400 13350 4400
+Connection ~ 13350 4400
+Wire Wire Line
+	13950 4400 14150 4400
+Text Label 4650 5900 0    50   ~ 0
+xltr_oe
+Text Label 9650 7000 0    50   ~ 0
+xltr_oe
+Wire Wire Line
+	3650 7400 3650 7300
+Connection ~ 3650 7300
+Wire Wire Line
+	3650 9000 3650 8900
+Connection ~ 3650 8900
+Wire Wire Line
+	3650 4200 3650 4100
+Connection ~ 3650 4100
+Wire Wire Line
+	3650 2600 3650 2500
+Connection ~ 3650 2500
+Wire Wire Line
+	3650 1000 3650 900 
+Connection ~ 3650 900 
+$Comp
+L power:GND #PWR0152
+U 1 1 5CF527E6
+P 4950 1100
+F 0 "#PWR0152" H 4950 850 50  0001 C CNN
+F 1 "GND" H 4955 927 50  0000 C CNN
+F 2 "" H 4950 1100 50  0001 C CNN
+F 3 "" H 4950 1100 50  0001 C CNN
+	1    4950 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1100 4650 1100
+$Comp
+L power:GND #PWR0153
+U 1 1 5CF52F0A
+P 5000 2700
+F 0 "#PWR0153" H 5000 2450 50  0001 C CNN
+F 1 "GND" H 5005 2527 50  0000 C CNN
+F 2 "" H 5000 2700 50  0001 C CNN
+F 3 "" H 5000 2700 50  0001 C CNN
+	1    5000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0154
+U 1 1 5CF5313F
+P 5050 4300
+F 0 "#PWR0154" H 5050 4050 50  0001 C CNN
+F 1 "GND" H 5055 4127 50  0000 C CNN
+F 2 "" H 5050 4300 50  0001 C CNN
+F 3 "" H 5050 4300 50  0001 C CNN
+	1    5050 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0155
+U 1 1 5CF53734
+P 5050 7500
+F 0 "#PWR0155" H 5050 7250 50  0001 C CNN
+F 1 "GND" H 5055 7327 50  0000 C CNN
+F 2 "" H 5050 7500 50  0001 C CNN
+F 3 "" H 5050 7500 50  0001 C CNN
+	1    5050 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 7500 5050 7500
+Wire Wire Line
+	4650 4300 5050 4300
+Wire Wire Line
+	4650 2700 5000 2700
+$Comp
+L 74xx:74LCX07 U1
+U 5 1 5CF544B9
+P 13050 7650
+F 0 "U1" H 13050 7967 50  0000 C CNN
+F 1 "74LCX07" H 13050 7876 50  0000 C CNN
+F 2 "" H 13050 7650 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/74lcx07.pdf" H 13050 7650 50  0001 C CNN
+	5    13050 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LCX07 U1
+U 6 1 5CF54C52
+P 13050 8250
+F 0 "U1" H 13050 8567 50  0000 C CNN
+F 1 "74LCX07" H 13050 8476 50  0000 C CNN
+F 2 "" H 13050 8250 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/74lcx07.pdf" H 13050 8250 50  0001 C CNN
+	6    13050 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LCX07 U1
+U 7 1 5CF5537F
+P 11750 7850
+F 0 "U1" H 11980 7896 50  0000 L CNN
+F 1 "74LCX07" H 11980 7805 50  0000 L CNN
+F 2 "" H 11750 7850 50  0001 C CNN
+F 3 "www.st.com/resource/en/datasheet/74lcx07.pdf" H 11750 7850 50  0001 C CNN
+	7    11750 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0156
+U 1 1 5CF571F5
+P 11750 7350
+F 0 "#PWR0156" H 11750 7200 50  0001 C CNN
+F 1 "+3V3" H 11765 7523 50  0000 C CNN
+F 2 "" H 11750 7350 50  0001 C CNN
+F 3 "" H 11750 7350 50  0001 C CNN
+	1    11750 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0157
+U 1 1 5CF5745C
+P 11750 8350
+F 0 "#PWR0157" H 11750 8100 50  0001 C CNN
+F 1 "GND" H 11755 8177 50  0000 C CNN
+F 2 "" H 11750 8350 50  0001 C CNN
+F 3 "" H 11750 8350 50  0001 C CNN
+	1    11750 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0158
+U 1 1 5CF575EF
+P 12750 8550
+F 0 "#PWR0158" H 12750 8300 50  0001 C CNN
+F 1 "GND" H 12755 8377 50  0000 C CNN
+F 2 "" H 12750 8550 50  0001 C CNN
+F 3 "" H 12750 8550 50  0001 C CNN
+	1    12750 8550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12750 8250 12750 8550
+Wire Wire Line
+	12750 7650 12750 8250
+Connection ~ 12750 8250
+Wire Wire Line
+	4650 1200 4650 1100
+Connection ~ 4650 1100
+$Comp
+L power:GND #PWR0159
+U 1 1 5CF57E7D
+P 3050 1800
+F 0 "#PWR0159" H 3050 1550 50  0001 C CNN
+F 1 "GND" H 3055 1627 50  0000 C CNN
+F 2 "" H 3050 1800 50  0001 C CNN
+F 3 "" H 3050 1800 50  0001 C CNN
+	1    3050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1800 3050 1200
+Wire Wire Line
+	3050 1200 3650 1200
+Wire Wire Line
+	4650 9500 4650 9600
+Wire Wire Line
+	4650 9600 4650 9700
+Connection ~ 4650 9600
+Wire Wire Line
+	4650 9700 4650 9800
+Connection ~ 4650 9700
+Wire Wire Line
+	4650 9800 4650 9900
+Connection ~ 4650 9800
+Wire Wire Line
+	4650 9900 4650 10000
+Connection ~ 4650 9900
+Connection ~ 4650 10000
+Wire Wire Line
+	3650 9500 3650 9600
+Wire Wire Line
+	3650 9700 3650 9600
+Connection ~ 3650 9600
+Wire Wire Line
+	3650 9700 3650 9800
+Connection ~ 3650 9700
+Wire Wire Line
+	3650 9800 3650 9900
+Connection ~ 3650 9800
+Wire Wire Line
+	3650 9900 3650 10000
+Connection ~ 3650 9900
+Connection ~ 3650 10000
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J4
+U 1 1 5CF59AAB
+P 9650 8350
+F 0 "J4" H 9700 8667 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 9700 8576 50  0000 C CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 9650 8350 50  0001 C CNN
+F 3 "~" H 9650 8350 50  0001 C CNN
+	1    9650 8350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0160
+U 1 1 5CF5A87B
+P 9450 8250
+F 0 "#PWR0160" H 9450 8100 50  0001 C CNN
+F 1 "+3V3" H 9465 8423 50  0000 C CNN
+F 2 "" H 9450 8250 50  0001 C CNN
+F 3 "" H 9450 8250 50  0001 C CNN
+	1    9450 8250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0161
+U 1 1 5CF5AA85
+P 9450 8450
+F 0 "#PWR0161" H 9450 8200 50  0001 C CNN
+F 1 "GND" H 9455 8277 50  0000 C CNN
+F 2 "" H 9450 8450 50  0001 C CNN
+F 3 "" H 9450 8450 50  0001 C CNN
+	1    9450 8450
+	1    0    0    -1  
+$EndComp
+Text Label 9950 8250 0    50   ~ 0
+si
+Text Label 9450 8350 2    50   ~ 0
+so
+Text Label 9950 8350 0    50   ~ 0
+sck
+Text Label 9950 8450 0    50   ~ 0
+ss
+NoConn ~ 13350 7650
+NoConn ~ 13350 8250
+$Comp
+L power:GND #PWR0162
+U 1 1 5CF6048C
+P 5050 9100
+F 0 "#PWR0162" H 5050 8850 50  0001 C CNN
+F 1 "GND" H 5055 8927 50  0000 C CNN
+F 2 "" H 5050 9100 50  0001 C CNN
+F 3 "" H 5050 9100 50  0001 C CNN
+	1    5050 9100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 9100 5050 9100
 $EndSCHEMATC
