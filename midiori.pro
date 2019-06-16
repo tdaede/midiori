@@ -1,4 +1,4 @@
-update=Sun 02 Jun 2019 09:11:39 PM PDT
+update=Sat 15 Jun 2019 10:48:38 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -12,6 +12,22 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_WriteFile=0
+ERC_TestSimilarLabels=0
+ERC_CheckUniqueGlobalLabels=1
+ERC_CheckBusDriverConflicts=1
+ERC_CheckBusEntryConflicts=1
+ERC_CheckBusToBusConflicts=1
+ERC_CheckBusToNetConflicts=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -57,8 +73,8 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0.051
-SolderMaskMinWidth=0.25
+SolderMaskClearance=0
+SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
@@ -239,19 +255,3 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=50
-ERC_WriteFile=0
-ERC_TestSimilarLabels=0
-ERC_CheckUniqueGlobalLabels=1
-ERC_CheckBusDriverConflicts=1
-ERC_CheckBusEntryConflicts=1
-ERC_CheckBusToBusConflicts=1
-ERC_CheckBusToNetConflicts=1
