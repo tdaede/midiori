@@ -1140,9 +1140,9 @@ F 3 "" H 8500 7800 50  0001 C CNN
 	1    8500 7800
 	1    0    0    -1  
 $EndComp
-Text Label 6350 8050 0    50   ~ 0
-sck
 Text Label 6350 8300 0    50   ~ 0
+sck
+Text Label 6350 8050 0    50   ~ 0
 ss
 Text Label 9000 8300 0    50   ~ 0
 sck
