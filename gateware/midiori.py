@@ -306,6 +306,7 @@ def test(m):
     yield m._rw.eq(1)
     yield m._iack.eq(1)
     yield
+    assert(yield m._dtready == 1)
     yield m.addr.eq(base_addr)
     yield
     yield m._as.eq(0)
@@ -314,15 +315,19 @@ def test(m):
     yield m._as.eq(1)
     yield m._lds.eq(1)
     yield
+    assert(yield m._dtready == 0)
     yield
     yield from midi_read(m, 0x34)
     yield from midi_read(m, 0x16)
     yield from midi_write(m, 0x04, 0xE0)
     yield from midi_write(m, 0x06, 0x40) #tx irq only
-    for i in range(1,2):
+    for i in range(0,2):
         yield from midi_write(m, 0x56, i)
+    assert(yield m.isr == 0x00)
+    assert(yield m.fifo.dout == 0x00)
     yield from midi_iack(m)
     yield from midi_wait_empty(m)
+    assert(yield m.isr == 0x40)
     #for i in range(1, 10000):
     #    yield
 
