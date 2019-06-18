@@ -412,16 +412,26 @@ def test(m):
     yield from midi_iack(m)
     yield from midi_wait_empty(m)
     assert(yield m.isr == 0x40)
-    yield from midi_write(m, 0xf4, 0x00)
-    yield from midi_read(m, 0xf5)
-    #for i in range(1, 10000):
-    #    yield
+    # test that manual clearing works
+    yield from midi_write(m, 0x03, 0x40)
+    assert(yield m.isr == 0x00)
+    #test that clearing via tx write works
+    yield from midi_write(m, 0x56, 0x55)
+    yield from midi_wait_empty(m)
+    yield from midi_write(m, 0x56, 0xAA)
+    assert(yield m.isr == 0x00)
+
+    for i in range(1, 10000):
+        yield
 
 if __name__ == "__main__":
     import sys
     if sys.argv[1] == "sim":
         m = Midiori()
         run_simulation(m, test(m), vcd_name="midiori.vcd")
+    elif sys.argv[1] == "verilog":
+        m = Midiori()
+        verilog.convert(m).write("top.v")
     else:
         plat = MidioriPlatform()
         m = Midiori()
