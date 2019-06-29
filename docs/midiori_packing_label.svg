@@ -27,15 +27,15 @@
      inkscape:pageshadow="2"
      inkscape:zoom="5.3252482"
      inkscape:cx="365.63791"
-     inkscape:cy="57.894326"
+     inkscape:cy="253.19039"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      inkscape:window-width="2880"
-     inkscape:window-height="1491"
+     inkscape:window-height="1492"
      inkscape:window-x="0"
-     inkscape:window-y="55"
+     inkscape:window-y="54"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -251,7 +251,7 @@
          id="tspan4702"
          x="126.09976"
          y="218.10068"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.26458332px">v1.1</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.26458332px">v2.1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.61458349px;line-height:6.61458349px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
