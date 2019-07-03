@@ -4,8 +4,12 @@ from migen import *
 from migen.fhdl import verilog
 from migen.genlib.fifo import *
 import midiori_platform
+import subprocess
 
 base_addr = Constant(0xeafa00 >> 1)
+
+describe = subprocess.check_output(["git", "describe", "--tags"]).strip().decode()
+version_string = Array(("midiori "+describe+"\x00").encode('shift_jis'))
 
 def _divisor(freq_in, freq_out, max_ppm=None):
     divisor = freq_in // freq_out
@@ -94,6 +98,7 @@ class Midiori(Module):
         self.data = TSTriple(8)
         self.addr_num = Signal(3)
         self.register_num = Signal(8)
+        self.version_index = Signal(5)
 
         # internal read-only registers
 
@@ -202,6 +207,8 @@ class Midiori(Module):
                            self.data.o.eq(0x00)
                     ).Elif(self.register_num == 0x96,
                            self.data.o.eq(0xFF)
+                    ).Elif(self.register_num == 0xF5,
+                           self.data.o.eq(version_string[self.version_index])
                     )
                 ),
                 If(self._as == 1,
@@ -224,6 +231,8 @@ class Midiori(Module):
                        NextValue(self.fifo.din, self.data.i),
                        # clear tx empty isr
                        NextValue(self.isr[6], 0)
+                    ).Elif(self.register_num == 0xF4,
+                           NextValue(self.version_index, self.data.i)
                     )
                 ),
                 #only spend one cycle in WDATA
@@ -328,6 +337,8 @@ def test(m):
     yield from midi_iack(m)
     yield from midi_wait_empty(m)
     assert(yield m.isr == 0x40)
+    yield from midi_write(m, 0xf4, 0x00)
+    yield from midi_read(m, 0xf5)
     #for i in range(1, 10000):
     #    yield
 
