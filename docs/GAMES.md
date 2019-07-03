@@ -1,8 +1,13 @@
 Known working
 ---------------
 Akumajou Dracula
+Angel Dive
+Arcus Odyssey
 Atomic Robo-Kid
+Carat
+Cynthia
 Detana!! TwinBee
+Die Bahnwelt
 Etoile Princesse
 Gemini Wing
 Geograph Seal
@@ -17,7 +22,6 @@ Granada
 
 Unknown
 --------
-Arcus Odyssey
 Parodius Da!
 Gradius II
 Thunder Blade
