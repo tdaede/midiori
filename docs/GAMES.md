@@ -31,13 +31,13 @@ Known working
 
 Broken
 -------
-* Granada - freezes on intro
-* Genocide 2 - bus error on start
-* Mahou Daisakusen - no sound
-* Overtake - crashes on music playback start
-* Square Resort - address error has occured
+* Mahou Daisakusen - no sound, works with 1.1
 
 Unknown
 --------
 * Gradius II - unknown how to configure
 * Duel Fighter 2 - unknown how to configure
+* Genocide 2
+* Granada - freezes on intro with both 1.1 and 2.1
+* Overtake - crashes on music playback start with both 1.1 and 2.1
+* Square Resort
