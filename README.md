@@ -10,10 +10,17 @@
 
 # Differences from midiori v1
 
-1. MIDI IN and THRU ports are not implemented.
-2. Interrupts are not implemented.
-3. GPIO is not implemented.
-4. General purpose timer is not implemented.
-5. Address is locked to 0xeafa00.
-6. Baud rate is locked to 31250 bps.
-7. 68k bus is implemented natively and timings are generally faster.
+- MIDI IN and THRU ports are not implemented.
+- FIFO-Rx and FIFO-IRx are not implemented.
+- FIFO-ITx is not implemented.
+- Tx idle detection is not implemented.
+- IC is not implemented.
+- Midi clock source is not implemented.
+- SYNC and CLICK are not implemented.
+- Sequencer is not implemented.
+- GPIO is not implemented.
+- Address is locked to 0xeafa00.
+- IRQ is locked to slot+2.
+- Baud rate is locked to 31250 bps, 8n1.
+- CLKM divider is locked to 1MHz mode.
+- 68k bus is implemented natively and timings are generally faster.
