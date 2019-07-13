@@ -120,6 +120,12 @@ class Midiori(Module):
         self.ier = Signal(8)
         self.ivo = Signal(3)
 
+        #8us clock divider
+        midi_divider = Signal(7)
+        self.sync += midi_divider.eq(midi_divider-1)
+        midi_clk_en = Signal()
+        self.comb += midi_clk_en.eq(midi_divider == 0)
+
         # irq controller
         self.isr = Signal(8, reset=0x00)
         self.ivr = Signal(8)
@@ -155,6 +161,20 @@ class Midiori(Module):
         )
         self.sync += self.previous_empty.eq(self.txemp)
 
+        #general purpose timer
+        gpt_low_byte_cache = Signal(8)
+        gpt_reset_value = Signal(16)
+        gpt_counter = Signal(14)
+        self.sync += If(midi_clk_en,
+            If((gpt_counter == 0) & (gpt_reset_value > 1),
+                gpt_counter.eq(gpt_reset_value),
+                self.isr[7].eq(1)
+            ).Else(
+                gpt_counter.eq(gpt_counter-1)
+            )
+        )
+
+        #register io state machine
         self.xltr_oe = Signal()
         self.comb += self.addr_num.eq(self.addr[0:3])
         self.comb += self.register_num.eq(Cat(self.addr_num, 0, self.group_num))
@@ -231,6 +251,13 @@ class Midiori(Module):
                        NextValue(self.fifo.din, self.data.i),
                        # clear tx empty isr
                        NextValue(self.isr[6], 0)
+                    ).Elif(self.register_num == 0x84,
+                           NextValue(gpt_low_byte_cache, self.data.i)
+                    ).Elif(self.register_num == 0x85,
+                           NextValue(gpt_reset_value, Cat(gpt_low_byte_cache, self.data.i[0:6])),
+                           If(self.data.i[7],
+                              NextValue(gpt_counter, Cat(gpt_low_byte_cache, self.data.i[0:6]))
+                           )
                     ).Elif(self.register_num == 0xF4,
                            NextValue(self.version_index, self.data.i)
                     )
