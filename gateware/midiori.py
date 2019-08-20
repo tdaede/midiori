@@ -122,9 +122,16 @@ class Midiori(Module):
 
         #8us clock divider
         midi_divider = Signal(7)
+        #all games should set this to 1, but
+        #simulate it for completeness
+        clkm = Signal()
         self.sync += midi_divider.eq(midi_divider-1)
         midi_clk_en = Signal()
-        self.comb += midi_clk_en.eq(midi_divider == 0)
+        self.comb += If(clkm,
+                            midi_clk_en.eq(midi_divider == 0)
+                        ).Else(
+                            midi_clk_en.eq(midi_divider[0:6] == 0)
+                        )
 
         # irq controller
         self.isr = Signal(8, reset=0x00)
@@ -277,6 +284,8 @@ class Midiori(Module):
                        NextValue(self.fifo.din, self.data.i),
                        # clear tx empty isr
                        NextValue(self.isr[6], 0)
+                    ).Elif(self.register_num == 0x66,
+                           NextValue(clkm, self.data.i[1])
                     ).Elif(self.register_num == 0x67,
                            NextValue(click_reset_value, self.data.i[0:7]),
                            If(self.data.i[7],
