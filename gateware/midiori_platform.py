@@ -4,7 +4,7 @@ from nmigen.vendor.lattice_ice40 import LatticeICE40Platform
 __all__ = ["MidioriPlatform"]
 
 class MidioriPlatform(LatticeICE40Platform):
-    device    = "hx1k"
+    device    = "iCE40HX1K"
     package   = "vq100"
     clocks    = [
         ("sync", 16e6),
