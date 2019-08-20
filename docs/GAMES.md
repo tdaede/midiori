@@ -18,6 +18,7 @@ Known working
 * Genocide 2
 * Geograph Seal
 * KU2
+* Mahou Daisakusen
 * Metal Orange EX
 * Nemesis '90 Kai
 * Parodius Da!
@@ -32,7 +33,6 @@ Known working
 
 Broken
 -------
-* Mahou Daisakusen - no sound, works with 1.1
 
 Unknown
 --------
