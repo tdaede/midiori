@@ -80,10 +80,12 @@ class UART(Module):
 
 class Midiori(Module):
     def __init__(self):
+        # tx uart registers
         self.tx = Signal()
         self.uart_tx = Signal()
         self.uart = UART(self.uart_tx, 16000000, 31250)
         self.brke = Signal()
+        self.txe = Signal()
         self.comb += If(self.brke,
             self.tx.eq(0),
         ).Else(
@@ -95,7 +97,11 @@ class Midiori(Module):
         self.tx_running = Signal()
         self.comb += self.uart.tx_ready.eq(self.fifo.readable)
         self.comb += self.fifo.re.eq(self.uart.tx_ack)
-        self.comb += self.uart.tx_data.eq(self.fifo.dout)
+        self.comb += If(self.txe,
+            self.uart.tx_data.eq(self.fifo.dout)
+        ).Else(
+            self.uart.tx_data.eq(0)
+        )
         self.addr = Signal(23)
         self._irq = Signal(reset=1)
         self._iack = Signal()
@@ -276,6 +282,7 @@ class Midiori(Module):
                     ).Elif(self.register_num == 0x06,
                            NextValue(self.ier, self.data.i)
                     ).Elif(self.register_num == 0x55,
+                           NextValue(self.txe, self.data.i[0]),
                            NextValue(self.brke, self.data.i[3])
                     ).Elif(self.register_num == 0x56,
                        NextValue(self.fifo.we, 1),
@@ -327,6 +334,8 @@ class Midiori(Module):
                         self.ivo.eq(0),
                         self.ier.eq(0),
                         self.isr.eq(0),
+                        self.txe.eq(0),
+                        self.brke.eq(0),
                         gpt_counter.eq(0),
                         gpt_low_byte_cache.eq(0),
                         gpt_reset_value.eq(0),
@@ -427,6 +436,7 @@ def test(m):
     yield from midi_read(m, 0x16)
     yield from midi_write(m, 0x04, 0xE0)
     yield from midi_write(m, 0x06, 0x40) #tx irq only
+    yield from midi_write(m, 0x55, 0x01)
     for i in range(0,2):
         yield from midi_write(m, 0x56, i)
     assert(yield m.isr == 0x00)
