@@ -3,6 +3,7 @@
 from migen import *
 from migen.fhdl import verilog
 from migen.genlib.fifo import *
+from migen.genlib.coding import *
 import midiori_platform
 import subprocess
 
@@ -139,25 +140,10 @@ class Midiori(Module):
         self.vec = Signal(4)
         self.isr_masked = Signal(8)
         self.comb += self.isr_masked.eq(self.isr & self.ier)
-        self.comb += If(self.isr_masked[0] == 1,
-                        self.vec.eq(0)
-                     ).Elif(self.isr_masked[1] == 1,
-                            self.vec.eq(1)
-                     ).Elif(self.isr_masked[2] == 1,
-                            self.vec.eq(2)
-                     ).Elif(self.isr_masked[3] == 1,
-                            self.vec.eq(3)
-                     ).Elif(self.isr_masked[4] == 1,
-                            self.vec.eq(4)
-                     ).Elif(self.isr_masked[5] == 1,
-                            self.vec.eq(5)
-                     ).Elif(self.isr_masked[6] == 1,
-                            self.vec.eq(6),
-                     ).Elif(self.isr_masked[7] == 1,
-                            self.vec.eq(7)
-                     ).Else(
-                         self.vec.eq(8)
-                     )
+        isr_pe = PriorityEncoder(8)
+        self.submodules += isr_pe
+        self.comb += isr_pe.i.eq(self.isr_masked)
+        self.comb += self.vec.eq(Cat(isr_pe.o, isr_pe.n))
         self.comb += self.ivr.eq(Cat(0,self.vec,self.ivo))
         self.comb += self._irq.eq(self.isr_masked == 0)
 
@@ -407,10 +393,12 @@ def test(m):
     for i in range(0,2):
         yield from midi_write(m, 0x56, i)
     assert(yield m.isr == 0x00)
+    assert(yield m.vec == 8)
     assert(yield m.fifo.dout == 0x00)
     yield from midi_iack(m)
     yield from midi_wait_empty(m)
     assert(yield m.isr == 0x40)
+    assert(yield m.vec == 6)
     yield from midi_write(m, 0xf4, 0x00)
     yield from midi_read(m, 0xf5)
     #for i in range(1, 10000):
