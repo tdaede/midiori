@@ -96,6 +96,7 @@ class Midiori(Module):
         self._lds = Signal()
         self._dtready = Signal(reset=1)
         self._rw = Signal()
+        self.exreset = Signal(reset=1)
         self.data = TSTriple(8)
         self.addr_num = Signal(3)
         self.register_num = Signal(8)
@@ -120,6 +121,7 @@ class Midiori(Module):
         self.group_num = Signal(4)
         self.ier = Signal(8)
         self.ivo = Signal(3)
+        self.ic = Signal()
 
         #8us clock divider
         midi_divider = Signal(7)
@@ -257,7 +259,8 @@ class Midiori(Module):
         fsm.act("WDATA",
                 self._dtready.eq(0),
                 If(self.addr_num == 0x01,
-                   NextValue(self.group_num, self.data.i[0:4])
+                   NextValue(self.group_num, self.data.i[0:4]),
+                   NextValue(self.ic, self.data.i[7])
                 ).Elif(self.addr_num == 0x03,
                       NextValue(self.isr, self.isr & ~self.data.i)
                 ).Else(
@@ -306,6 +309,22 @@ class Midiori(Module):
                    NextState("IDLE")
                 )
         )
+
+        #manual resets - the bus FSM cannot be reset during an ic
+        #todo: consider using clock domain reset instead
+        self.sync += If(self.exreset == 0 | self.ic,
+                        self.group_num.eq(0),
+                        clkm.eq(0),
+                        self.ivo.eq(0),
+                        self.ier.eq(0),
+                        self.isr.eq(0),
+                        gpt_counter.eq(0),
+                        gpt_low_byte_cache.eq(0),
+                        gpt_reset_value.eq(0),
+                        clock_counter.eq(0),
+                        clock_low_byte_cache.eq(0),
+                        clock_reset_value.eq(0),
+                        )
 
 def midi_read(m, reg):
     yield m.addr.eq(base_addr+1)
@@ -386,6 +405,15 @@ def test(m):
     yield
     assert(yield m._dtready == 0)
     yield
+    # test reset
+    yield from midi_write(m, 0x06, 0xFF)
+    yield
+    yield from midi_write(m, 0x01, 0x80)
+    yield
+    yield from midi_write(m, 0x01, 0x00)
+    yield
+    assert(yield m.ier == 0x00)
+    #configure
     yield from midi_read(m, 0x34)
     yield from midi_read(m, 0x16)
     yield from midi_write(m, 0x04, 0xE0)
@@ -423,4 +451,5 @@ if __name__ == "__main__":
         m.comb += plat.request("tx").eq(m.tx)
         m.comb += plat.request("irq2").eq(m._irq)
         m.comb += m._iack.eq(plat.request("iack2"))
+        m.comb += m.exreset.eq(plat.request("exreset"))
         plat.build(m)
