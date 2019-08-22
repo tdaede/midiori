@@ -81,7 +81,14 @@ class UART(Module):
 class Midiori(Module):
     def __init__(self):
         self.tx = Signal()
-        self.uart = UART(self.tx, 16000000, 31250)
+        self.uart_tx = Signal()
+        self.uart = UART(self.uart_tx, 16000000, 31250)
+        self.brke = Signal()
+        self.comb += If(self.brke,
+            self.tx.eq(0),
+        ).Else(
+            self.tx.eq(self.uart_tx)
+        )
         self.submodules += self.uart
         self.fifo = SyncFIFOBuffered(8, 16)
         self.submodules += self.fifo
@@ -268,6 +275,8 @@ class Midiori(Module):
                        NextValue(self.ivo, self.data.i[5:8])
                     ).Elif(self.register_num == 0x06,
                            NextValue(self.ier, self.data.i)
+                    ).Elif(self.register_num == 0x55,
+                           NextValue(self.brke, self.data.i[3])
                     ).Elif(self.register_num == 0x56,
                        NextValue(self.fifo.we, 1),
                        NextValue(self.fifo.din, self.data.i),
