@@ -124,7 +124,13 @@ class Midiori(Module):
         self.comb += self.txrdy.eq(self.fifo.writable)
         #self.comb += self.txrdy.eq(1)
         self.txidl = Signal()
-        self.comb += self.txidl.eq(1)
+        txidl_counter = Signal(17)
+        self.sync += If(txidl_counter >= 128000,
+            txidl_counter.eq(0),
+            self.txidl.eq(1)
+        ).Elif(self.txe & self.txemp,
+            txidl_counter.eq(txidl_counter + 1)
+        )
         self.txbsy = Signal()
         self.comb += self.txbsy.eq(0)
         self.tsr = Signal(8)
@@ -283,6 +289,9 @@ class Midiori(Module):
                            NextValue(self.ier, self.data.i)
                     ).Elif(self.register_num == 0x55,
                            NextValue(self.txe, self.data.i[0]),
+                           If(self.data.i[2],
+                              NextValue(self.txidl, 0)
+                           ),
                            NextValue(self.brke, self.data.i[3])
                     ).Elif(self.register_num == 0x56,
                        NextValue(self.fifo.we, 1),
