@@ -94,7 +94,6 @@ class Midiori(Module):
         self.submodules += self.uart
         self.fifo = SyncFIFOBuffered(8, 16)
         self.submodules += self.fifo
-        self.tx_running = Signal()
         self.comb += self.uart.tx_ready.eq(self.fifo.readable)
         self.comb += self.fifo.re.eq(self.uart.tx_ack)
         self.comb += If(self.txe,
