@@ -140,7 +140,7 @@ class Midiori(Module):
         self.sync += If(txidl_counter >= 128000,
             txidl_counter.eq(0),
             self.txidl.eq(1),
-            itx_fifo_fe.eq(1)
+            itx_fifo_fe.eq(self.ase)
         ).Elif(~self.txemp | ~self.txe,
             txidl_counter.eq(0)
         ).Else(
@@ -302,6 +302,8 @@ class Midiori(Module):
                        NextValue(self.ivo, self.data.i[5:8])
                     ).Elif(self.register_num == 0x06,
                            NextValue(self.ier, self.data.i)
+                    ).Elif(self.register_num == 0x14,
+                           NextValue(self.ase, self.data.i[5])
                     ).Elif(self.register_num == 0x55,
                            NextValue(self.txe, self.data.i[0]),
                            If(self.data.i[2],
