@@ -127,8 +127,10 @@ class Midiori(Module):
         txidl_counter = Signal(17)
         self.sync += If(txidl_counter >= 128000,
             txidl_counter.eq(0),
-            self.txidl.eq(1)
-        ).Elif(self.txe & self.txemp,
+            self.txidl.eq(1),
+        ).Elif(~self.txemp | ~self.txe,
+            txidl_counter.eq(0)
+        ).Else(
             txidl_counter.eq(txidl_counter + 1)
         )
         self.txbsy = Signal()
