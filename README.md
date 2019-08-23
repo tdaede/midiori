@@ -12,9 +12,7 @@
 
 - MIDI IN and THRU ports are not implemented.
 - FIFO-Rx and FIFO-IRx are not implemented.
-- FIFO-ITx is not implemented.
-- Tx idle detection is not implemented.
-- IC is not implemented.
+- FIFO-ITx start/stop/clock messages are not implemented.
 - SYNC and CLICK are not implemented.
 - Sequencer is not implemented.
 - GPIO is not implemented.

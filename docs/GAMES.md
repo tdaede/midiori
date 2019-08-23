@@ -3,9 +3,9 @@ Known working
 * Akumajou Dracula
 * Angel Dive
 * Arcus Odyssey
-* Atomic Robo-Kid
+* Atomic Robo-Kid (F1)
 * Carat
-* Cynthia
+* Cynthia (V2 only)
 * Daimakaimura
 * Detana!! TwinBee
 * Die Bahnwelt
