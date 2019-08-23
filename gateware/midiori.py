@@ -111,10 +111,10 @@ class Midiori(Module):
             self.uart.tx_data.eq(self.fifo.dout)
         )
         self.sync += If(self.uart.tx_ack & itx_fifo_fe & ~itx_fifo_in_progress,
-                        itx_fifo_fe.eq(0),
+            itx_fifo_fe.eq(0),
             itx_fifo_in_progress.eq(1)
         ).Elif(self.uart.tx_ack & itx_fifo_in_progress,
-               itx_fifo_in_progress.eq(0),
+            itx_fifo_in_progress.eq(0),
         )
         self.addr = Signal(23)
         self._irq = Signal(reset=1)
@@ -136,8 +136,9 @@ class Midiori(Module):
         self.txrdy = Signal()
         self.comb += self.txrdy.eq(self.fifo.writable)
         self.txidl = Signal()
-        txidl_counter = Signal(17)
-        self.sync += If(txidl_counter >= 128000,
+        self.ase = Signal()
+        txidl_counter = Signal(21)
+        self.sync += If(txidl_counter >= 1280000,
             txidl_counter.eq(0),
             self.txidl.eq(1),
             itx_fifo_fe.eq(self.ase)
@@ -362,6 +363,7 @@ class Midiori(Module):
                         self.isr.eq(0),
                         self.txe.eq(0),
                         self.brke.eq(0),
+                        self.ase.eq(0),
                         gpt_counter.eq(0),
                         gpt_low_byte_cache.eq(0),
                         gpt_reset_value.eq(0),
