@@ -133,10 +133,8 @@ class Midiori(Module):
 
         self.txemp = Signal()
         self.comb += self.txemp.eq(self.fifo.level == 0)
-        #self.comb += self.txemp.eq(1)
         self.txrdy = Signal()
         self.comb += self.txrdy.eq(self.fifo.writable)
-        #self.comb += self.txrdy.eq(1)
         self.txidl = Signal()
         txidl_counter = Signal(17)
         self.sync += If(txidl_counter >= 128000,
