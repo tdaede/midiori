@@ -94,12 +94,27 @@ class Midiori(Module):
         self.submodules += self.uart
         self.fifo = SyncFIFOBuffered(8, 16)
         self.submodules += self.fifo
-        self.comb += self.uart.tx_ready.eq(self.fifo.readable)
-        self.comb += self.fifo.re.eq(self.uart.tx_ack)
-        self.comb += If(self.txe,
-            self.uart.tx_data.eq(self.fifo.dout)
+        # the itx fifo is described as a 4 deep fifo,
+        # but it's really just 4 different types of
+        # messages that can be sent
+        itx_fifo_fe = Signal()
+        itx_fifo_in_progress = Signal()
+        self.comb += self.uart.tx_ready.eq(self.fifo.readable | itx_fifo_fe)
+        self.comb += If(itx_fifo_in_progress,
+            self.fifo.re.eq(0)
         ).Else(
-            self.uart.tx_data.eq(0)
+            self.fifo.re.eq(self.uart.tx_ack)
+        )
+        self.comb += If(itx_fifo_fe,
+            self.uart.tx_data.eq(0xfe)
+        ).Else(
+            self.uart.tx_data.eq(self.fifo.dout)
+        )
+        self.sync += If(self.uart.tx_ack & itx_fifo_fe & ~itx_fifo_in_progress,
+                        itx_fifo_fe.eq(0),
+            itx_fifo_in_progress.eq(1)
+        ).Elif(self.uart.tx_ack & itx_fifo_in_progress,
+               itx_fifo_in_progress.eq(0),
         )
         self.addr = Signal(23)
         self._irq = Signal(reset=1)
@@ -127,6 +142,7 @@ class Midiori(Module):
         self.sync += If(txidl_counter >= 128000,
             txidl_counter.eq(0),
             self.txidl.eq(1),
+            itx_fifo_fe.eq(1)
         ).Elif(~self.txemp | ~self.txe,
             txidl_counter.eq(0)
         ).Else(
@@ -458,8 +474,8 @@ def test(m):
     assert(yield m.vec == 6)
     yield from midi_write(m, 0xf4, 0x00)
     yield from midi_read(m, 0xf5)
-    #for i in range(1, 10000):
-    #    yield
+    for i in range(1, 10000):
+        yield
 
 if __name__ == "__main__":
     import sys
