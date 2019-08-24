@@ -19,4 +19,6 @@
 - Address is locked to 0xeafa00.
 - IRQ is locked to slot+2.
 - Baud rate is locked to 31250 bps, 8n1.
+- 32-byte, null terminated version string, readable by writing
+  the index (0-31) to 0xF4 and reading the current byte from 0xF5.
 - 68k bus is implemented natively and timings are generally faster.
