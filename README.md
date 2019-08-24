@@ -8,6 +8,10 @@
 4. Attach OUT connector to MIDI in of your synthesizer.
 5. (optional) Run LINE OUT from the x68000 to the LINE IN of your synthesizer's internal mixer.
 
+# Compatibility
+
+A list of tested games is available [here](docs/GAMES.md).
+
 # Differences from midiori v1
 
 - MIDI IN and THRU ports are not implemented.
