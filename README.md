@@ -12,6 +12,10 @@
 
 A list of tested games is available [here](docs/GAMES.md).
 
+# Changelog
+
+See [here](docs/CHANGELOG.md).
+
 # Differences from midiori v1
 
 - MIDI IN and THRU ports are not implemented.
