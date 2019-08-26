@@ -10,7 +10,7 @@ Known working
 * Detana!! TwinBee
 * Die Bahnwelt
 * Etoile Princesse
-* Final Fight (switching to internal fails)
+* Final Fight
 * Garou Densetsu
 * Garou Densetsu 2
 * Garou Densetsu Special
