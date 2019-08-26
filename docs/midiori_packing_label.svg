@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.3252482"
-     inkscape:cx="365.63791"
-     inkscape:cy="253.19039"
+     inkscape:cx="208.82685"
+     inkscape:cy="166.27146"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -143,23 +143,18 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:4.39208317px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="54.03429"
-       y="246.88484"
+       y="244.23904"
        id="text4520-9-0"><tspan
          sodipodi:role="line"
          id="tspan4518-9-7"
          x="54.03429"
-         y="246.88484"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:4.39208317px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.26458332px">in</tspan><tspan
+         y="247.31703"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:4.39208317px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.26458332px" /><tspan
          sodipodi:role="line"
          x="54.03429"
-         y="251.27693"
+         y="251.70911"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:4.39208317px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.26458332px"
-         id="tspan4617">out</tspan><tspan
-         sodipodi:role="line"
-         x="54.03429"
-         y="255.66901"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:4.39208317px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.26458332px"
-         id="tspan4619">thru</tspan></text>
+         id="tspan4619">out</tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4621"
@@ -231,7 +226,7 @@
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 60.497965,250.27391 c 16.095443,-1.0481 26.498638,-23.3002 27.766899,-5.09506"
+       d="m 60.249542,250.22423 c 16.095443,-1.0481 26.747061,-23.25052 28.015322,-5.04538"
        id="path4698"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
