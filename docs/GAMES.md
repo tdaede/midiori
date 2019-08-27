@@ -14,22 +14,22 @@ Known working
 * Garou Densetsu
 * Garou Densetsu 2
 * Garou Densetsu Special
-* Gemini Wing
+* Gemini Wing (F1)
 * Genocide 2
 * Geograph Seal
 * KU2
 * Mahou Daisakusen
 * Metal Orange EX
 * Nemesis '90 Kai
-* Parodius Da!
+* Parodius Da! (F3)
 * Phalanx
-* Sol-Feace
+* Sol-Feace (登録)
 * Star Luster
 * Street Fighter II
 * Super Hang-On
 * Super Street Fighter II
-* Thunder Blade
-* Xenon 2
+* Thunder Blade (F5)
+* Xenon 2 (登録)
 
 Broken
 -------
