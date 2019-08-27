@@ -9,6 +9,7 @@ Known working
 * Daimakaimura
 * Detana!! TwinBee
 * Die Bahnwelt
+* Deadly Edge
 * Etoile Princesse
 * Final Fight
 * Garou Densetsu
