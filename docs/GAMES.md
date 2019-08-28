@@ -4,6 +4,7 @@ Known working
 * Angel Dive
 * Arcus Odyssey
 * Atomic Robo-Kid (F1)
+* Bleed Out
 * Carat
 * Cynthia (V2 only)
 * Daimakaimura
