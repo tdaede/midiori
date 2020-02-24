@@ -9,7 +9,7 @@ import subprocess
 
 base_addr = Constant(0xeafa00 >> 1)
 
-describe = subprocess.check_output(["git", "describe", "--tags"]).strip().decode()
+describe = subprocess.check_output(["git", "describe", "--tags", "--long"]).strip().decode()
 version_string = Array(("midiori "+describe+"\x00").encode('shift_jis'))
 
 def _divisor(freq_in, freq_out, max_ppm=None):
