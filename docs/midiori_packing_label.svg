@@ -772,21 +772,12 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px"
          id="tspan1613">mini-DIN connector</tspan></text>
     <g
-       style="stroke-width:3.2296"
-       transform="matrix(0.08192445,0,0,0.08192445,123.77478,271.83336)"
-       id="g3868">
-      <rect
-         style="stroke-width:3.2296"
-         id="rect2"
-         fill="#ffffff"
-         height="264"
-         width="264"
-         y="0"
-         x="0" />
+       id="g4499">
       <g
          style="stroke-width:3.2296"
          id="g633"
-         fill="#000000">
+         fill="#000000"
+         transform="matrix(0.08192445,0,0,0.08192445,123.77478,271.83336)">
         <use
            style="stroke-width:3.2296"
            height="100%"
