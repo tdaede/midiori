@@ -38,6 +38,10 @@
        id="p" />
   </defs>
   <sodipodi:namedview
+     inkscape:snap-global="false"
+     inkscape:snap-others="false"
+     inkscape:guide-bbox="true"
+     showguides="false"
      id="base"
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -45,8 +49,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.94137978"
-     inkscape:cx="131.2415"
-     inkscape:cy="254.032"
+     inkscape:cx="160.22967"
+     inkscape:cy="268.65217"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -56,7 +60,12 @@
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:document-rotation="0" />
+     inkscape:document-rotation="0">
+    <sodipodi:guide
+       id="guide4571"
+       orientation="0,-1"
+       position="77.16312,23.098264" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -76,97 +85,97 @@
      transform="translate(0,-195.39998)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;line-height:6.61458302px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="32.127979"
-       y="217.96518"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:6.61458px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="54.882168"
+       y="219.0235"
        id="text4520"><tspan
          sodipodi:role="line"
          id="tspan4518"
-         x="32.127979"
-         y="217.96518"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.39999962px;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.26458332px">midiori</tspan></text>
+         x="54.882168"
+         y="219.0235"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.264583px">midiori</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.77027px;line-height:10.8193px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="34.615532"
-       y="240.39621"
+       y="242.51285"
        id="text4520-9"><tspan
          sodipodi:role="line"
          id="tspan4518-9"
          x="34.615532"
-         y="240.39621"
+         y="242.51285"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.77027px;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.264582px">midiori</tspan></text>
     <text
        transform="rotate(-90)"
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:4.39208px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-262.48276"
+       x="-264.59946"
        y="52.458023"
        id="text4520-9-0"><tspan
          sodipodi:role="line"
          id="tspan4518-9-7"
-         x="-262.48276"
+         x="-264.59946"
          y="52.458023"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:4.39208px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.264583px" /><tspan
          sodipodi:role="line"
-         x="-262.48276"
+         x="-264.59946"
          y="56.850101"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:4.39208px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:end;text-anchor:end;stroke-width:0.264583px"
          id="tspan4619">out</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.61458px;line-height:6.61458px;font-family:Orbitron;-inkscape-font-specification:Orbitron;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="126.09976"
-       y="218.10068"
+       x="126.62893"
+       y="226.56723"
        id="text4704"><tspan
          rotate="0 0 0"
          sodipodi:role="line"
          id="tspan4702"
-         x="126.09976"
-         y="218.10068"
+         x="126.62893"
+         y="226.56723"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.264583px">v2.2</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path977"
-       d="m 10.646302,286.29198 -3.4809972,0.005 -0.7048307,-0.70483 v -50.55327 l 0.7928897,-0.79289 h 3.3635642 v -1.8999 c 0,0 0.339174,-1.39006 1.182655,-1.43611 0.843481,-0.0461 50.90756,0 50.90756,0 0,0 1.152074,0.76342 1.140334,1.47878 -0.0118,0.71536 0,57.71027 0,57.71027 0,0 -0.0298,1.73789 -0.955854,1.73789 -0.926077,0 -51.077972,0 -51.077972,0 0,0 -1.266727,-0.0856 -1.196488,-0.80526 0.07024,-0.71968 0.02914,-4.7398 0.02914,-4.7398 z"
+       d="m 10.646302,288.40866 -3.4809972,0.005 -0.7048307,-0.70483 v -50.55327 l 0.7928897,-0.79289 h 3.3635642 v -1.8999 c 0,0 0.339174,-1.39006 1.182655,-1.43611 0.843481,-0.0461 50.90756,0 50.90756,0 0,0 1.152074,0.76342 1.140334,1.47878 -0.0118,0.71536 0,57.71027 0,57.71027 0,0 -0.0298,1.73789 -0.955854,1.73789 -0.926077,0 -51.077972,0 -51.077972,0 0,0 -1.266727,-0.0856 -1.196488,-0.80526 0.07024,-0.71968 0.02914,-4.7398 0.02914,-4.7398 z"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="262.00644"
+       y="264.12314"
        x="58.419823"
        height="6.1349678"
        width="5.3702531"
        id="rect1000"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="241.7908"
+       y="243.90744"
        x="16.481216"
        height="3.618701"
        width="2.0478547"
        id="rect1002"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="248.16893"
+       y="250.28557"
        x="15.823911"
        height="6.3038092"
        width="3.0059953"
        id="rect1004"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="261.83707"
+       y="263.95377"
        x="23.972092"
        height="5.851522"
        width="5.6199231"
        id="rect1006"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="265.92517"
+       y="268.04187"
        x="32.869545"
        height="2.0387342"
        width="2.6984515"
        id="rect1008"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
-       y="271.25174"
+       y="273.36844"
        x="33.352989"
        height="1.9258975"
        width="1.8262733"
@@ -178,28 +187,28 @@
        width="3.0059953"
        height="6.3038092"
        x="24.06208"
-       y="248.17383" />
+       y="250.29047" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1004-3"
        width="3.0059953"
        height="6.3038092"
        x="15.927602"
-       y="257.15298" />
+       y="259.26968" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1004-56"
        width="3.0059953"
        height="6.3038092"
        x="15.929845"
-       y="266.19217" />
+       y="268.30887" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1004-2"
        width="3.0059953"
        height="6.3038092"
        x="15.904881"
-       y="275.02676" />
+       y="277.14346" />
     <rect
        inkscape:tile-y0="39.325166"
        inkscape:tile-x0="48.247699"
@@ -207,7 +216,7 @@
        inkscape:tile-w="3.165088"
        inkscape:tile-cy="39.706863"
        inkscape:tile-cx="49.830243"
-       y="234.77515"
+       y="236.89178"
        x="7.5518422"
        height="0.66339391"
        width="3.065088"
@@ -704,7 +713,7 @@
        y="0"
        x="0" />
     <rect
-       y="275.16394"
+       y="277.28064"
        x="24.034088"
        height="6.3038092"
        width="3.0059953"
@@ -712,7 +721,7 @@
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="1.094811"
-       cy="233.04024"
+       cy="235.15688"
        cx="61.748138"
        id="path1571"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
@@ -720,34 +729,34 @@
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle1573"
        cx="61.905907"
-       cy="289.63"
+       cy="291.7467"
        r="1.094811" />
     <text
        id="text1577"
-       y="259.12976"
-       x="142.86148"
+       y="256.48389"
+       x="143.9198"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:5.64445px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan1579"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px"
-         y="259.12976"
-         x="142.86148"
+         y="256.48389"
+         x="143.9198"
          sodipodi:role="line">CZ-6BM1 compatible</tspan></text>
     <text
        id="text1599"
        y="240.95529"
-       x="75.845291"
+       x="76.903625"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:6.35001px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';stroke-width:0.264583px"
          y="240.95529"
-         x="75.845291"
+         x="76.903625"
          id="tspan1597"
          sodipodi:role="line">MIDI card for X68000</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path1601"
-       d="M 75.814337,246.89635 H 142.33202"
+       d="M 77.401838,246.89635 H 143.91953"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <text
        id="text1611"
@@ -763,15 +772,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:5.64445px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="142.86148"
-       y="268.65491"
+       x="143.9198"
+       y="266.53821"
        id="text1615"><tspan
          sodipodi:role="line"
-         x="142.86148"
-         y="268.65491"
+         x="143.9198"
+         y="266.53821"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px"
          id="tspan1613">mini-DIN connector</tspan></text>
     <g
+       transform="translate(1.0583333,3.1750001)"
        id="g4499">
       <g
          style="stroke-width:3.2296"
@@ -3287,13 +3297,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:3.08681px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="122.66989"
-       y="290.96716"
+       x="122.81042"
+       y="293.19138"
        id="text4704-6"><tspan
          sodipodi:role="line"
          id="tspan4702-5"
-         x="122.66989"
-         y="290.96716"
+         x="122.81042"
+         y="293.19138"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px">github.com/tdaede/midiori</tspan></text>
   </g>
 </svg>
