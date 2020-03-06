@@ -32,6 +32,10 @@
          operator="arithmetic"
          in2="colormatrix" />
     </filter>
+    <rect
+       height="8"
+       width="8"
+       id="p" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -41,8 +45,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.94137978"
-     inkscape:cx="281.64939"
-     inkscape:cy="237.68953"
+     inkscape:cx="131.2415"
+     inkscape:cy="254.032"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -121,17 +125,6 @@
          x="126.09976"
          y="218.10068"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Orbitron;-inkscape-font-specification:Orbitron;stroke-width:0.264583px">v2.2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:4.23333px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="141.22604"
-       y="290.23038"
-       id="text4704-6"><tspan
-         sodipodi:role="line"
-         id="tspan4702-5"
-         x="141.22604"
-         y="290.23038"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px">github.com/tdaede/midiori</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path977"
@@ -732,29 +725,29 @@
     <text
        id="text1577"
        y="259.12976"
-       x="141.274"
+       x="142.86148"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:5.64445px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan1579"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px"
          y="259.12976"
-         x="141.274"
+         x="142.86148"
          sodipodi:role="line">CZ-6BM1 compatible</tspan></text>
     <text
        id="text1599"
        y="240.95529"
-       x="74.25779"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:6.35001px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="75.845291"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:6.35001px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';stroke-width:0.264583px;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';stroke-width:0.264583px"
          y="240.95529"
-         x="74.25779"
+         x="75.845291"
          id="tspan1597"
          sodipodi:role="line">MIDI card for X68000</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path1601"
-       d="M 74.226836,246.89635 H 140.74451"
+       d="M 75.814337,246.89635 H 142.33202"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <text
        id="text1611"
@@ -770,13 +763,2546 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:5.64445px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="141.274"
+       x="142.86148"
        y="268.65491"
        id="text1615"><tspan
          sodipodi:role="line"
-         x="141.274"
+         x="142.86148"
          y="268.65491"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px"
          id="tspan1613">mini-DIN connector</tspan></text>
+    <g
+       style="stroke-width:3.2296"
+       transform="matrix(0.08192445,0,0,0.08192445,123.77478,271.83336)"
+       id="g3868">
+      <rect
+         style="stroke-width:3.2296"
+         id="rect2"
+         fill="#ffffff"
+         height="264"
+         width="264"
+         y="0"
+         x="0" />
+      <g
+         style="stroke-width:3.2296"
+         id="g633"
+         fill="#000000">
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use7"
+           y="32"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use9"
+           y="40"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use11"
+           y="48"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use13"
+           y="56"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use15"
+           y="64"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use17"
+           y="72"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use19"
+           y="80"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use21"
+           y="96"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use23"
+           y="120"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use25"
+           y="176"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use27"
+           y="184"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use29"
+           y="192"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use31"
+           y="200"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use33"
+           y="208"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use35"
+           y="216"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use37"
+           y="224"
+           x="32"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use39"
+           y="32"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use41"
+           y="80"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use43"
+           y="96"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use45"
+           y="120"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use47"
+           y="128"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use49"
+           y="136"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use51"
+           y="152"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use53"
+           y="160"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use55"
+           y="176"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use57"
+           y="224"
+           x="40"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use59"
+           y="32"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use61"
+           y="48"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use63"
+           y="56"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use65"
+           y="64"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use67"
+           y="80"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use69"
+           y="104"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use71"
+           y="176"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use73"
+           y="192"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use75"
+           y="200"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use77"
+           y="208"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use79"
+           y="224"
+           x="48"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use81"
+           y="32"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use83"
+           y="48"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use85"
+           y="56"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use87"
+           y="64"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use89"
+           y="80"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use91"
+           y="96"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use93"
+           y="112"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use95"
+           y="136"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use97"
+           y="176"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use99"
+           y="192"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use101"
+           y="200"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use103"
+           y="208"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use105"
+           y="224"
+           x="56"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use107"
+           y="32"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use109"
+           y="48"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use111"
+           y="56"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use113"
+           y="64"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use115"
+           y="80"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use117"
+           y="96"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use119"
+           y="104"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use121"
+           y="120"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use123"
+           y="136"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use125"
+           y="144"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use127"
+           y="160"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use129"
+           y="176"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use131"
+           y="192"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use133"
+           y="200"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use135"
+           y="208"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use137"
+           y="224"
+           x="64"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use139"
+           y="32"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use141"
+           y="80"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use143"
+           y="120"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use145"
+           y="160"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use147"
+           y="176"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use149"
+           y="224"
+           x="72"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use151"
+           y="32"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use153"
+           y="40"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use155"
+           y="48"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use157"
+           y="56"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use159"
+           y="64"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use161"
+           y="72"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use163"
+           y="80"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use165"
+           y="96"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use167"
+           y="112"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use169"
+           y="128"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use171"
+           y="144"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use173"
+           y="160"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use175"
+           y="176"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use177"
+           y="184"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use179"
+           y="192"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use181"
+           y="200"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use183"
+           y="208"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use185"
+           y="216"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use187"
+           y="224"
+           x="80"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use189"
+           y="104"
+           x="88"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use191"
+           y="120"
+           x="88"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use193"
+           y="144"
+           x="88"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use195"
+           y="152"
+           x="88"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use197"
+           y="160"
+           x="88"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use199"
+           y="32"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use201"
+           y="80"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use203"
+           y="88"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use205"
+           y="120"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use207"
+           y="128"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use209"
+           y="144"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use211"
+           y="160"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use213"
+           y="168"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use215"
+           y="192"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use217"
+           y="200"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use219"
+           y="216"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use221"
+           y="224"
+           x="96"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use223"
+           y="48"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use225"
+           y="56"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use227"
+           y="64"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use229"
+           y="128"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use231"
+           y="144"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use233"
+           y="192"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use235"
+           y="200"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use237"
+           y="208"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use239"
+           y="224"
+           x="104"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use241"
+           y="32"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use243"
+           y="48"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use245"
+           y="64"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use247"
+           y="80"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use249"
+           y="88"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use251"
+           y="104"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use253"
+           y="120"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use255"
+           y="128"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use257"
+           y="144"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use259"
+           y="160"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use261"
+           y="168"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use263"
+           y="184"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use265"
+           y="200"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use267"
+           y="208"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use269"
+           y="224"
+           x="112"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use271"
+           y="72"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use273"
+           y="96"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use275"
+           y="104"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use277"
+           y="112"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use279"
+           y="128"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use281"
+           y="136"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use283"
+           y="152"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use285"
+           y="176"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use287"
+           y="200"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use289"
+           y="208"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use291"
+           y="216"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use293"
+           y="224"
+           x="120"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use295"
+           y="40"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use297"
+           y="80"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use299"
+           y="88"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use301"
+           y="96"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use303"
+           y="128"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use305"
+           y="160"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use307"
+           y="168"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use309"
+           y="192"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use311"
+           y="208"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use313"
+           y="224"
+           x="128"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use315"
+           y="40"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use317"
+           y="48"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use319"
+           y="56"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use321"
+           y="64"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use323"
+           y="72"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use325"
+           y="88"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use327"
+           y="136"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use329"
+           y="144"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use331"
+           y="160"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use333"
+           y="176"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use335"
+           y="184"
+           x="136"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use337"
+           y="32"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use339"
+           y="48"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use341"
+           y="56"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use343"
+           y="64"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use345"
+           y="72"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use347"
+           y="80"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use349"
+           y="96"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use351"
+           y="136"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use353"
+           y="144"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use355"
+           y="152"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use357"
+           y="176"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use359"
+           y="192"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use361"
+           y="200"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use363"
+           y="216"
+           x="144"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use365"
+           y="56"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use367"
+           y="88"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use369"
+           y="96"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use371"
+           y="104"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use373"
+           y="112"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use375"
+           y="120"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use377"
+           y="136"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use379"
+           y="144"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use381"
+           y="152"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use383"
+           y="160"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use385"
+           y="184"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use387"
+           y="192"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use389"
+           y="200"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use391"
+           y="216"
+           x="152"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use393"
+           y="40"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use395"
+           y="56"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use397"
+           y="64"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use399"
+           y="80"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use401"
+           y="96"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use403"
+           y="128"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use405"
+           y="144"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use407"
+           y="152"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use409"
+           y="160"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use411"
+           y="168"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use413"
+           y="176"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use415"
+           y="184"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use417"
+           y="192"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use419"
+           y="200"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use421"
+           y="224"
+           x="160"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use423"
+           y="112"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use425"
+           y="136"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use427"
+           y="144"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use429"
+           y="160"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use431"
+           y="192"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use433"
+           y="200"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use435"
+           y="208"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use437"
+           y="216"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use439"
+           y="224"
+           x="168"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use441"
+           y="32"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use443"
+           y="40"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use445"
+           y="48"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use447"
+           y="56"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use449"
+           y="64"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use451"
+           y="72"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use453"
+           y="80"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use455"
+           y="96"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use457"
+           y="120"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use459"
+           y="128"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use461"
+           y="144"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use463"
+           y="152"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use465"
+           y="160"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use467"
+           y="176"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use469"
+           y="192"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use471"
+           y="200"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use473"
+           y="224"
+           x="176"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use475"
+           y="32"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use477"
+           y="80"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use479"
+           y="104"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use481"
+           y="112"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use483"
+           y="120"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use485"
+           y="128"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use487"
+           y="152"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use489"
+           y="160"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use491"
+           y="192"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use493"
+           y="216"
+           x="184"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use495"
+           y="32"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use497"
+           y="48"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use499"
+           y="56"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use501"
+           y="64"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use503"
+           y="80"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use505"
+           y="104"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use507"
+           y="136"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use509"
+           y="144"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use511"
+           y="160"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use513"
+           y="168"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use515"
+           y="176"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use517"
+           y="184"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use519"
+           y="192"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use521"
+           y="208"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use523"
+           y="216"
+           x="192"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use525"
+           y="32"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use527"
+           y="48"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use529"
+           y="56"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use531"
+           y="64"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use533"
+           y="80"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use535"
+           y="104"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use537"
+           y="112"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use539"
+           y="120"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use541"
+           y="144"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use543"
+           y="152"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use545"
+           y="208"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use547"
+           y="224"
+           x="200"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use549"
+           y="32"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use551"
+           y="48"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use553"
+           y="56"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use555"
+           y="64"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use557"
+           y="80"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use559"
+           y="104"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use561"
+           y="120"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use563"
+           y="144"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use565"
+           y="152"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use567"
+           y="160"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use569"
+           y="168"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use571"
+           y="208"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use573"
+           y="216"
+           x="208"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use575"
+           y="32"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use577"
+           y="80"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use579"
+           y="104"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use581"
+           y="120"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use583"
+           y="136"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use585"
+           y="144"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use587"
+           y="160"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use589"
+           y="168"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use591"
+           y="208"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use593"
+           y="216"
+           x="216"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use595"
+           y="32"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use597"
+           y="40"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use599"
+           y="48"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use601"
+           y="56"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use603"
+           y="64"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use605"
+           y="72"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use607"
+           y="80"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use609"
+           y="96"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use611"
+           y="112"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use613"
+           y="120"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use615"
+           y="128"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use617"
+           y="144"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use619"
+           y="152"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use621"
+           y="176"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use623"
+           y="184"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use625"
+           y="192"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use627"
+           y="208"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use629"
+           y="216"
+           x="224"
+           xlink:href="#p" />
+        <use
+           style="stroke-width:3.2296"
+           height="100%"
+           width="100%"
+           id="use631"
+           y="224"
+           x="224"
+           xlink:href="#p" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:3.08681px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="122.66989"
+       y="290.96716"
+       id="text4704-6"><tspan
+         sodipodi:role="line"
+         id="tspan4702-5"
+         x="122.66989"
+         y="290.96716"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';text-align:end;text-anchor:end;stroke-width:0.264583px">github.com/tdaede/midiori</tspan></text>
   </g>
 </svg>
