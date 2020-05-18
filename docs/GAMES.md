@@ -2,7 +2,7 @@ Known working
 ---------------
 * Akumajou Dracula
 * Angel Dive
-* Arcus Odyssey
+* Arcus Odyssey (登録)
 * Atomic Robo-Kid (F1)
 * Bleed Out
 * Carat
