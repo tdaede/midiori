@@ -19,6 +19,7 @@ Known working
 * Gemini Wing (F1)
 * Genocide 2
 * Geograph Seal
+* Granada (10MHz)
 * KU2
 * Mahou Daisakusen
 * Metal Orange EX
@@ -40,6 +41,5 @@ Unknown
 --------
 * Gradius II - unknown how to configure
 * Duel Fighter 2 - unknown how to configure
-* Granada - freezes on intro with both 1.1 and 2.1
 * Overtake - crashes on music playback start with both 1.1 and 2.1
 * Square Resort - unknown how to configure
