@@ -53,3 +53,55 @@ As described by [_Outside X68000_](https://archive.org/stream/OutsideX680001993/
 |A48    | INH2        | O   | Refresh cycle display signal |
 |A49    | Vcc1        | O   | +5V DC power supply |
 |A50    | Vcc1        | O   | +5V DC power supply |
+|B1     | GND         | ... | Ground |
+|B2     | 10MHz       | O   | 10MHz clock signal |
+|B3     | ~10MHz      | O   | 10MHz clock signal (inverted) |
+|B4     | E           | O   | 6800-series peripheral device clock |
+|B5     | AB1         | I/O | Address bus |
+|B6     | AB2         | I/O | Address bus |
+|B7     | AB3         | I/O | Address bus |
+|B8     | AB4         | I/O | Address bus |
+|B9     | AB5         | I/O | Address bus |
+|B10    | AB6         | I/O | Address bus |
+|B11    | GND         | ... | Ground |
+|B12    | AB7         | I/O | Address bus |
+|B13    | AB8         | I/O | Address bus |
+|B14    | AB9         | I/O | Address bus |
+|B15    | AB10        | I/O | Address bus |
+|B16    | AB11        | I/O | Address bus |
+|B17    | AB12        | I/O | Address bus |
+|B18    | AB13        | I/O | Address bus |
+|B19    | AB14        | I/O | Address bus |
+|B20    | AB15        | I/O | Address bus |
+|B21    | GND         | ... | Ground |
+|B22    | AB16        | I/O | Address bus |
+|B23    | AB17        | I/O | Address bus |
+|B24    | AB18        | I/O | Address bus |
+|B25    | AB19        | I/O | Address bus |
+|B26    | AB20        | I/O | Address bus |
+|B27    | AB21        | I/O | Address bus |
+|B28    | AB22        | I/O | Address bus |
+|B29    | AB23        | I/O | Address bus |
+|B30    | IDDIR       | O   | Data bus buffer direction control |
+|B31    | ---         | ... | Unused (key?) |
+|B32    | HSYNC       | O   | Horizontal sync signal |
+|B33    | VSYNC       | O   | Vertical sync signal |
+|B34    | ~DONE       | O   | DMA block transfer complete |
+|B35    | ~DTC        | I   | DMA data transfer completed |
+|B36    | ~EXREQ      | I/O | DMA data transfer request |
+|B37    | ~EXACK      | O   | DMA data transfer permission |
+|B38    | ~EXPCL      | I/O | DMA general purpose I/O signal |
+|B39    | ~EXOWN      | I/O | Bus release operation signal |
+|B40    | ~EXNMI      | I   | NMI request signal |
+|B41    | GND         | ... | Ground |
+|B42    | ~IRQ2-n     | O   | Level 2 interrupt request |
+|B43    | ~IRQ4-n     | O   | Level 4 interrupt request |
+|B44    | ~IACK2-n    | O   | Level 2 interrupt acknowledge |
+|B45    | ~IACK4-n    | O   | Level 4 interrupt acknowledge |
+|B46    | ~BR-n       | O   | Bus request |
+|B47    | ~BG-n       | O   | Bus ground |
+|B48    | ~BGACK      | O   | Bus ground acknowledge |
+|B49    | Vcc1        | O   | +5V DC power supply |
+|B50    | Vcc1        | O   | +5V DC power supply |
+
+
