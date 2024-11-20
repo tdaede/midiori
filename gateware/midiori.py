@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 
-from migen import *
-from migen.fhdl import verilog
-from migen.genlib.fifo import *
-from migen.genlib.coding import *
-import midiori_platform
+
+from amaranth import *
+from amaranth.compat import *
+from amaranth.compat.fhdl import verilog
+from amaranth.compat.genlib.fifo import *
+from amaranth.compat.genlib.coding import PriorityEncoder
+from midiori_platform import *
 import subprocess
 
 base_addr = Constant(0xeafa00 >> 1)
@@ -485,18 +487,20 @@ if __name__ == "__main__":
         m = Midiori()
         run_simulation(m, test(m), vcd_name="midiori.vcd")
     else:
-        plat = midiori_platform.Platform()
+        plat = MidioriPlatform()
         m = Midiori()
-        m.comb += m.addr.eq(plat.request("addr"))
-        m.comb += m._as.eq(plat.request("as"))
-        m.comb += m._lds.eq(plat.request("lds"))
-        m.comb += m._rw.eq(plat.request("rw"))
-        m.comb += plat.request("dtack").eq(m._dtready)
-        m.specials += m.data.get_tristate(plat.request("data"))
-        m.comb += plat.request("xltr_oe").eq(m.xltr_oe)
-        m.comb += m.data.oe.eq(~plat.request("iddir"))
-        m.comb += plat.request("tx").eq(m.tx)
-        m.comb += plat.request("irq2").eq(m._irq)
-        m.comb += m._iack.eq(plat.request("iack2"))
-        m.comb += m.exreset.eq(plat.request("exreset"))
+        m.clock_domains += ClockDomain("sync")
+        m.comb += ClockSignal().eq(plat.request("sync").i)
+        m.comb += m.addr.eq(plat.request("addr").i)
+        m.comb += m._as.eq(plat.request("as").i)
+        m.comb += m._lds.eq(plat.request("lds").i)
+        m.comb += m._rw.eq(plat.request("rw").i)
+        m.comb += plat.request("dtack").o.eq(m._dtready)
+        m.specials += m.data.get_tristate(plat.request("data", dir="-"))
+        m.comb += plat.request("xltr_oe").o.eq(m.xltr_oe)
+        m.comb += m.data.oe.eq(~plat.request("iddir").i)
+        m.comb += plat.request("tx").o.eq(m.tx)
+        m.comb += plat.request("irq2").o.eq(m._irq)
+        m.comb += m._iack.eq(plat.request("iack2").i)
+        m.comb += m.exreset.eq(plat.request("exreset").i)
         plat.build(m)
