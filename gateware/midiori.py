@@ -9,7 +9,7 @@ from amaranth.compat.genlib.coding import PriorityEncoder
 from midiori_platform import *
 import subprocess
 
-base_addr = Constant(0xeafa00 >> 1)
+base_addr = Const(0xeafa00 >> 1)
 
 describe = subprocess.check_output(["git", "describe", "--tags", "--long"]).strip().decode()
 version_string = Array(("midiori "+describe+"\x00").encode('shift_jis'))
@@ -34,7 +34,7 @@ class UART(Module):
 
         divisor = _divisor(freq_in=clk_freq, freq_out=baud_rate, max_ppm=50000)
 
-        tx_counter = Signal(max=divisor)
+        tx_counter = Signal(range(0, divisor))
         self.tx_strobe = tx_strobe = Signal()
         self.comb += tx_strobe.eq(tx_counter == 0)
         self.sync += \
@@ -103,14 +103,14 @@ class Midiori(Module):
         itx_fifo_in_progress = Signal()
         self.comb += self.uart.tx_ready.eq(self.fifo.readable | itx_fifo_fe)
         self.comb += If(itx_fifo_in_progress,
-            self.fifo.re.eq(0)
+            self.fifo.r_en.eq(0)
         ).Else(
-            self.fifo.re.eq(self.uart.tx_ack)
+            self.fifo.r_en.eq(self.uart.tx_ack)
         )
         self.comb += If(itx_fifo_fe,
             self.uart.tx_data.eq(0xfe)
         ).Else(
-            self.uart.tx_data.eq(self.fifo.dout)
+            self.uart.tx_data.eq(self.fifo.r_data)
         )
         self.sync += If(self.uart.tx_ack & itx_fifo_fe & ~itx_fifo_in_progress,
             itx_fifo_fe.eq(0),
@@ -136,7 +136,7 @@ class Midiori(Module):
         self.txemp = Signal()
         self.comb += self.txemp.eq(self.fifo.level == 0)
         self.txrdy = Signal()
-        self.comb += self.txrdy.eq(self.fifo.writable)
+        self.comb += self.txrdy.eq(self.fifo.w_rdy)
         self.txidl = Signal()
         self.ase = Signal()
         txidl_counter = Signal(21)
@@ -314,8 +314,8 @@ class Midiori(Module):
                            ),
                            NextValue(self.brke, self.data.i[3])
                     ).Elif(self.register_num == 0x56,
-                       NextValue(self.fifo.we, 1),
-                       NextValue(self.fifo.din, self.data.i),
+                       NextValue(self.fifo.w_en, 1),
+                       NextValue(self.fifo.w_data, self.data.i),
                        # clear tx empty isr
                        NextValue(self.isr[6], 0)
                     ).Elif(self.register_num == 0x66,
@@ -349,7 +349,7 @@ class Midiori(Module):
         )
         fsm.act("WWAIT",
                 self._dtready.eq(0),
-                NextValue(self.fifo.we, 0),
+                NextValue(self.fifo.w_en, 0),
                 If(self._as == 1,
                    NextState("IDLE")
                 )
@@ -471,7 +471,7 @@ def test(m):
         yield from midi_write(m, 0x56, i)
     assert(yield m.isr == 0x00)
     assert(yield m.vec == 8)
-    assert(yield m.fifo.dout == 0x00)
+    assert(yield m.fifo.r_data == 0x00)
     yield from midi_iack(m)
     yield from midi_wait_empty(m)
     assert(yield m.isr == 0x40)
