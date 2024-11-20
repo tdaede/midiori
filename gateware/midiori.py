@@ -2,7 +2,8 @@
 
 
 from amaranth import *
-from amaranth.compat import *
+from amaranth.compat import Module as CompatModule
+from amaranth.compat import If, TSTriple, FSM, NextState, NextValue, run_simulation
 from amaranth.compat.fhdl import verilog
 from amaranth.compat.genlib.fifo import *
 from amaranth.compat.genlib.coding import PriorityEncoder
@@ -26,61 +27,56 @@ def _divisor(freq_in, freq_out, max_ppm=None):
     return divisor
 
 
-class UART(Module):
+class UART(Elaboratable):
     def __init__(self, tx, clk_freq, baud_rate):
         self.tx_data = Signal(8)
         self.tx_ready = Signal()
         self.tx_ack = Signal()
+        self.tx = tx
 
-        divisor = _divisor(freq_in=clk_freq, freq_out=baud_rate, max_ppm=50000)
+        self.divisor = _divisor(freq_in=clk_freq, freq_out=baud_rate, max_ppm=50000)
 
-        tx_counter = Signal(range(0, divisor))
+        self.tx_counter = Signal(range(0, self.divisor))
         self.tx_strobe = tx_strobe = Signal()
-        self.comb += tx_strobe.eq(tx_counter == 0)
-        self.sync += \
-            If(tx_counter == 0,
-                tx_counter.eq(divisor - 1)
-            ).Else(
-                tx_counter.eq(tx_counter - 1)
-            )
 
         self.tx_bitno = tx_bitno = Signal(3)
         self.tx_latch = tx_latch = Signal(8)
-        self.submodules.tx_fsm = FSM(reset_state="IDLE")
-        self.tx_fsm.act("IDLE",
-            self.tx_ack.eq(1),
-            If(self.tx_ready,
-                NextValue(tx_counter, divisor - 1),
-                NextValue(tx_latch, self.tx_data),
-                NextState("START")
-            ).Else(
-                NextValue(tx, 1)
-            )
-        )
-        self.tx_fsm.act("START",
-            If(self.tx_strobe,
-                NextValue(tx, 0),
-                NextState("DATA")
-            )
-        )
-        self.tx_fsm.act("DATA",
-            If(self.tx_strobe,
-                NextValue(tx, tx_latch[0]),
-                NextValue(tx_latch, Cat(tx_latch[1:8], 0)),
-                NextValue(tx_bitno, tx_bitno + 1),
-                If(self.tx_bitno == 7,
-                    NextState("STOP")
-                )
-            )
-        )
-        self.tx_fsm.act("STOP",
-            If(self.tx_strobe,
-                NextValue(tx, 1),
-                NextState("IDLE")
-            )
-        )
 
-class Midiori(Module):
+    def elaborate(self, platform):
+        m = Module()
+        m.d.comb += self.tx_strobe.eq(self.tx_counter == 0)
+        with m.If(self.tx_counter == 0):
+            m.d.sync += self.tx_counter.eq(self.divisor - 1)
+        with m.Else():
+            m.d.sync += self.tx_counter.eq(self.tx_counter - 1)
+
+        with m.FSM():
+            with m.State("IDLE"):
+                m.d.comb += self.tx_ack.eq(1)
+                with m.If(self.tx_ready):
+                    m.d.sync += self.tx_counter.eq(self.divisor - 1)
+                    m.d.sync += self.tx_latch.eq(self.tx_data)
+                    m.next = "START"
+                with m.Else():
+                    m.d.sync += self.tx.eq(1)
+            with m.State("START"):
+                with m.If(self.tx_strobe):
+                    m.d.sync += self.tx.eq(0)
+                    m.next = "DATA"
+            with m.State("DATA"):
+                with m.If(self.tx_strobe):
+                    m.d.sync += self.tx.eq(self.tx_latch[0])
+                    m.d.sync += self.tx_latch.eq(Cat(self.tx_latch[1:8], 0))
+                    m.d.sync += self.tx_bitno.eq(self.tx_bitno + 1)
+                    with m.If(self.tx_bitno == 7):
+                        m.next = "STOP"
+            with m.State("STOP"):
+                with m.If(self.tx_strobe):
+                    m.d.sync += self.tx.eq(1)
+                    m.next = "IDLE"
+        return m
+
+class Midiori(CompatModule):
     def __init__(self):
         # tx uart registers
         self.tx = Signal()
