@@ -10,7 +10,7 @@ class MidioriPlatform(LatticeICE40Platform):
         ("sync", 16e6),
     ]
     resources = [
-        Resource("sync", 0, Pins("63", dir="i"),
+        Resource("sync", 0, Pins("63", dir="i"), Clock(16e6),
                  Attrs(GLOBAL=True, IO_STANDARD="SB_LVCMOS33")),
         Resource("rw", 0, Pins("100", dir="i"), Attrs(IO_STANDARD="SB_LVCMOS33")),
         Resource("exreset", 0, Pins("99", dir="i"), Attrs(IO_STANDARD="SB_LVCMOS33")),

@@ -2,6 +2,7 @@
 
 
 from amaranth import *
+from amaranth.lib import io
 from amaranth.compat import Module as CompatModule
 from amaranth.compat import If, TSTriple, FSM, NextState, NextValue, run_simulation
 from amaranth.compat.fhdl import verilog
@@ -76,7 +77,7 @@ class UART(Elaboratable):
                     m.next = "IDLE"
         return m
 
-class Midiori(CompatModule):
+class Midiori(Elaboratable):
     def __init__(self):
         # tx uart registers
         self.tx = Signal()
@@ -84,36 +85,8 @@ class Midiori(CompatModule):
         self.uart = UART(self.uart_tx, 16000000, 31250)
         self.brke = Signal()
         self.txe = Signal()
-        self.comb += If(self.brke,
-            self.tx.eq(0),
-        ).Else(
-            self.tx.eq(self.uart_tx)
-        )
-        self.submodules += self.uart
         self.fifo = SyncFIFOBuffered(8, 16)
-        self.submodules += self.fifo
-        # the itx fifo is described as a 4 deep fifo,
-        # but it's really just 4 different types of
-        # messages that can be sent
-        itx_fifo_fe = Signal()
-        itx_fifo_in_progress = Signal()
-        self.comb += self.uart.tx_ready.eq(self.fifo.readable | itx_fifo_fe)
-        self.comb += If(itx_fifo_in_progress,
-            self.fifo.r_en.eq(0)
-        ).Else(
-            self.fifo.r_en.eq(self.uart.tx_ack)
-        )
-        self.comb += If(itx_fifo_fe,
-            self.uart.tx_data.eq(0xfe)
-        ).Else(
-            self.uart.tx_data.eq(self.fifo.r_data)
-        )
-        self.sync += If(self.uart.tx_ack & itx_fifo_fe & ~itx_fifo_in_progress,
-            itx_fifo_fe.eq(0),
-            itx_fifo_in_progress.eq(1)
-        ).Elif(self.uart.tx_ack & itx_fifo_in_progress,
-            itx_fifo_in_progress.eq(0),
-        )
+
         self.addr = Signal(23)
         self._irq = Signal(reset=1)
         self._iack = Signal()
@@ -122,7 +95,8 @@ class Midiori(CompatModule):
         self._dtready = Signal(reset=1)
         self._rw = Signal()
         self.exreset = Signal(reset=1)
-        self.data = TSTriple(8)
+        # this type is just being used for Record(i,o,oe)
+        self.data = io.Pin(8, "io")
         self.addr_num = Signal(3)
         self.register_num = Signal(8)
         self.version_index = Signal(5)
@@ -130,25 +104,12 @@ class Midiori(CompatModule):
         # internal read-only registers
 
         self.txemp = Signal()
-        self.comb += self.txemp.eq(self.fifo.level == 0)
         self.txrdy = Signal()
-        self.comb += self.txrdy.eq(self.fifo.w_rdy)
         self.txidl = Signal()
         self.ase = Signal()
-        txidl_counter = Signal(21)
-        self.sync += If(txidl_counter >= 1280000,
-            txidl_counter.eq(0),
-            self.txidl.eq(1),
-            itx_fifo_fe.eq(self.ase)
-        ).Elif(~self.txemp | ~self.txe,
-            txidl_counter.eq(0)
-        ).Else(
-            txidl_counter.eq(txidl_counter + 1)
-        )
+
         self.txbsy = Signal()
-        self.comb += self.txbsy.eq(0)
         self.tsr = Signal(8)
-        self.comb += self.tsr.eq(Cat(self.txbsy,0,self.txidl,0,0,0,self.txrdy,self.txemp))
 
         # internal read-write registers
         self.group_num = Signal(4)
@@ -156,219 +117,255 @@ class Midiori(CompatModule):
         self.ivo = Signal(3)
         self.ic = Signal()
 
-        #8us clock divider
-        midi_divider = Signal(7)
-        #all games should set this to 1, but
-        #simulate it for completeness
-        clkm = Signal()
-        self.sync += midi_divider.eq(midi_divider-1)
-        midi_clk_en = Signal()
-        self.comb += If(clkm,
-                            midi_clk_en.eq(midi_divider == 0)
-                        ).Else(
-                            midi_clk_en.eq(midi_divider[0:6] == 0)
-                        )
-
         # irq controller
         self.isr = Signal(8, reset=0x00)
         self.ivr = Signal(8)
         self.vec = Signal(4)
         self.isr_masked = Signal(8)
-        self.comb += self.isr_masked.eq(self.isr & self.ier)
+
+        self.previous_empty = Signal()
+    def elaborate(self, platform):
+        m = Module()
+        m.d.comb += self.txemp.eq(self.fifo.level == 0)
+        m.d.comb += self.txrdy.eq(self.fifo.w_rdy)
+        with m.If(self.brke):
+            m.d.comb += self.tx.eq(0)
+        with m.Else():
+            m.d.comb += self.tx.eq(self.uart_tx)
+        m.submodules += self.uart
+        m.submodules += self.fifo
+        # the itx fifo is described as a 4 deep fifo,
+        # but it's really just 4 different types of
+        # messages that can be sent
+        itx_fifo_fe = Signal()
+        itx_fifo_in_progress = Signal()
+        m.d.comb += self.uart.tx_ready.eq(self.fifo.r_rdy | itx_fifo_fe)
+        with m.If(itx_fifo_in_progress):
+            m.d.comb += self.fifo.r_en.eq(0)
+        with m.Else():
+            m.d.comb += self.fifo.r_en.eq(self.uart.tx_ack)
+        with m.If(itx_fifo_fe):
+            m.d.comb += self.uart.tx_data.eq(0xfe)
+        with m.Else():
+            m.d.comb += self.uart.tx_data.eq(self.fifo.r_data)
+        with m.If(self.uart.tx_ack & itx_fifo_fe & ~itx_fifo_in_progress):
+            m.d.sync += itx_fifo_fe.eq(0)
+            m.d.sync += itx_fifo_in_progress.eq(1)
+        with m.Elif(self.uart.tx_ack & itx_fifo_in_progress):
+            m.d.sync += itx_fifo_in_progress.eq(0)
+
+        txidl_counter = Signal(21)
+        with m.If(txidl_counter >= 1280000):
+            m.d.sync += txidl_counter.eq(0)
+            m.d.sync += self.txidl.eq(1)
+            m.d.sync += itx_fifo_fe.eq(self.ase)
+        with m.Elif(~self.txemp | ~self.txe):
+            m.d.sync += txidl_counter.eq(0)
+        with m.Else():
+            m.d.sync += txidl_counter.eq(txidl_counter + 1)
+
+        m.d.comb += self.txbsy.eq(0)
+        m.d.comb += self.tsr.eq(Cat(self.txbsy,0,self.txidl,0,0,0,self.txrdy,self.txemp))
+
+        #8us clock divider
+        midi_divider = Signal(7)
+        #all games should set this to 1, but
+        #simulate it for completeness
+        clkm = Signal()
+        m.d.sync += midi_divider.eq(midi_divider-1)
+        midi_clk_en = Signal()
+        with m.If(clkm):
+            m.d.comb += midi_clk_en.eq(midi_divider == 0)
+        with m.Else():
+            m.d.comb += midi_clk_en.eq(midi_divider[0:6] == 0)
+
+        m.d.comb += self.isr_masked.eq(self.isr & self.ier)
         isr_pe = PriorityEncoder(8)
-        self.submodules += isr_pe
-        self.comb += isr_pe.i.eq(self.isr_masked)
-        self.comb += self.vec.eq(Cat(isr_pe.o, isr_pe.n))
-        self.comb += self.ivr.eq(Cat(0,self.vec,self.ivo))
-        self.comb += self._irq.eq(self.isr_masked == 0)
+        m.submodules += isr_pe
+        m.d.comb += isr_pe.i.eq(self.isr_masked)
+        m.d.comb += self.vec.eq(Cat(isr_pe.o, isr_pe.n))
+        m.d.comb += self.ivr.eq(Cat(0,self.vec,self.ivo))
+        m.d.comb += self._irq.eq(self.isr_masked == 0)
 
         # irq sets
-        self.previous_empty = Signal()
-        self.sync += If((self.previous_empty == 0) & (self.txemp == 1),
-                        self.isr[6].eq(1)
-        )
-        self.sync += self.previous_empty.eq(self.txemp)
+        with m.If((self.previous_empty == 0) & (self.txemp == 1)):
+            m.d.sync += self.isr[6].eq(1)
+        m.d.sync += self.previous_empty.eq(self.txemp)
 
         #general purpose timer
         gpt_low_byte_cache = Signal(8)
         gpt_reset_value = Signal(16)
         gpt_counter = Signal(14)
-        self.sync += If(midi_clk_en,
-            If((gpt_counter == 0) & (gpt_reset_value > 1),
-                gpt_counter.eq(gpt_reset_value),
-                self.isr[7].eq(1)
-            ).Else(
-                gpt_counter.eq(gpt_counter-1)
-            )
-        )
+        with m.If(midi_clk_en):
+            with m.If((gpt_counter == 0) & (gpt_reset_value > 1)):
+                m.d.sync += gpt_counter.eq(gpt_reset_value)
+                m.d.sync += self.isr[7].eq(1)
+            with m. Else():
+                m.d.sync += gpt_counter.eq(gpt_counter-1)
 
         #midi clock timer
         clock_low_byte_cache = Signal(8)
         clock_reset_value = Signal(16)
         clock_counter = Signal(14)
-        self.sync += If(midi_clk_en,
-            If((clock_counter == 0) & (clock_reset_value > 1),
-                clock_counter.eq(clock_reset_value),
-                self.isr[1].eq(1)
-            ).Else(
-                clock_counter.eq(clock_counter-1)
-            )
-        )
+        with m.If(midi_clk_en):
+            with m.If((clock_counter == 0) & (clock_reset_value > 1)):
+                m.d.sync += clock_counter.eq(clock_reset_value)
+                m.d.sync += self.isr[1].eq(1)
+            with m.Else():
+                m.d.sync += clock_counter.eq(clock_counter-1)
 
         #midi click counter
         # todo: clock off midi clock and implement isr mux
         click_counter = Signal(7)
         click_reset_value = Signal(7)
-        self.sync += If(0,
-            If((click_counter == 0) & (click_reset_value > 0),
-               click_counter.eq(click_reset_value),
-               self.isr[1].eq(1)
-            ).Else(
-                click_counter.eq(click_counter-1)
-            )
-        )
+        with m.If(0):
+            with m.If((click_counter == 0) & (click_reset_value > 0)):
+                m.d.sync += click_counter.eq(click_reset_value)
+                m.d.sync += self.isr[1].eq(1)
+            with m.Else():
+                m.d.sync += click_counter.eq(click_counter-1)
 
         #register io state machine
         self.xltr_oe = Signal()
-        self.comb += self.addr_num.eq(self.addr[0:3])
-        self.comb += self.register_num.eq(Cat(self.addr_num, 0, self.group_num))
-        fsm = FSM(reset_state="IDLE")
-        self.submodules += fsm
-        fsm.act("IDLE",
-                self._dtready.eq(1),
-                self.xltr_oe.eq(1),
-                If((self._iack == 0) & (self._irq == 0),
+        m.d.comb += self.addr_num.eq(self.addr[0:3])
+        m.d.comb += self.register_num.eq(Cat(self.addr_num, 0, self.group_num))
+        with m.FSM():
+            with m.State("IDLE"):
+                m.d.comb += self._dtready.eq(1)
+                m.d.comb += self.xltr_oe.eq(1)
+                with m.If((self._iack == 0) & (self._irq == 0)):
                    #enable xltr early
-                   self.xltr_oe.eq(0),
-                   NextState("IACK")
-                ).Elif((self._as == 0) &
-                   (self.addr[3:24] == base_addr[3:24]),
+                   m.d.comb += self.xltr_oe.eq(0),
+                   m.next = "IACK"
+                with m.Elif((self._as == 0) &
+                   (self.addr[3:24] == base_addr[3:24])):
                    # enable xltr early
-                   self.xltr_oe.eq(0),
-                   If(self._lds == 0,
-                       If((self._rw == 1),
-                           NextState("RDATA"),
-                       ).Else(
-                           NextState("WDATA"),
-                       )
-                   )
-                )
-        )
-        fsm.act("IACK",
-                self._dtready.eq(0),
-                self.data.o.eq(self.ivr),
-                If(self._iack == 1,
-                   NextState("IDLE")
-                )
-        )
-        fsm.act("RDATA",
-                self._dtready.eq(0),
-                If(self.addr_num == 0,
+                   m.d.comb += self.xltr_oe.eq(0)
+                   with m.If(self._lds == 0):
+                       with m.If((self._rw == 1)):
+                           m.next = "RDATA"
+                       with m.Else():
+                           m.next = "WDATA"
+            with m.State("IACK"):
+                m.d.comb += self._dtready.eq(0),
+                m.d.comb += self.data.o.eq(self.ivr),
+                with m.If(self._iack == 1):
+                   m.next = "IDLE"
+            with m.State("RDATA"):
+                m.d.comb += self._dtready.eq(0)
+                with m.If(self.addr_num == 0):
                    # irq vector register
-                   self.data.o.eq(self.ivr)
-                ).Elif(self.addr_num == 2,
-                    self.data.o.eq(self.isr)
-                ).Else(
-                    If(self.register_num == 0x34,
-                       self.data.o.eq(0x04)
-                    ).Elif(self.register_num == 0x36,
-                           self.data.o.eq(0x00)
-                    ).Elif(self.register_num == 0x54,
-                           self.data.o.eq(self.tsr)
-                    ).Elif(self.register_num == 0x64,
-                           self.data.o.eq(0xa0)
-                    ).Elif(self.register_num == 0x74,
-                           self.data.o.eq(0x00)
-                    ).Elif(self.register_num == 0x96,
-                           self.data.o.eq(0xFF)
-                    ).Elif(self.register_num == 0xF5,
-                           self.data.o.eq(version_string[self.version_index])
-                    )
-                ),
-                If(self._as == 1,
-                   NextState("IDLE")
-                )
-        )
-        fsm.act("WDATA",
-                self._dtready.eq(0),
-                If(self.addr_num == 0x01,
-                   NextValue(self.group_num, self.data.i[0:4]),
-                   NextValue(self.ic, self.data.i[7])
-                ).Elif(self.addr_num == 0x03,
-                      NextValue(self.isr, self.isr & ~self.data.i)
-                ).Else(
-                    If(self.register_num == 0x04,
-                       NextValue(self.ivo, self.data.i[5:8])
-                    ).Elif(self.register_num == 0x06,
-                           NextValue(self.ier, self.data.i)
-                    ).Elif(self.register_num == 0x14,
-                           NextValue(self.ase, self.data.i[5])
-                    ).Elif(self.register_num == 0x55,
-                           NextValue(self.txe, self.data.i[0]),
-                           If(self.data.i[2],
-                              NextValue(self.txidl, 0)
-                           ),
-                           NextValue(self.brke, self.data.i[3])
-                    ).Elif(self.register_num == 0x56,
-                       NextValue(self.fifo.w_en, 1),
-                       NextValue(self.fifo.w_data, self.data.i),
+                    m.d.comb += self.data.o.eq(self.ivr)
+                with m.Elif(self.addr_num == 2):
+                    m.d.comb += self.data.o.eq(self.isr)
+                with m.Else():
+                    with m.If(self.register_num == 0x34):
+                        m.d.comb += self.data.o.eq(0x04)
+                    with m.Elif(self.register_num == 0x36):
+                        m.d.comb += self.data.o.eq(0x00)
+                    with m.Elif(self.register_num == 0x54):
+                        m.d.comb += self.data.o.eq(self.tsr)
+                    with m.Elif(self.register_num == 0x64):
+                        m.d.comb += self.data.o.eq(0xa0)
+                    with m.Elif(self.register_num == 0x74):
+                        m.d.comb += self.data.o.eq(0x00)
+                    with m.Elif(self.register_num == 0x96):
+                        m.d.comb += self.data.o.eq(0xFF)
+                    with m.Elif(self.register_num == 0xF5):
+                        m.d.comb += self.data.o.eq(version_string[self.version_index])
+                with m.If(self._as == 1):
+                   m.next = "IDLE"
+            with m.State("WDATA"):
+                m.d.comb += self._dtready.eq(0)
+                with m.If(self.addr_num == 0x01):
+                    m.d.sync += self.group_num.eq(self.data.i[0:4])
+                    m.d.sync += self.ic.eq(self.data.i[7])
+                with m.Elif(self.addr_num == 0x03):
+                    m.d.sync += self.isr.eq(self.isr & ~self.data.i)
+                with m.Else():
+                    with m.If(self.register_num == 0x04):
+                        m.d.sync += self.ivo.eq(self.data.i[5:8])
+                    with m.Elif(self.register_num == 0x06):
+                        m.d.sync += self.ier.eq(self.data.i)
+                    with m.Elif(self.register_num == 0x14):
+                        m.d.sync += self.ase.eq(self.data.i[5])
+                    with m.Elif(self.register_num == 0x55):
+                        m.d.sync += self.txe.eq(self.data.i[0]),
+                        with m.If(self.data.i[2]):
+                            m.d.sync += self.txidl.eq(0)
+                        m.d.sync += self.brke.eq(self.data.i[3])
+                    with m.Elif(self.register_num == 0x56):
+                       m.d.sync += self.fifo.w_en.eq(1)
+                       m.d.sync += self.fifo.w_data.eq(self.data.i)
                        # clear tx empty isr
-                       NextValue(self.isr[6], 0)
-                    ).Elif(self.register_num == 0x66,
-                           NextValue(clkm, self.data.i[1])
-                    ).Elif(self.register_num == 0x67,
-                           NextValue(click_reset_value, self.data.i[0:7]),
-                           If(self.data.i[7],
-                              NextValue(click_counter, self.data.i[0:7]),
-                           )
-                    ).Elif(self.register_num == 0x84,
-                           NextValue(gpt_low_byte_cache, self.data.i)
-                    ).Elif(self.register_num == 0x85,
-                           NextValue(gpt_reset_value, Cat(gpt_low_byte_cache, self.data.i[0:6])),
-                           If(self.data.i[7],
-                              NextValue(gpt_counter, Cat(gpt_low_byte_cache, self.data.i[0:6]))
-                           )
-                    ).Elif(self.register_num == 0x86,
-                           NextValue(clock_low_byte_cache, self.data.i)
-                    ).Elif(self.register_num == 0x87,
-                           NextValue(clock_reset_value, Cat(clock_low_byte_cache, self.data.i[0:6])),
-                           If(self.data.i[7],
-                              NextValue(clock_counter, Cat(clock_low_byte_cache, self.data.i[0:6]))
-                           )
-                    ).Elif(self.register_num == 0xF4,
-                           NextValue(self.version_index, self.data.i)
-                    )
-                ),
+                       m.d.sync += self.isr[6].eq(0)
+                    with m.Elif(self.register_num == 0x66):
+                        m.d.sync += clkm.eq(self.data.i[1])
+                    with m.Elif(self.register_num == 0x67):
+                        m.d.sync += click_reset_value.eq(self.data.i[0:7])
+                        with m.If(self.data.i[7]):
+                            m.d.sync += click_counter.eq(self.data.i[0:7])
+                    with m.Elif(self.register_num == 0x84):
+                        m.d.sync += gpt_low_byte_cache.eq(self.data.i)
+                    with m.Elif(self.register_num == 0x85):
+                        m.d.sync += gpt_reset_value.eq(Cat(gpt_low_byte_cache, self.data.i[0:6]))
+                        with m.If(self.data.i[7]):
+                            m.d.sync += gpt_counter.eq(Cat(gpt_low_byte_cache, self.data.i[0:6]))
+                    with m.Elif(self.register_num == 0x86):
+                        m.d.sync += clock_low_byte_cache.eq(self.data.i)
+                    with m.Elif(self.register_num == 0x87):
+                        m.d.sync += clock_reset_value.eq(Cat(clock_low_byte_cache, self.data.i[0:6]))
+                        with m.If(self.data.i[7]):
+                            m.d.sync += clock_counter.eq(Cat(clock_low_byte_cache, self.data.i[0:6]))
+                    with m.Elif(self.register_num == 0xF4):
+                        m.d.sync += self.version_index.eq(self.data.i)
                 #only spend one cycle in WDATA
                 #so that writes only happen once
-                NextState("WWAIT")
-        )
-        fsm.act("WWAIT",
-                self._dtready.eq(0),
-                NextValue(self.fifo.w_en, 0),
-                If(self._as == 1,
-                   NextState("IDLE")
-                )
-        )
+                m.next = "WWAIT"
+            with m.State("WWAIT"):
+                m.d.comb += self._dtready.eq(0)
+                m.d.sync += self.fifo.w_en.eq(0)
+                with m.If(self._as == 1):
+                   m.next= "IDLE"
 
         #manual resets - the bus FSM cannot be reset during an ic
         #todo: consider using clock domain reset instead
-        self.sync += If(self.exreset == 0 | self.ic,
-                        self.group_num.eq(0),
-                        clkm.eq(0),
-                        self.ivo.eq(0),
-                        self.ier.eq(0),
-                        self.isr.eq(0),
-                        self.txe.eq(0),
-                        self.brke.eq(0),
-                        self.ase.eq(0),
-                        gpt_counter.eq(0),
-                        gpt_low_byte_cache.eq(0),
-                        gpt_reset_value.eq(0),
-                        clock_counter.eq(0),
-                        clock_low_byte_cache.eq(0),
-                        clock_reset_value.eq(0),
-                        )
+        with m.If(self.exreset == 0 | self.ic):
+            m.d.sync += self.group_num.eq(0)
+            m.d.sync += clkm.eq(0)
+            m.d.sync += self.ivo.eq(0)
+            m.d.sync += self.ier.eq(0)
+            m.d.sync += self.isr.eq(0)
+            m.d.sync += self.txe.eq(0)
+            m.d.sync += self.brke.eq(0)
+            m.d.sync += self.ase.eq(0)
+            m.d.sync += gpt_counter.eq(0)
+            m.d.sync += gpt_low_byte_cache.eq(0)
+            m.d.sync += gpt_reset_value.eq(0)
+            m.d.sync += clock_counter.eq(0)
+            m.d.sync += clock_low_byte_cache.eq(0)
+            m.d.sync += clock_reset_value.eq(0)
+
+        if platform is not None:
+            m.domains.sync = ClockDomain()
+            m.d.comb += ClockSignal().eq(plat.request("sync").i)
+            m.d.comb += self.addr.eq(plat.request("addr").i)
+            m.d.comb += self._as.eq(plat.request("as").i)
+            m.d.comb += self._lds.eq(plat.request("lds").i)
+            m.d.comb += self._rw.eq(plat.request("rw").i)
+            m.d.comb += plat.request("dtack").o.eq(self._dtready)
+            # is there a better way to "attach" this?
+            data_port = plat.request("data")
+            m.d.comb += self.data.i.eq(data_port.i)
+            m.d.comb += data_port.o.eq(self.data.o)
+            m.d.comb += data_port.oe.eq(self.data.oe)
+            m.d.comb += plat.request("xltr_oe").o.eq(self.xltr_oe)
+            m.d.comb += self.data.oe.eq(~plat.request("iddir").i)
+            m.d.comb += plat.request("tx").o.eq(self.tx)
+            m.d.comb += plat.request("irq2").o.eq(self._irq)
+            m.d.comb += self._iack.eq(plat.request("iack2").i)
+            m.d.comb += self.exreset.eq(plat.request("exreset").i)
+        return m
 
 def midi_read(m, reg):
     yield m.addr.eq(base_addr+1)
@@ -485,18 +482,4 @@ if __name__ == "__main__":
     else:
         plat = MidioriPlatform()
         m = Midiori()
-        m.clock_domains += ClockDomain("sync")
-        m.comb += ClockSignal().eq(plat.request("sync").i)
-        m.comb += m.addr.eq(plat.request("addr").i)
-        m.comb += m._as.eq(plat.request("as").i)
-        m.comb += m._lds.eq(plat.request("lds").i)
-        m.comb += m._rw.eq(plat.request("rw").i)
-        m.comb += plat.request("dtack").o.eq(m._dtready)
-        m.specials += m.data.get_tristate(plat.request("data", dir="-"))
-        m.comb += plat.request("xltr_oe").o.eq(m.xltr_oe)
-        m.comb += m.data.oe.eq(~plat.request("iddir").i)
-        m.comb += plat.request("tx").o.eq(m.tx)
-        m.comb += plat.request("irq2").o.eq(m._irq)
-        m.comb += m._iack.eq(plat.request("iack2").i)
-        m.comb += m.exreset.eq(plat.request("exreset").i)
         plat.build(m)
