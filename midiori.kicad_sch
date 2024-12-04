@@ -5342,93 +5342,6 @@
 				)
 			)
 		)
-		(symbol "midiori-rescue:PWR_FLAG-power"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "power_PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG-power_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "pwr"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG-power_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-		)
 		(symbol "midiori-rescue:SG5032CAN-x68k-midiori-rescue-midiori-rescue"
 			(pin_names
 				(offset 0.254)
@@ -6774,7 +6687,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin open_collector line
 					(at -22.86 -147.32 0)
 					(length 3.81)
 					(name "/DTACK"
@@ -7800,7 +7713,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin open_collector line
 					(at 3.81 -215.9 180)
 					(length 3.81)
 					(name "/IRQ2"
@@ -7818,7 +7731,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin open_collector line
 					(at 3.81 -218.44 180)
 					(length 3.81)
 					(name "/IRQ4"
@@ -8855,12 +8768,6 @@
 		(uuid "02dc23f3-be16-4eed-bf38-eb6593888f27")
 	)
 	(junction
-		(at 25.4 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05459292-d055-4ee1-99d7-9cf2a26b3055")
-	)
-	(junction
 		(at 308.61 101.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9553,6 +9460,10 @@
 		(uuid "41980844-6f0d-4f5e-a99a-b3e2908c25d3")
 	)
 	(no_connect
+		(at 31.75 151.13)
+		(uuid "44438f0b-4af3-4670-9ade-87c96a93b102")
+	)
+	(no_connect
 		(at 245.11 142.24)
 		(uuid "4be6b189-d696-4d35-ade8-e3f402cea608")
 	)
@@ -9561,8 +9472,20 @@
 		(uuid "4efed46a-045b-4882-83c4-5d6c8889fe0b")
 	)
 	(no_connect
+		(at 191.77 88.9)
+		(uuid "5015752f-bd0e-4934-b4ef-2b94427cbf34")
+	)
+	(no_connect
 		(at 31.75 123.19)
 		(uuid "501e9cc5-b762-4e3e-8252-890da7be4e3f")
+	)
+	(no_connect
+		(at 31.75 146.05)
+		(uuid "57beb039-1b9b-4d52-87c7-0dafe4490e66")
+	)
+	(no_connect
+		(at 191.77 91.44)
+		(uuid "5a528d91-00e6-4266-a886-2a09adaec153")
 	)
 	(no_connect
 		(at 31.75 133.35)
@@ -9625,6 +9548,10 @@
 		(uuid "b907cd42-bf66-43cf-a88e-ba6a9c9bc727")
 	)
 	(no_connect
+		(at 31.75 148.59)
+		(uuid "c1a2f333-a7fb-40c6-b0f9-d2171870ce41")
+	)
+	(no_connect
 		(at 344.17 88.9)
 		(uuid "c644d4e6-2ec2-4313-bc98-68c102c91116")
 	)
@@ -9649,6 +9576,10 @@
 		(uuid "d38b1fb0-bb40-461e-bad0-d838f9280225")
 	)
 	(no_connect
+		(at 191.77 86.36)
+		(uuid "d741da8d-f51b-439a-9029-e7ca2b9a0d43")
+	)
+	(no_connect
 		(at 58.42 179.07)
 		(uuid "de26acb7-10d6-4db3-bfaa-d40edb4cf718")
 	)
@@ -9661,6 +9592,10 @@
 		(uuid "e9da2675-c9a9-46a8-8bf6-1dbd11ce0074")
 	)
 	(no_connect
+		(at 194.31 73.66)
+		(uuid "ea3bca2e-4f54-402d-a05a-ee5a10d8298c")
+	)
+	(no_connect
 		(at 31.75 100.33)
 		(uuid "f854242d-48ad-41e2-b841-b62e3598448e")
 	)
@@ -9671,6 +9606,10 @@
 	(no_connect
 		(at 31.75 207.01)
 		(uuid "fa7c60ac-b290-46fe-86cf-d77e3f50d174")
+	)
+	(no_connect
+		(at 245.11 63.5)
+		(uuid "fad3ea37-9918-47cb-b865-d33afb5547e0")
 	)
 	(no_connect
 		(at 31.75 92.71)
@@ -13069,16 +13008,6 @@
 		)
 		(uuid "065458b6-f71a-488e-b711-4a4f9cb1f1bd")
 	)
-	(label "C"
-		(at 31.75 151.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "06962336-e674-4d90-a216-c3027d231cda")
-	)
 	(label "si"
 		(at 165.1 156.21 0)
 		(effects
@@ -13098,16 +13027,6 @@
 			(justify left bottom)
 		)
 		(uuid "0780fc5c-80bd-4eaa-ad64-aa5c5ce0bb57")
-	)
-	(label "b"
-		(at 191.77 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "08208a76-e355-47cd-a2f4-c4993112f5ea")
 	)
 	(label "AB8"
 		(at 86.36 88.9 0)
@@ -13350,16 +13269,6 @@
 		)
 		(uuid "2319f2d0-e744-4b80-b01b-395df8305887")
 	)
-	(label "a"
-		(at 191.77 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "240a291d-9e56-44c9-920d-8038c41e1b58")
-	)
 	(label "AB3"
 		(at 58.42 100.33 0)
 		(effects
@@ -13501,16 +13410,6 @@
 			(justify left bottom)
 		)
 		(uuid "34fb99d9-1a97-491f-97cf-ab0d75e3216d")
-	)
-	(label "c"
-		(at 191.77 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "360d949d-5c2a-41b7-87ff-3616db34b2a3")
 	)
 	(label "sck"
 		(at 161.29 210.82 0)
@@ -14273,16 +14172,6 @@
 		)
 		(uuid "8dd5dd83-adc0-4cdc-9478-dc26252abd9c")
 	)
-	(label "A"
-		(at 31.75 146.05 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "911f967d-b24b-457f-89f3-a63662298d48")
-	)
 	(label "AB2"
 		(at 87.63 45.72 0)
 		(effects
@@ -14920,16 +14809,6 @@
 			(justify left bottom)
 		)
 		(uuid "d5f04f82-2969-420d-9f7b-679af4739ab9")
-	)
-	(label "B"
-		(at 31.75 148.59 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d8b5c05c-43d2-4635-8a44-55fcac9bd740")
 	)
 	(label "DB15"
 		(at 92.71 233.68 180)
@@ -24218,72 +24097,6 @@
 			(project ""
 				(path "/89a089da-4491-480f-b113-8450a227c3da"
 					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "midiori-rescue:PWR_FLAG-power")
-		(at 25.4 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005e27b85f")
-		(property "Reference" "#FLG0101"
-			(at 23.495 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 22.1488 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 25.4 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 25.4 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6384bede-26b2-4745-9435-06056e0b2b36")
-		)
-		(instances
-			(project ""
-				(path "/89a089da-4491-480f-b113-8450a227c3da"
-					(reference "#FLG0101")
 					(unit 1)
 				)
 			)
