@@ -15300,17 +15300,6 @@
 		)
 		(uuid "db843f0f-dacf-4352-a42e-32b3591a958f")
 	)
-	(label "mclk"
-		(at 278.13 102.87 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "deec3b1a-bd29-4643-9499-b6a249b86bf5")
-	)
 	(label "DB4"
 		(at 31.75 191.77 180)
 		(effects
