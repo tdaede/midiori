@@ -10405,6 +10405,10 @@
 		(uuid "0a0e8360-8fb7-4c94-870a-802c5e0eb521")
 	)
 	(no_connect
+		(at 377.19 41.91)
+		(uuid "0c98ce8d-e476-4812-84b9-ef45926d03cf")
+	)
+	(no_connect
 		(at 58.42 166.37)
 		(uuid "15fa6e40-a822-4a7b-a6ff-d9a7ba3cc25e")
 	)
@@ -10495,6 +10499,10 @@
 	(no_connect
 		(at 31.75 102.87)
 		(uuid "d31a8e0b-dfbf-452f-946e-c51969a01168")
+	)
+	(no_connect
+		(at 393.7 24.13)
+		(uuid "dc4b40bc-ce97-4c4f-9b45-a3be8236b96b")
 	)
 	(no_connect
 		(at 58.42 179.07)
@@ -11217,16 +11225,6 @@
 			(type default)
 		)
 		(uuid "3829c142-5a14-4ecb-b9e0-0b3bc64dae9f")
-	)
-	(wire
-		(pts
-			(xy 264.16 72.39) (xy 316.23 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "384f124d-f9b6-4665-babd-c9b345eca1d6")
 	)
 	(wire
 		(pts
@@ -12690,16 +12688,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 147.32) (xy 264.16 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f9ebf4a-f34d-41c1-955e-3df81ef4b1a4")
-	)
-	(wire
-		(pts
 			(xy 175.26 45.72) (xy 158.75 45.72)
 		)
 		(stroke
@@ -13067,16 +13055,6 @@
 			(type default)
 		)
 		(uuid "bd9965e9-6613-4b78-88ab-151081fc2340")
-	)
-	(wire
-		(pts
-			(xy 393.7 24.13) (xy 400.05 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf2b2c52-38be-4dd8-911a-b5d1b9398594")
 	)
 	(wire
 		(pts
@@ -15072,7 +15050,7 @@
 		(uuid "4ac31275-2abc-4ab1-ada9-70e2a9798599")
 	)
 	(label "24.576mhz"
-		(at 241.3 -35.56 180)
+		(at 241.3 -38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -16073,13 +16051,13 @@
 		(uuid "a196ff56-1094-4247-8f2d-668c59a4bc4d")
 	)
 	(label "midi_out"
-		(at 300.99 72.39 0)
+		(at 316.23 72.39 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "a1b561c1-43fd-4bb8-b926-f764ebaed4a0")
 	)
@@ -16535,7 +16513,7 @@
 		(uuid "cb856e2d-4f77-40b3-957f-c148f40c7f90")
 	)
 	(label "16mhz"
-		(at 241.3 -38.1 180)
+		(at 241.3 -35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -25453,71 +25431,6 @@
 		)
 	)
 	(symbol
-		(lib_id "midiori-rescue:GND-power")
-		(at 377.19 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "52eb0e5a-6777-4f14-a6c1-3e2d6eb1f0a3")
-		(property "Reference" "#PWR041"
-			(at 377.19 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 377.317 46.3042 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 377.19 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 377.19 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 377.19 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f5333d8f-bd3e-4d57-bce4-31c11ec0fdc5")
-		)
-		(instances
-			(project "midiori"
-				(path "/89a089da-4491-480f-b113-8450a227c3da"
-					(reference "#PWR041")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 373.38 36.83 90)
 		(unit 1)
@@ -25687,71 +25600,6 @@
 				(path "/89a089da-4491-480f-b113-8450a227c3da"
 					(reference "U16")
 					(unit 7)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "midiori-rescue:GND-power")
-		(at 400.05 24.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5423f33c-63e3-478a-bd78-4d2ff8eeeb7a")
-		(property "Reference" "#PWR044"
-			(at 400.05 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 400.177 28.5242 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 400.05 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 400.05 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 400.05 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cd04d8d4-bf5b-41eb-8630-5400b9e28ea2")
-		)
-		(instances
-			(project "midiori"
-				(path "/89a089da-4491-480f-b113-8450a227c3da"
-					(reference "#PWR044")
-					(unit 1)
 				)
 			)
 		)
