@@ -18377,6 +18377,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "110-CB3LV-3C-16M000000CT-ND"
+			(at 248.92 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "46b56e75-967c-41e8-8497-2f8151a28bf2")
 		)
@@ -18580,6 +18589,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-220CRCT-ND"
+			(at 335.28 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c73845eb-f9b6-4fb0-a645-8e7d66e68042")
 		)
@@ -18712,6 +18730,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-220CRCT-ND"
+			(at 335.28 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "139a8f4e-10b4-444c-adb9-bfc3af9533e5")
 		)
@@ -18773,6 +18800,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 234.95 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 234.95 204.47 0)
 			(effects
 				(font
@@ -19573,7 +19609,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 167.64 92.0496 0)
 			(effects
 				(font
@@ -19600,6 +19636,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 167.64 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 167.64 97.79 0)
 			(effects
 				(font
@@ -20056,7 +20101,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 167.64 79.3496 0)
 			(effects
 				(font
@@ -20083,6 +20128,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 167.64 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 167.64 85.09 0)
 			(effects
 				(font
@@ -20159,7 +20213,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 167.64 106.0196 0)
 			(effects
 				(font
@@ -20186,6 +20240,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 167.64 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 167.64 111.76 0)
 			(effects
 				(font
@@ -20262,7 +20325,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 90.8304 0)
 			(effects
 				(font
@@ -20289,6 +20352,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 139.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 85.09 0)
 			(effects
 				(font
@@ -20727,6 +20799,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "490-14466-1-ND"
+			(at 168.91 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6e140894-df55-4119-84ba-d9f58c49f66e")
 		)
@@ -20853,6 +20934,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 200.66 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "490-14466-1-ND"
 			(at 200.66 243.84 0)
 			(effects
 				(font
@@ -21060,6 +21150,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "AT25SF081B-SSHD-B"
+			(at 175.26 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "89dd1adc-dee7-4c50-aa34-54741f48d772")
 		)
@@ -21176,7 +21275,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "10k"
 			(at 201.168 65.913 0)
 			(effects
 				(font
@@ -21204,6 +21303,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 199.39 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-10.0KCRCT-ND"
 			(at 199.39 64.77 0)
 			(effects
 				(font
@@ -21570,6 +21678,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 259.08 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "619875d6-fcb2-42aa-8eb6-2a0501913e85")
 		)
@@ -21631,6 +21748,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 270.51 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 270.51 57.15 0)
 			(effects
 				(font
@@ -21708,6 +21834,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 281.94 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "eb3fe9ae-59cf-44cd-86b8-5dd4dd6778d8")
 		)
@@ -21769,6 +21904,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 293.37 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 293.37 57.15 0)
 			(effects
 				(font
@@ -21911,6 +22055,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 259.08 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d18f778c-56d8-46db-a1cd-5a629fabe736")
 		)
@@ -21972,6 +22125,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 270.51 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 270.51 40.64 0)
 			(effects
 				(font
@@ -22049,6 +22211,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 281.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "302e3592-e5a0-4508-b70b-1ff400f20ddf")
 		)
@@ -22110,6 +22281,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 293.37 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 293.37 40.64 0)
 			(effects
 				(font
@@ -22317,6 +22497,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 256.54 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d17eae4e-abb4-4f5e-a89f-45856a235ba3")
 		)
@@ -22378,6 +22567,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 267.97 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 267.97 22.86 0)
 			(effects
 				(font
@@ -22455,6 +22653,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 279.4 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "718515ed-2a0f-46e2-8a73-dca4be8042e0")
 		)
@@ -22516,6 +22723,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 290.83 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 290.83 22.86 0)
 			(effects
 				(font
@@ -22593,6 +22809,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 302.26 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c38ab305-1a2e-4c35-81e1-8d84be6d894e")
 		)
@@ -22654,6 +22879,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 313.69 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 313.69 22.86 0)
 			(effects
 				(font
@@ -23314,6 +23548,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "AP2202K-3.3TRG1DICT-ND"
+			(at 156.21 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d8659c83-2765-4fef-93d6-6e293f8f8ba8")
 		)
@@ -23383,6 +23626,15 @@
 			)
 		)
 		(property "Description" "300mA low dropout linear regulator, shutdown pin, 2.5V-6V input voltage, 1.2V fixed positive output, SOT-23-5"
+			(at 187.96 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "AP2127K-1.2TRG1DICT-ND"
 			(at 187.96 242.57 0)
 			(effects
 				(font
@@ -23498,7 +23750,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 92.0496 0)
 			(effects
 				(font
@@ -23525,6 +23777,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 97.79 0)
 			(effects
 				(font
@@ -23602,7 +23863,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 391.922 159.893 0)
 			(effects
 				(font
@@ -23630,6 +23891,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 386.08 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 386.08 158.75 0)
 			(effects
 				(font
@@ -23936,6 +24206,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "CP-2250-ND"
+			(at 351.79 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9be1a287-99fd-44b4-b03d-2d7c7aa26671")
 		)
@@ -24210,6 +24489,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 372.11 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "392ccf26-30f5-44fb-9f96-cee65403dd0a")
 		)
@@ -24271,6 +24559,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 321.31 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "490-14466-1-ND"
 			(at 321.31 95.25 0)
 			(effects
 				(font
@@ -24554,6 +24851,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "497-2200-1-ND"
+			(at 361.95 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "5270b81f-ca31-4267-81c4-b032c01a4755")
 		)
@@ -24769,6 +25075,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 339.09 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ca2a4a82-8e3f-41a0-a086-7136a7aba766")
 		)
@@ -24896,6 +25211,15 @@
 			)
 		)
 		(property "Description" "iCE40 HX FPGA, 1280 LUTs, 1.2V, TQFP-144"
+			(at 147.32 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "220-1565-ND"
 			(at 147.32 193.04 0)
 			(effects
 				(font
@@ -25594,6 +25918,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "490-14466-1-ND"
+			(at 234.95 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1be8b635-0f47-4b56-9a21-8fadd08ff8b8")
 		)
@@ -25720,6 +26053,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 325.12 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 325.12 22.86 0)
 			(effects
 				(font
@@ -26059,6 +26401,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-220CRCT-ND"
+			(at 373.38 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0c19a8ad-1425-4ea6-a661-e23434781f70")
 		)
@@ -26093,7 +26444,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 413.512 159.9621 0)
 			(effects
 				(font
@@ -26121,6 +26472,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 407.67 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 407.67 158.75 0)
 			(effects
 				(font
@@ -26302,6 +26662,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 247.65 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 247.65 57.15 0)
 			(effects
 				(font
@@ -26510,6 +26879,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "CP1-3533NG-ND"
+			(at 381 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "ea977cca-1922-4875-936d-d70b6e66e734")
 		)
@@ -26613,7 +26991,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 65.5898 0)
 			(effects
 				(font
@@ -26640,6 +27018,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 139.7 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 71.12 0)
 			(effects
 				(font
@@ -26753,6 +27140,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 245.11 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f5f739dd-756b-4028-832e-40a1fa3927fb")
 		)
@@ -26773,7 +27169,7 @@
 		(at 284.48 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -26905,6 +27301,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 313.69 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4036421e-8cc7-4e8b-8210-bebc7cd2dbb9")
 		)
@@ -27002,7 +27407,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 323.85 66.6496 0)
 			(effects
 				(font
@@ -27029,6 +27434,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 323.85 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 323.85 72.39 0)
 			(effects
 				(font
@@ -27142,6 +27556,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 332.74 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e184a0d5-be98-465f-b4a4-52fda08d9558")
 		)
@@ -27201,6 +27624,15 @@
 			)
 		)
 		(property "Description" "150mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(at 222.25 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "AP2202K-3.3TRG1DICT-ND"
 			(at 222.25 242.57 0)
 			(effects
 				(font
@@ -27288,6 +27720,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 77.47 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "93944b43-2611-447b-aac8-9706a124d7ba")
 		)
@@ -27321,7 +27762,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 121.4698 0)
 			(effects
 				(font
@@ -27348,6 +27789,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 139.7 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 127 0)
 			(effects
 				(font
@@ -27518,6 +27968,15 @@
 			)
 		)
 		(property "Description" "iCE40 HX FPGA, 1280 LUTs, 1.2V, TQFP-144"
+			(at 241.3 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "220-1565-ND"
 			(at 241.3 113.03 0)
 			(effects
 				(font
@@ -28021,6 +28480,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 233.68 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fb065768-6c5a-4468-a166-511a00b3f4b9")
 		)
@@ -28167,6 +28635,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "110-CB3LV-3I-24M576000CT-ND"
+			(at 281.94 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c6581b82-819c-48e5-aa2e-a339088eb736")
 		)
@@ -28236,6 +28713,15 @@
 			)
 		)
 		(property "Description" "Audio Jack, 3 Poles (Stereo / TRS)"
+			(at 287.02 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "CP1-3533NG-ND"
 			(at 287.02 200.66 0)
 			(effects
 				(font
@@ -28382,6 +28868,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 344.17 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0b88ce70-ab8a-43a5-8e2d-f578c1b3cf8c")
 		)
@@ -28443,6 +28938,15 @@
 			)
 		)
 		(property "Description" "iCE40 HX FPGA, 1280 LUTs, 1.2V, TQFP-144"
+			(at 207.01 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "220-1565-ND"
 			(at 207.01 118.11 0)
 			(effects
 				(font
@@ -28946,6 +29450,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 304.8 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e2d4156f-85f3-4ef6-bac9-5b11b184d638")
 		)
@@ -29015,6 +29528,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 267.97 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b464b5e3-5cb6-4e26-9ac3-19240f8f1690")
 		)
@@ -29075,6 +29597,15 @@
 			)
 		)
 		(property "Description" "iCE40 HX FPGA, 1280 LUTs, 1.2V, TQFP-144"
+			(at 223.52 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "220-1565-ND"
 			(at 223.52 48.26 0)
 			(effects
 				(font
@@ -29578,6 +30109,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "CP1-3533NG-ND"
+			(at 408.94 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "dd212dcb-8e7e-4c3c-8695-1b703cc7969f")
 		)
@@ -29913,6 +30453,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 351.79 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fb24ee50-ec9d-4941-8fa7-819f60026f8d")
 		)
@@ -30050,6 +30599,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 349.25 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "09c91e92-7b3e-45c7-a3fd-08d22a80ff93")
 		)
@@ -30083,7 +30641,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074"
+		(property "Value" "TL072"
 			(at 327.66 211.6398 0)
 			(effects
 				(font
@@ -30110,6 +30668,15 @@
 			)
 		)
 		(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+			(at 327.66 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "497-2200-1-ND"
 			(at 327.66 218.44 0)
 			(effects
 				(font
@@ -30461,6 +31028,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 313.69 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3c850ee4-c06e-43cd-b0ac-cc69d732ef56")
 		)
@@ -30718,6 +31294,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 412.75 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1140-1-ND"
 			(at 412.75 120.65 0)
 			(effects
 				(font
@@ -30990,6 +31575,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 339.09 218.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "69cbf4ac-e043-40eb-b3fb-48e84122b650")
 		)
@@ -31181,6 +31775,15 @@
 			)
 		)
 		(property "Description" "iCE40 HX FPGA, 1280 LUTs, 1.2V, TQFP-144"
+			(at 181.61 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "220-1565-ND"
 			(at 181.61 190.5 0)
 			(effects
 				(font
@@ -31779,7 +32382,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 167.64 136.7098 0)
 			(effects
 				(font
@@ -31806,6 +32409,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 167.64 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 167.64 142.24 0)
 			(effects
 				(font
@@ -31985,6 +32597,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" ""
+			(at 222.25 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "02cc3f3a-58fb-41a7-bbdd-61c6cd870209")
 		)
@@ -32042,6 +32663,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 377.19 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1.00KCRCT-ND"
 			(at 377.19 203.2 0)
 			(effects
 				(font
@@ -32112,6 +32742,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 344.17 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-10.0KCRCT-ND"
 			(at 344.17 204.47 0)
 			(effects
 				(font
@@ -32219,7 +32858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TL074"
+		(property "Value" "TL072"
 			(at 401.955 95.1921 0)
 			(effects
 				(font
@@ -32247,6 +32886,15 @@
 			)
 		)
 		(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+			(at 403.86 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "497-2200-1-ND"
 			(at 403.86 93.98 0)
 			(effects
 				(font
@@ -32340,6 +32988,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "CP-2250-ND"
+			(at 386.08 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9575e15a-59c4-443e-9f3d-3d33f526a88a")
 		)
@@ -32419,6 +33076,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "490-14467-1-ND"
+			(at 330.2 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6bf64414-5bc7-4934-a483-ebb4b8d11210")
 		)
@@ -32481,6 +33147,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 354.33 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-220CRCT-ND"
 			(at 354.33 27.94 0)
 			(effects
 				(font
@@ -32625,6 +33300,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-10.0KCRCT-ND"
+			(at 76.2 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cf1a9f86-74d5-416f-8b86-d4f08ec523aa")
 		)
@@ -32695,6 +33379,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" ""
+			(at 234.95 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9c476234-9b35-4077-abec-4cbbf0a013fb")
 		)
@@ -32752,6 +33445,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 377.19 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1.00KCRCT-ND"
 			(at 377.19 220.98 0)
 			(effects
 				(font
@@ -32899,6 +33601,15 @@
 			)
 		)
 		(property "Description" "Schmitt Trigger Output Optocoupler, High Speed, DIP-6, 1.6mA turn on threshold"
+			(at 361.95 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "H11L1SR2MCT-ND"
 			(at 361.95 39.37 0)
 			(effects
 				(font
@@ -33150,7 +33861,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 167.64 121.2596 0)
 			(effects
 				(font
@@ -33177,6 +33888,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 167.64 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 167.64 127 0)
 			(effects
 				(font
@@ -33355,6 +34075,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 360.68 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d4e132eb-bb91-4669-8904-5e514e1887ff")
 		)
@@ -33490,6 +34219,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "CP1-3533NG-ND"
+			(at 388.62 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "b44dcb43-936d-47be-b178-e32ebe67102e")
 		)
@@ -33591,7 +34329,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 106.2298 0)
 			(effects
 				(font
@@ -33618,6 +34356,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 139.7 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 111.76 0)
 			(effects
 				(font
@@ -33804,6 +34551,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 344.17 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8df272b4-f6bf-4de7-9364-aab68f968b2d")
 		)
@@ -33902,7 +34658,7 @@
 				)
 			)
 		)
-		(property "Value" "TL074"
+		(property "Value" "TL072"
 			(at 327.66 193.8598 0)
 			(effects
 				(font
@@ -33929,6 +34685,15 @@
 			)
 		)
 		(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+			(at 327.66 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "497-2200-1-ND"
 			(at 327.66 200.66 0)
 			(effects
 				(font
@@ -34015,6 +34780,15 @@
 			)
 		)
 		(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+			(at 361.95 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "497-2200-1-ND"
 			(at 361.95 220.98 0)
 			(effects
 				(font
@@ -34248,6 +35022,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "311-1140-1-ND"
+			(at 412.75 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b2357478-18df-487a-893a-83bf1a924444")
 		)
@@ -34281,7 +35064,7 @@
 				)
 			)
 		)
-		(property "Value" "74LCX07"
+		(property "Value" "74lv07"
 			(at 139.7 136.7098 0)
 			(effects
 				(font
@@ -34308,6 +35091,15 @@
 			)
 		)
 		(property "Description" "CMOS hex buffer (open drain) with 5V tolerant inputs"
+			(at 139.7 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "74LV07AS14-13DICT-ND"
 			(at 139.7 142.24 0)
 			(effects
 				(font
@@ -34546,6 +35338,15 @@
 			)
 		)
 		(property "Description" "Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8/SOIC-8"
+			(at 403.86 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "497-2200-1-ND"
 			(at 403.86 120.65 0)
 			(effects
 				(font
@@ -34843,6 +35644,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 341.63 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "311-1365-1-ND"
 			(at 341.63 124.46 0)
 			(effects
 				(font
