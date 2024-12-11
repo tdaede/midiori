@@ -18944,7 +18944,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 35.56 0)
 			(effects
 				(font
@@ -19134,7 +19134,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 76.2 0)
 			(effects
 				(font
@@ -19324,7 +19324,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 116.84 0)
 			(effects
 				(font
@@ -19514,7 +19514,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 157.48 0)
 			(effects
 				(font
@@ -19816,7 +19816,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 198.12 0)
 			(effects
 				(font
@@ -20006,7 +20006,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 105.41 238.76 0)
 			(effects
 				(font
@@ -30830,7 +30830,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey" "1727-8095-1-ND"
+		(property "Digikey" "1727-3104-1-ND"
 			(at 45.72 44.45 0)
 			(effects
 				(font
