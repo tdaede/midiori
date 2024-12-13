@@ -708,7 +708,7 @@
 			(pintype "power_in")
 			(uuid "5cc62b6f-cc68-4cf6-9db1-4821d940c6d6")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -28027,7 +28027,7 @@
 			(pintype "power_in")
 			(uuid "493b41c0-4988-460c-8f71-39e6ff0c2ce8")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_SeikoEpson_SG8002CA-4Pin_7.0x5.0mm.wrl"
+		(model "${KICAD8_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
