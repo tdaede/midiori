@@ -109,7 +109,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "midiori_3.0/")
+			(outputdirectory "midiori_3.1/")
 		)
 	)
 	(net 0 "")
@@ -1153,7 +1153,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "992bde5d-a8c8-42cd-b2ee-38e3338485c6")
+			(uuid "fe3a6735-98e9-4bbb-82d7-cea22b09249d")
 		)
 		(pad "A2" connect rect
 			(at 0 -2.54)
@@ -1171,7 +1171,7 @@
 			(remove_unused_layers no)
 			(net 251 "unconnected-(J1-PadA2)")
 			(pintype "input+no_connect")
-			(uuid "fc3d00af-3d3f-48dc-94c9-6d77ca7b3f37")
+			(uuid "3ff0ca49-05dd-4a21-941f-a2ee40af2a8c")
 		)
 		(pad "A3" connect rect
 			(at 0 -5.08)
@@ -1191,7 +1191,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "passive")
-			(uuid "4d9e8831-7720-4980-ba3b-69c1aaea167e")
+			(uuid "03624e36-f513-4b31-bc52-2375cea1ec0b")
 		)
 		(pad "A4" connect rect
 			(at 0 -7.62)
@@ -1211,7 +1211,7 @@
 			(net 3 "/DB0")
 			(pinfunction "DB0")
 			(pintype "input")
-			(uuid "2ea8b6f4-c409-4098-bc25-7d9c359f5a02")
+			(uuid "ce8145e7-26ea-4df6-ae2c-a39f26965e3a")
 		)
 		(pad "A5" connect rect
 			(at 0 -10.16)
@@ -1231,7 +1231,7 @@
 			(net 4 "/DB1")
 			(pinfunction "DB1")
 			(pintype "input")
-			(uuid "af350710-0a16-4e2c-a357-87c1d69dadf3")
+			(uuid "bd7c64df-5557-463a-9548-af7018bb76a4")
 		)
 		(pad "A6" connect rect
 			(at 0 -12.7)
@@ -1251,7 +1251,7 @@
 			(net 5 "/DB2")
 			(pinfunction "DB2")
 			(pintype "input")
-			(uuid "c18d2266-8280-48fd-b27b-ec49abd90da5")
+			(uuid "fa8c16e1-63ad-4d34-bfea-120bd9a8c033")
 		)
 		(pad "A7" connect rect
 			(at 0 -15.24)
@@ -1271,7 +1271,7 @@
 			(net 6 "/DB3")
 			(pinfunction "DB3")
 			(pintype "input")
-			(uuid "cf16d850-74c0-4249-a5a3-ff43e9f14b58")
+			(uuid "809b1f04-e853-470f-9f26-d17afa5a7dde")
 		)
 		(pad "A8" connect rect
 			(at 0 -17.78)
@@ -1291,7 +1291,7 @@
 			(net 7 "/DB4")
 			(pinfunction "DB4")
 			(pintype "input")
-			(uuid "5b0615f1-442a-43a7-8407-56a366424886")
+			(uuid "9db0aff8-5a4c-46ff-8bff-7959ceb4e23c")
 		)
 		(pad "A9" connect rect
 			(at 0 -20.32)
@@ -1311,7 +1311,7 @@
 			(net 8 "/DB5")
 			(pinfunction "DB5")
 			(pintype "input")
-			(uuid "d646d41c-cd23-4b27-911e-28014bd0cfd4")
+			(uuid "1d6257b7-8756-4d40-beae-54656d7b2aff")
 		)
 		(pad "A10" connect rect
 			(at 0 -22.86)
@@ -1331,7 +1331,7 @@
 			(net 9 "/DB6")
 			(pinfunction "DB6")
 			(pintype "input")
-			(uuid "0202fc57-aca9-47cc-bb1b-b1a19cbe3e20")
+			(uuid "a3220fec-76da-4b6a-b085-7fbb4a9b18f3")
 		)
 		(pad "A11" connect rect
 			(at 0 -25.4)
@@ -1351,7 +1351,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "415dc8e9-8505-466b-895a-dff583b0f4fb")
+			(uuid "d1a2b56f-0e45-40de-810e-c416f1526e0f")
 		)
 		(pad "A12" connect rect
 			(at 0 -27.94)
@@ -1371,7 +1371,7 @@
 			(net 10 "/DB7")
 			(pinfunction "DB7")
 			(pintype "input")
-			(uuid "4675f5c4-0d72-4be9-9bc1-b8439afa6815")
+			(uuid "149e6338-9394-43ed-b8b4-f2f87b201505")
 		)
 		(pad "A13" connect rect
 			(at 0 -30.48)
@@ -1391,7 +1391,7 @@
 			(net 61 "/DB8")
 			(pinfunction "DB8")
 			(pintype "input")
-			(uuid "a2ff0a97-3ccd-4eaf-bc44-85116e3aa443")
+			(uuid "1eab0efb-d092-4f42-a6b8-c599fa8cef3b")
 		)
 		(pad "A14" connect rect
 			(at 0 -33.02)
@@ -1411,7 +1411,7 @@
 			(net 63 "/DB9")
 			(pinfunction "DB9")
 			(pintype "input")
-			(uuid "a0cb0240-1b27-471e-a266-ea72be20344f")
+			(uuid "cfe98435-c404-4f08-91ab-dd0915101b9b")
 		)
 		(pad "A15" connect rect
 			(at 0 -35.56)
@@ -1431,7 +1431,7 @@
 			(net 74 "/DB10")
 			(pinfunction "DB10")
 			(pintype "input")
-			(uuid "d2459313-926e-44a3-899a-7902147a729d")
+			(uuid "bdc4d65d-3927-434f-a025-379798733b79")
 		)
 		(pad "A16" connect rect
 			(at 0 -38.1)
@@ -1451,7 +1451,7 @@
 			(net 62 "/DB11")
 			(pinfunction "DB11")
 			(pintype "input")
-			(uuid "7cde5f09-4cf7-49e8-b99d-bcf78385ce9b")
+			(uuid "39a86054-9cf8-461d-8064-744092cb136d")
 		)
 		(pad "A17" connect rect
 			(at 0 -40.64)
@@ -1471,7 +1471,7 @@
 			(net 68 "/DB12")
 			(pinfunction "DB12")
 			(pintype "input")
-			(uuid "53db4df7-bcfe-47f4-b4b9-7d6945d97e58")
+			(uuid "4f850196-1a29-4bb9-b036-b19a72f9700d")
 		)
 		(pad "A18" connect rect
 			(at 0 -43.18)
@@ -1491,7 +1491,7 @@
 			(net 66 "/DB13")
 			(pinfunction "DB13")
 			(pintype "input")
-			(uuid "abdcfbfb-63ff-487b-803a-35f4e286bda4")
+			(uuid "1e70129d-9217-4d12-8ad8-e219c134e7f5")
 		)
 		(pad "A19" connect rect
 			(at 0 -45.72)
@@ -1511,7 +1511,7 @@
 			(net 80 "/DB14")
 			(pinfunction "DB14")
 			(pintype "input")
-			(uuid "a65a92f0-8475-40b3-b086-572512d4280a")
+			(uuid "571fa306-7060-4d44-97d8-fdc4cae6c239")
 		)
 		(pad "A20" connect rect
 			(at 0 -48.26)
@@ -1531,7 +1531,7 @@
 			(net 82 "/DB15")
 			(pinfunction "DB15")
 			(pintype "input")
-			(uuid "fc0164be-a793-4727-b831-86b2e04693b1")
+			(uuid "0024ffc8-926f-423c-9688-dc695bc200e7")
 		)
 		(pad "A21" connect rect
 			(at 0 -50.8)
@@ -1551,7 +1551,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "6b7db312-68ba-4eaf-ac53-e7c9787651d9")
+			(uuid "285e119b-7406-4e69-9f38-97ffff72be71")
 		)
 		(pad "A22" connect rect
 			(at 0 -53.34)
@@ -1571,7 +1571,7 @@
 			(net 55 "+12V")
 			(pinfunction "+12V")
 			(pintype "power_out")
-			(uuid "b0e39a64-5bcf-4c74-97eb-b81aafae907e")
+			(uuid "39a19506-8a59-4fe9-ac1b-1538b3703138")
 		)
 		(pad "A23" connect rect
 			(at 0 -55.88)
@@ -1591,7 +1591,7 @@
 			(net 55 "+12V")
 			(pinfunction "+12V")
 			(pintype "passive")
-			(uuid "953e9e58-e0c5-451c-a5bc-990a577548a7")
+			(uuid "b0bf1f74-ab77-4d4d-b66d-139e11bd6636")
 		)
 		(pad "A24" connect rect
 			(at 0 -58.42)
@@ -1611,7 +1611,7 @@
 			(net 248 "/FC0")
 			(pinfunction "FC0")
 			(pintype "input")
-			(uuid "71f353ff-ae72-4508-a20a-596be383603b")
+			(uuid "72b534bb-5ba5-430e-84b1-ca457b50ea65")
 		)
 		(pad "A25" connect rect
 			(at 0 -60.96)
@@ -1631,7 +1631,7 @@
 			(net 249 "/FC1")
 			(pinfunction "FC1")
 			(pintype "input")
-			(uuid "7b4d611c-5dcd-4b53-aa36-98e95526d22c")
+			(uuid "fa48460d-287d-488e-b4bf-183ae5340eb1")
 		)
 		(pad "A26" connect rect
 			(at 0 -63.5)
@@ -1651,7 +1651,7 @@
 			(net 79 "/FC2")
 			(pinfunction "FC2")
 			(pintype "input")
-			(uuid "9a4b7cf0-e6d4-4456-8bf2-6f0b349198f6")
+			(uuid "6ae81871-fedf-436c-be6f-d3370e8fdcad")
 		)
 		(pad "A27" connect rect
 			(at 0 -66.04)
@@ -1671,7 +1671,7 @@
 			(net 35 "/AS")
 			(pinfunction "/AS")
 			(pintype "open_collector")
-			(uuid "03bb9ed6-a0e2-4b7f-a977-061a385bac52")
+			(uuid "06800205-b4c4-48d9-b796-2b4dee8d4dfc")
 		)
 		(pad "A28" connect rect
 			(at 0 -68.58)
@@ -1691,7 +1691,7 @@
 			(net 36 "/LDS")
 			(pinfunction "/LDS")
 			(pintype "open_collector")
-			(uuid "e7b69b48-3f84-4d97-87b9-fcca140d22e3")
+			(uuid "3fc56bdc-ca3a-4c35-bc5c-877bbb88cadf")
 		)
 		(pad "A29" connect rect
 			(at 0 -71.12)
@@ -1711,7 +1711,7 @@
 			(net 178 "/UDS")
 			(pinfunction "/UDS")
 			(pintype "open_collector")
-			(uuid "c4ae3a45-9964-4518-85a9-a1a1f9d4d78b")
+			(uuid "bea87399-eec0-443b-a796-de28f9768a9c")
 		)
 		(pad "A30" connect rect
 			(at 0 -73.66)
@@ -1731,7 +1731,7 @@
 			(net 37 "/RW")
 			(pinfunction "R/W")
 			(pintype "input")
-			(uuid "94d2f47d-d01e-40a7-adfe-be66ab49369b")
+			(uuid "d8746778-6618-4860-8285-ab95edc2e8b6")
 		)
 		(pad "A31" connect rect
 			(at 0 -76.2)
@@ -1749,7 +1749,7 @@
 			(remove_unused_layers no)
 			(net 247 "unconnected-(J1-PadA31)_1")
 			(pintype "input+no_connect")
-			(uuid "4da91522-9a51-4f71-997a-9a970f7a6bd1")
+			(uuid "698abb06-f915-47ad-a27a-9ccbb0fdea62")
 		)
 		(pad "A32" connect rect
 			(at 0 -78.74)
@@ -1769,7 +1769,7 @@
 			(net 56 "-12V")
 			(pinfunction "-12V")
 			(pintype "power_out")
-			(uuid "fbfd5914-52df-4c96-b820-afa05ca44005")
+			(uuid "2fa12fb3-5c34-423f-9430-aaf20b31ba69")
 		)
 		(pad "A33" connect rect
 			(at 0 -81.28)
@@ -1789,7 +1789,7 @@
 			(net 56 "-12V")
 			(pinfunction "-12V")
 			(pintype "passive")
-			(uuid "f25638a6-29ea-45d3-ab40-904b50190da0")
+			(uuid "18dd0734-f8c4-40db-86ef-f0fc436d9b14")
 		)
 		(pad "A34" connect rect
 			(at 0 -83.82)
@@ -1807,7 +1807,7 @@
 			(remove_unused_layers no)
 			(net 245 "unconnected-(J1-PadA34)")
 			(pintype "input+no_connect")
-			(uuid "428ded71-ab5e-47ee-af96-ff0845350ba2")
+			(uuid "f16b593f-e276-4d3f-8847-1a69a52bdcec")
 		)
 		(pad "A35" connect rect
 			(at 0 -86.36)
@@ -1825,7 +1825,7 @@
 			(remove_unused_layers no)
 			(net 252 "unconnected-(J1-PadA35)_1")
 			(pintype "input+no_connect")
-			(uuid "99cbc1ea-80ac-44c3-96d1-8b47615e7a61")
+			(uuid "2ddd0dfe-6c59-4579-805a-8c17de2ee94e")
 		)
 		(pad "A36" connect rect
 			(at 0 -88.9)
@@ -1845,7 +1845,7 @@
 			(net 33 "/DTACK")
 			(pinfunction "/DTACK")
 			(pintype "open_collector")
-			(uuid "cd4a7880-c0c9-44f9-9ab2-be587ba0b0e7")
+			(uuid "37b2d83c-6bf9-4f9e-8f68-da48ce1ac3f7")
 		)
 		(pad "A37" connect rect
 			(at 0 -91.44)
@@ -1865,7 +1865,7 @@
 			(net 39 "/EXRESET")
 			(pinfunction "EXRESET")
 			(pintype "input")
-			(uuid "0dec18d4-ab56-4d83-bfe0-16806f1ef578")
+			(uuid "6d7a4ad4-c7a7-49cf-a1b2-20046029327e")
 		)
 		(pad "A38" connect rect
 			(at 0 -93.98)
@@ -1883,7 +1883,7 @@
 			(remove_unused_layers no)
 			(net 259 "unconnected-(J1-PadA38)")
 			(pintype "input+no_connect")
-			(uuid "c44747bb-9ae9-4758-9b11-c70aa26eef63")
+			(uuid "7a03d369-1f1b-4816-9a86-97f1faf8f555")
 		)
 		(pad "A39" connect rect
 			(at 0 -96.52)
@@ -1901,7 +1901,7 @@
 			(remove_unused_layers no)
 			(net 250 "unconnected-(J1-PadA39)_1")
 			(pintype "input+no_connect")
-			(uuid "39aeca51-ec91-4819-9801-444b823d1199")
+			(uuid "f4838c06-c3cc-4326-9dba-777a61cd63d8")
 		)
 		(pad "A40" connect rect
 			(at 0 -99.06)
@@ -1919,7 +1919,7 @@
 			(remove_unused_layers no)
 			(net 263 "unconnected-(J1-PadA40)_1")
 			(pintype "input+no_connect")
-			(uuid "e1af2d93-5040-48d7-9e23-fdca7feec94d")
+			(uuid "985c7db5-bc37-4706-bc72-8247d1b8fad3")
 		)
 		(pad "A41" connect rect
 			(at 0 -101.6)
@@ -1939,7 +1939,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "power_out")
-			(uuid "28137ade-bbcd-42c4-b30b-ead5f8e21d2c")
+			(uuid "99812877-bac3-4171-b3dd-5944ae4a3201")
 		)
 		(pad "A42" connect rect
 			(at 0 -104.14)
@@ -1957,7 +1957,7 @@
 			(remove_unused_layers no)
 			(net 234 "unconnected-(J1-PadA42)_1")
 			(pintype "input+no_connect")
-			(uuid "f2d4b0ba-ebf8-4bb4-9b2f-08ec83006354")
+			(uuid "accac854-9218-4a49-b3ee-115bbb33de0e")
 		)
 		(pad "A43" connect rect
 			(at 0 -106.68)
@@ -1975,7 +1975,7 @@
 			(remove_unused_layers no)
 			(net 256 "unconnected-(J1-PadA43)_1")
 			(pintype "input+no_connect")
-			(uuid "3de752b4-790f-4a22-a18b-9594bd71923e")
+			(uuid "ccb455fb-7161-4d0f-87a1-59d3c7feb940")
 		)
 		(pad "A44" connect rect
 			(at 0 -109.22)
@@ -1993,7 +1993,7 @@
 			(remove_unused_layers no)
 			(net 64 "unconnected-(J1-PadA44)")
 			(pintype "input+no_connect")
-			(uuid "a1326e08-1328-47d7-a42f-77a55c229b6d")
+			(uuid "358f57e8-8c34-4e82-add7-6d74774e7966")
 		)
 		(pad "A45" connect rect
 			(at 0 -111.76)
@@ -2011,7 +2011,7 @@
 			(remove_unused_layers no)
 			(net 258 "unconnected-(J1-PadA45)")
 			(pintype "input+no_connect")
-			(uuid "c760e1ea-5bc5-466c-a530-4040e3749681")
+			(uuid "f42ebce3-37f3-433b-805e-8cce9448f27f")
 		)
 		(pad "A46" connect rect
 			(at 0 -114.3)
@@ -2029,7 +2029,7 @@
 			(remove_unused_layers no)
 			(net 70 "unconnected-(J1-PadA46)")
 			(pintype "input+no_connect")
-			(uuid "d8c3d31d-8846-4c30-9f5f-81b357814bd6")
+			(uuid "22a85328-ce95-4170-b925-dc5d1752dce6")
 		)
 		(pad "A47" connect rect
 			(at 0 -116.84)
@@ -2047,7 +2047,7 @@
 			(remove_unused_layers no)
 			(net 257 "unconnected-(J1-PadA47)_1")
 			(pintype "input+no_connect")
-			(uuid "55f40013-bcff-449a-8349-499aa10762c4")
+			(uuid "38ae6080-af00-4851-8435-03fb0992238c")
 		)
 		(pad "A48" connect rect
 			(at 0 -119.38)
@@ -2065,7 +2065,7 @@
 			(remove_unused_layers no)
 			(net 233 "unconnected-(J1-PadA48)_1")
 			(pintype "input+no_connect")
-			(uuid "f54aca2b-eae4-4eb6-a7af-b2100ffac3d2")
+			(uuid "0a634ebf-9293-4c1c-b034-7b41a0c93010")
 		)
 		(pad "A49" connect rect
 			(at 0 -121.92)
@@ -2085,7 +2085,7 @@
 			(net 1 "+5V")
 			(pinfunction "+5V")
 			(pintype "passive")
-			(uuid "5176b37c-db68-4ff2-ae76-6136ed7adab1")
+			(uuid "46b140e1-a3a5-40e6-a279-c07e44e8608c")
 		)
 		(pad "A50" connect rect
 			(at 0 -124.46)
@@ -2105,7 +2105,7 @@
 			(net 1 "+5V")
 			(pinfunction "+5V")
 			(pintype "power_out")
-			(uuid "c163c9ed-2774-4912-aba9-622a5f67f189")
+			(uuid "37317fee-bd3c-4b93-bcb1-c98397893dd7")
 		)
 		(pad "B1" connect rect
 			(at 0 0)
@@ -2125,7 +2125,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "def1266c-7572-4925-9b38-ea54cba42a94")
+			(uuid "0319615c-1535-4c45-8e92-141017ab3d39")
 		)
 		(pad "B2" connect rect
 			(at 0 -2.54)
@@ -2143,7 +2143,7 @@
 			(remove_unused_layers no)
 			(net 77 "unconnected-(J1-PadB2)")
 			(pintype "input+no_connect")
-			(uuid "b019273f-0e6d-491a-8312-59b6eb110fa5")
+			(uuid "eb68f477-ffba-4f98-af7a-2417f13fe4a1")
 		)
 		(pad "B3" connect rect
 			(at 0 -5.08)
@@ -2163,7 +2163,7 @@
 			(net 38 "/10MHz")
 			(pinfunction "10MHz")
 			(pintype "input")
-			(uuid "faad726e-83f2-43f6-9bd3-bfc5ce4a205d")
+			(uuid "9208729a-8f5f-49a9-b66a-d69c30976861")
 		)
 		(pad "B4" connect rect
 			(at 0 -7.62)
@@ -2181,7 +2181,7 @@
 			(remove_unused_layers no)
 			(net 226 "unconnected-(J1-PadB4)_1")
 			(pintype "input+no_connect")
-			(uuid "e6076b01-fd35-44d6-a0b9-65b411c17b14")
+			(uuid "a993d8bc-4726-4a70-8160-8b241006aa81")
 		)
 		(pad "B5" connect rect
 			(at 0 -10.16)
@@ -2201,7 +2201,7 @@
 			(net 43 "/AB1")
 			(pinfunction "AB1")
 			(pintype "input")
-			(uuid "3a034b8b-2cdf-489f-86cb-f9a3a703cde7")
+			(uuid "0bab1e41-05db-479f-b573-b693cb4152e1")
 		)
 		(pad "B6" connect rect
 			(at 0 -12.7)
@@ -2221,7 +2221,7 @@
 			(net 42 "/AB2")
 			(pinfunction "AB2")
 			(pintype "input")
-			(uuid "0dd190b2-09c3-4d3d-b263-139a453fcee1")
+			(uuid "d8a18c6a-f75b-40a3-a38f-502bc16d7e37")
 		)
 		(pad "B7" connect rect
 			(at 0 -15.24)
@@ -2241,7 +2241,7 @@
 			(net 41 "/AB3")
 			(pinfunction "AB3")
 			(pintype "input")
-			(uuid "e0d9ba14-251f-44db-a3f7-9763676fc57b")
+			(uuid "2173b66b-f4ae-4f3d-aedd-c327565a920e")
 		)
 		(pad "B8" connect rect
 			(at 0 -17.78)
@@ -2261,7 +2261,7 @@
 			(net 40 "/AB4")
 			(pinfunction "AB4")
 			(pintype "input")
-			(uuid "d14000cd-35ce-407d-98c9-a9e0927ad52c")
+			(uuid "1a357a74-b1fe-4225-bd86-1f0bc1d6da77")
 		)
 		(pad "B9" connect rect
 			(at 0 -20.32)
@@ -2281,7 +2281,7 @@
 			(net 19 "/AB5")
 			(pinfunction "AB5")
 			(pintype "input")
-			(uuid "57b05078-51eb-42a9-8503-3c1b11a95d50")
+			(uuid "4c685a83-25aa-4513-b11b-0baa0c7ddae7")
 		)
 		(pad "B10" connect rect
 			(at 0 -22.86)
@@ -2301,7 +2301,7 @@
 			(net 18 "/AB6")
 			(pinfunction "AB6")
 			(pintype "input")
-			(uuid "f62bf580-aaab-41d6-b6f5-42149fc7c212")
+			(uuid "4145cf3d-4a5a-4184-bd2a-f74717a76daf")
 		)
 		(pad "B11" connect rect
 			(at 0 -25.4)
@@ -2321,7 +2321,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "e7c78ee9-465b-49a5-8291-53bd0fd2e248")
+			(uuid "f9b21994-ab77-4c4a-826a-d8528782c506")
 		)
 		(pad "B12" connect rect
 			(at 0 -27.94)
@@ -2341,7 +2341,7 @@
 			(net 16 "/AB7")
 			(pinfunction "AB7")
 			(pintype "input")
-			(uuid "7d3f85a6-13e9-4815-9f2a-7b8ea26140e3")
+			(uuid "228cef42-9b96-4236-8bbc-a59778cf2893")
 		)
 		(pad "B13" connect rect
 			(at 0 -30.48)
@@ -2361,7 +2361,7 @@
 			(net 17 "/AB8")
 			(pinfunction "AB8")
 			(pintype "input")
-			(uuid "529b6fca-521a-4ff5-9aa2-a9f4beb342e1")
+			(uuid "3f1fb682-3f18-4133-a370-e5c9a025a186")
 		)
 		(pad "B14" connect rect
 			(at 0 -33.02)
@@ -2381,7 +2381,7 @@
 			(net 72 "/AB9")
 			(pinfunction "AB9")
 			(pintype "input")
-			(uuid "74c80c85-72d5-4eac-962f-da4f16c6f8e8")
+			(uuid "5549b511-98eb-4e79-8a51-b89c6ade06d0")
 		)
 		(pad "B15" connect rect
 			(at 0 -35.56)
@@ -2401,7 +2401,7 @@
 			(net 12 "/AB10")
 			(pinfunction "AB10")
 			(pintype "input")
-			(uuid "d7a42a7e-17a1-409a-a6fe-0e28dfd9fb77")
+			(uuid "c9a7dcd8-00ee-4279-a392-a53fea621a38")
 		)
 		(pad "B16" connect rect
 			(at 0 -38.1)
@@ -2421,7 +2421,7 @@
 			(net 20 "/AB11")
 			(pinfunction "AB11")
 			(pintype "input")
-			(uuid "41cb1727-def3-4eff-82aa-4365366a30af")
+			(uuid "18edf770-0bb3-4e81-ad37-3e741b35d16b")
 		)
 		(pad "B17" connect rect
 			(at 0 -40.64)
@@ -2441,7 +2441,7 @@
 			(net 21 "/AB12")
 			(pinfunction "AB12")
 			(pintype "input")
-			(uuid "6641043d-db02-40c2-8c4a-bc894fd36d4a")
+			(uuid "078f93fd-d1b2-4d20-8dcc-cf9ed568dcbe")
 		)
 		(pad "B18" connect rect
 			(at 0 -43.18)
@@ -2461,7 +2461,7 @@
 			(net 22 "/AB13")
 			(pinfunction "AB13")
 			(pintype "input")
-			(uuid "1f89c342-ef44-4fac-a044-642b63e1085e")
+			(uuid "76f10c1b-b662-42ee-b81f-6bcddfac0b83")
 		)
 		(pad "B19" connect rect
 			(at 0 -45.72)
@@ -2481,7 +2481,7 @@
 			(net 23 "/AB14")
 			(pinfunction "AB14")
 			(pintype "input")
-			(uuid "b7902346-d313-4dc8-a945-e5a0a71df64f")
+			(uuid "9e68104c-2518-4100-8f8b-a4fbc24d0cfc")
 		)
 		(pad "B20" connect rect
 			(at 0 -48.26)
@@ -2501,7 +2501,7 @@
 			(net 24 "/AB15")
 			(pinfunction "AB15")
 			(pintype "input")
-			(uuid "cad232b1-4218-4406-9371-b3b3923917ff")
+			(uuid "3f8db620-9c22-41f0-b18d-876e34590e9e")
 		)
 		(pad "B21" connect rect
 			(at 0 -50.8)
@@ -2521,7 +2521,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "013e8bce-e06e-4352-87b8-c93ebb33b2a3")
+			(uuid "1e2694fe-7af9-465d-99ba-32a9cef2d34b")
 		)
 		(pad "B22" connect rect
 			(at 0 -53.34)
@@ -2541,7 +2541,7 @@
 			(net 14 "/AB16")
 			(pinfunction "AB16")
 			(pintype "input")
-			(uuid "126fe60a-90fa-4c7f-88fa-5dae858a5463")
+			(uuid "02e114b3-2d22-4b23-89f4-3146656dbf42")
 		)
 		(pad "B23" connect rect
 			(at 0 -55.88)
@@ -2561,7 +2561,7 @@
 			(net 25 "/AB17")
 			(pinfunction "AB17")
 			(pintype "input")
-			(uuid "2efb87fd-6f07-47db-8c04-73060c07a850")
+			(uuid "f15bd81f-8446-4ffa-a373-ace4b35df41b")
 		)
 		(pad "B24" connect rect
 			(at 0 -58.42)
@@ -2581,7 +2581,7 @@
 			(net 15 "/AB18")
 			(pinfunction "AB18")
 			(pintype "input")
-			(uuid "61089c11-bc48-4dbd-a8d5-fde092a8f07b")
+			(uuid "c832a725-30ac-4012-8703-25580a81c6be")
 		)
 		(pad "B25" connect rect
 			(at 0 -60.96)
@@ -2601,7 +2601,7 @@
 			(net 26 "/AB19")
 			(pinfunction "AB19")
 			(pintype "input")
-			(uuid "bcfe73aa-0b89-425c-931e-bd38c5e24dcc")
+			(uuid "aef1aef5-59be-4b32-83fe-3ec5b2b81ddf")
 		)
 		(pad "B26" connect rect
 			(at 0 -63.5)
@@ -2621,7 +2621,7 @@
 			(net 13 "/AB20")
 			(pinfunction "AB20")
 			(pintype "input")
-			(uuid "4385936a-286f-4bea-a542-a1a13846532d")
+			(uuid "69da22df-3add-4582-a06a-c2f374f91d17")
 		)
 		(pad "B27" connect rect
 			(at 0 -66.04)
@@ -2641,7 +2641,7 @@
 			(net 28 "/AB21")
 			(pinfunction "AB21")
 			(pintype "input")
-			(uuid "cbdb5ced-0fd6-40e2-a243-6c70fb475069")
+			(uuid "a4e72d9d-065d-4c03-944f-6607a4bf52a4")
 		)
 		(pad "B28" connect rect
 			(at 0 -68.58)
@@ -2661,7 +2661,7 @@
 			(net 27 "/AB22")
 			(pinfunction "AB22")
 			(pintype "input")
-			(uuid "093a8565-ce5e-4cb5-903e-fef52f9a7cec")
+			(uuid "a9380f99-6ce8-4903-87b1-3246ef1feb1f")
 		)
 		(pad "B29" connect rect
 			(at 0 -71.12)
@@ -2681,7 +2681,7 @@
 			(net 31 "/AB23")
 			(pinfunction "AB23")
 			(pintype "input")
-			(uuid "9e84381d-749a-4978-85d6-77a670201637")
+			(uuid "c4f5162c-8bd8-42f8-b4f0-a922ee9e6ec4")
 		)
 		(pad "B30" connect rect
 			(at 0 -73.66)
@@ -2701,7 +2701,7 @@
 			(net 11 "/IDDIR")
 			(pinfunction "IDDIR")
 			(pintype "input")
-			(uuid "c59253aa-d0bc-41b4-882f-91217cbb0b35")
+			(uuid "16ecac60-5b6f-4be8-b5b5-770bf77616f0")
 		)
 		(pad "B31" connect rect
 			(at 0 -76.2)
@@ -2719,7 +2719,7 @@
 			(remove_unused_layers no)
 			(net 244 "unconnected-(J1-PadB31)")
 			(pintype "input+no_connect")
-			(uuid "40aab132-7471-4b0f-af2b-453817369421")
+			(uuid "6249a3d4-1f38-4867-888f-a365f0b81ca3")
 		)
 		(pad "B32" connect rect
 			(at 0 -78.74)
@@ -2737,7 +2737,7 @@
 			(remove_unused_layers no)
 			(net 65 "unconnected-(J1-PadB32)")
 			(pintype "input+no_connect")
-			(uuid "fd2261e3-150f-4b3e-9165-aecd87de9152")
+			(uuid "05eeb907-def6-4eca-a078-3ed7d5bbb98b")
 		)
 		(pad "B33" connect rect
 			(at 0 -81.28)
@@ -2755,7 +2755,7 @@
 			(remove_unused_layers no)
 			(net 236 "unconnected-(J1-PadB33)_1")
 			(pintype "input+no_connect")
-			(uuid "7d4669e9-4cbf-43cb-b0c1-ba31eadd1368")
+			(uuid "30200826-b1b1-4337-86ed-87de50b89599")
 		)
 		(pad "B34" connect rect
 			(at 0 -83.82)
@@ -2773,7 +2773,7 @@
 			(remove_unused_layers no)
 			(net 81 "unconnected-(J1-PadB34)")
 			(pintype "input+no_connect")
-			(uuid "ed66404f-a25a-476b-884a-92e71496c146")
+			(uuid "d3263b07-9b8a-4944-afd0-f8107d2e59ee")
 		)
 		(pad "B35" connect rect
 			(at 0 -86.36)
@@ -2791,7 +2791,7 @@
 			(remove_unused_layers no)
 			(net 69 "unconnected-(J1-PadB35)")
 			(pintype "input+no_connect")
-			(uuid "4bb0122f-bc18-45f5-a403-8bcbc808e59f")
+			(uuid "1abcca38-e8d8-4822-8b96-b4723d818367")
 		)
 		(pad "B36" connect rect
 			(at 0 -88.9)
@@ -2811,7 +2811,7 @@
 			(net 171 "/EXREQ")
 			(pinfunction "/EXREQ")
 			(pintype "open_collector")
-			(uuid "baaea050-f2b2-4189-8f98-567819a61c6a")
+			(uuid "45c4cae5-f952-479d-8ec7-1b19b2ca9faf")
 		)
 		(pad "B37" connect rect
 			(at 0 -91.44)
@@ -2831,7 +2831,7 @@
 			(net 170 "/EXACK")
 			(pinfunction "/EXACK")
 			(pintype "open_collector")
-			(uuid "a6220071-dbc4-4344-9850-333b00d45398")
+			(uuid "934e4048-1eec-48b7-be65-ea753aa17083")
 		)
 		(pad "B38" connect rect
 			(at 0 -93.98)
@@ -2851,7 +2851,7 @@
 			(net 246 "/EXPCL")
 			(pinfunction "/EXPCL")
 			(pintype "open_collector")
-			(uuid "4500d237-d01d-4890-b6fe-593bf0c2b1d7")
+			(uuid "20bc3112-1499-4418-9db7-c19d1b8cbea6")
 		)
 		(pad "B39" connect rect
 			(at 0 -96.52)
@@ -2871,7 +2871,7 @@
 			(net 172 "/EXOWN")
 			(pinfunction "/EXOWN")
 			(pintype "open_collector")
-			(uuid "c84507a2-3946-4526-96ff-41d02f8a8774")
+			(uuid "9745e6be-3a18-425b-8c08-a3282e6fb7f3")
 		)
 		(pad "B40" connect rect
 			(at 0 -99.06)
@@ -2889,7 +2889,7 @@
 			(remove_unused_layers no)
 			(net 254 "unconnected-(J1-PadB40)")
 			(pintype "input+no_connect")
-			(uuid "a2d2f2c1-b6e1-47c2-8a15-17edb4fb3358")
+			(uuid "9363d7e2-d72d-4065-9557-86f505ae4ab6")
 		)
 		(pad "B41" connect rect
 			(at 0 -101.6)
@@ -2909,7 +2909,7 @@
 			(net 2 "GND")
 			(pinfunction "GND")
 			(pintype "input")
-			(uuid "d5afdf8d-f606-4a2c-b513-bffd1824d44d")
+			(uuid "3d3577ea-472b-476a-8349-c3b8ca76cebd")
 		)
 		(pad "B42" connect rect
 			(at 0 -104.14)
@@ -2929,7 +2929,7 @@
 			(net 34 "/IRQ2")
 			(pinfunction "/IRQ2")
 			(pintype "open_collector")
-			(uuid "4def99d9-e19f-47b6-b900-31fafb1dc0eb")
+			(uuid "9bb181f3-cf1e-469f-962d-6357ef73b7d0")
 		)
 		(pad "B43" connect rect
 			(at 0 -106.68)
@@ -2949,7 +2949,7 @@
 			(net 32 "/IRQ4")
 			(pinfunction "/IRQ4")
 			(pintype "open_collector")
-			(uuid "45e02499-cae7-4ec7-8246-5f281a492fcf")
+			(uuid "f080eebf-8410-4857-a17b-cb77e51d7a2d")
 		)
 		(pad "B44" connect rect
 			(at 0 -109.22)
@@ -2969,7 +2969,7 @@
 			(net 29 "/IACK2")
 			(pinfunction "/IACK2")
 			(pintype "input")
-			(uuid "e6e5a396-f8d9-4a3d-b42d-4aa726ca4a8e")
+			(uuid "f8322f19-7d14-4b6b-8500-1ba60cfdefcd")
 		)
 		(pad "B45" connect rect
 			(at 0 -111.76)
@@ -2989,7 +2989,7 @@
 			(net 30 "/IACK4")
 			(pinfunction "/IACK4")
 			(pintype "input")
-			(uuid "1d40916e-45d4-4cd8-a263-202d1b13cdb2")
+			(uuid "36f82a85-012c-4e66-b7d9-079e54878183")
 		)
 		(pad "B46" connect rect
 			(at 0 -114.3)
@@ -3009,7 +3009,7 @@
 			(net 146 "/BR")
 			(pinfunction "/BR")
 			(pintype "open_collector")
-			(uuid "ea5bd927-90b2-4b4e-9cd5-45caad950578")
+			(uuid "5b89e0ba-a258-49ea-9244-3e73ae8d477e")
 		)
 		(pad "B47" connect rect
 			(at 0 -116.84)
@@ -3029,7 +3029,7 @@
 			(net 168 "/BG")
 			(pinfunction "/BG")
 			(pintype "open_collector")
-			(uuid "143fdb57-4632-4706-a24d-8d5f5f4257f6")
+			(uuid "c6166083-e66d-45fb-862b-2f8cec501abf")
 		)
 		(pad "B48" connect rect
 			(at 0 -119.38)
@@ -3049,7 +3049,7 @@
 			(net 169 "/BGACK")
 			(pinfunction "/BGACK")
 			(pintype "open_collector")
-			(uuid "69b8d2f7-1565-42c7-90a0-3e56ee6255fd")
+			(uuid "7ba014be-58d4-4423-8c63-81c1cdd3f961")
 		)
 		(pad "B49" connect rect
 			(at 0 -121.92)
@@ -3069,7 +3069,7 @@
 			(net 1 "+5V")
 			(pinfunction "+5V")
 			(pintype "passive")
-			(uuid "878553fa-18b9-439d-aca5-2613d5392953")
+			(uuid "a28ef40c-eb50-434b-a857-62499c87db77")
 		)
 		(pad "B50" connect rect
 			(at 0 -124.46)
@@ -3089,7 +3089,7 @@
 			(net 1 "+5V")
 			(pinfunction "+5V")
 			(pintype "passive")
-			(uuid "e357a311-5d6f-41eb-95c9-58e6f22f96a0")
+			(uuid "2e7a20a6-292d-411e-8e19-592544d1a101")
 		)
 		(embedded_fonts no)
 	)
@@ -12318,7 +12318,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
-			(uuid "70862810-0e9e-427e-b348-635108269645")
+			(uuid "10588c8f-c439-47b9-9440-f168b3e24086")
 		)
 		(pad "0" thru_hole roundrect
 			(at 6.75 0.8 270)
@@ -12327,7 +12327,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
-			(uuid "70862810-0e9e-427e-b348-635108269645")
+			(uuid "820b9601-2e51-494f-929c-b9f142dbab6a")
 		)
 		(pad "1" thru_hole circle
 			(at -1.3 3.8 270)
@@ -23283,7 +23283,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
-			(uuid "65eb1731-5db1-4411-9738-4c6f3503642e")
+			(uuid "c5eb7ded-81a4-4555-8126-5581052f3a23")
 		)
 		(pad "0" thru_hole roundrect
 			(at 6.75 0.8 270)
@@ -23292,7 +23292,7 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.25)
-			(uuid "65eb1731-5db1-4411-9738-4c6f3503642e")
+			(uuid "31da3ab1-e85d-4b4c-a4aa-8e80c91019f9")
 		)
 		(pad "1" thru_hole circle
 			(at -1.3 3.8 270)
@@ -51861,7 +51861,7 @@
 				(xy 96.7435 106.738892) (xy 96.7435 107.293887) (xy 96.763977 107.370308) (xy 96.780331 107.398634)
 				(xy 96.791591 107.418136) (xy 96.80354 107.438833) (xy 97.175718 107.811011) (xy 97.231667 107.86696)
 				(xy 97.300189 107.906521) (xy 97.300191 107.906521) (xy 97.300192 107.906522) (xy 97.341524 107.917597)
-				(xy 97.376616 107.927) (xy 97.45574 107.927) (xy 97.700782 107.927) (xy 97.768903 107.947002) (xy 97.815396 108.000658)
+				(xy 97.376616 107.927) (xy 97.700782 107.927) (xy 97.768903 107.947002) (xy 97.815396 108.000658)
 				(xy 97.826232 108.064764) (xy 97.8245 108.083231) (xy 97.8245 108.593471) (xy 97.804498 108.661592)
 				(xy 97.750842 108.708085) (xy 97.680568 108.718189) (xy 97.615988 108.688695) (xy 97.609405 108.682566)
 				(xy 95.603173 106.676334) (xy 95.569147 106.614022) (xy 95.566268 106.587239) (xy 95.566268 105.813659)
