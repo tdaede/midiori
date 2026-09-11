@@ -157,6 +157,7 @@ class Midiori(Module):
         self.ier = Signal(8)
         self.ivo = Signal(3)
         self.ic = Signal()
+        self.imr = Signal(4)
 
         #8us clock divider
         midi_divider = Signal(7)
@@ -189,6 +190,9 @@ class Midiori(Module):
         self.sync += If((self.previous_empty == 0) & (self.txemp == 1),
                         self.isr[6].eq(1)
         )
+        self.sync += If((self.previous_empty == 1) & (self.txemp == 0),
+                        self.isr[6].eq(0)
+        )
         self.sync += self.previous_empty.eq(self.txemp)
 
         #general purpose timer
@@ -211,20 +215,23 @@ class Midiori(Module):
         self.sync += If(midi_clk_en,
             If((clock_counter == 0) & (clock_reset_value > 1),
                 clock_counter.eq(clock_reset_value),
-                self.isr[1].eq(1)
+                If(self.imr[3] == 1,
+                   self.isr[1].eq(1)
+                )
             ).Else(
                 clock_counter.eq(clock_counter-1)
             )
         )
 
         #midi click counter
-        # todo: clock off midi clock and implement isr mux
         click_counter = Signal(7)
         click_reset_value = Signal(7)
-        self.sync += If(0,
-            If((click_counter == 0) & (click_reset_value > 0),
+        self.sync += If(midi_clk_en & (clock_counter == 0),
+            If((click_counter == 1) & (click_reset_value > 0),
                click_counter.eq(click_reset_value),
-               self.isr[1].eq(1)
+               If(self.imr[3] == 0,
+                   self.isr[1].eq(1)
+               )
             ).Else(
                 click_counter.eq(click_counter-1)
             )
@@ -301,6 +308,8 @@ class Midiori(Module):
                 ).Else(
                     If(self.register_num == 0x04,
                        NextValue(self.ivo, self.data.i[5:8])
+                    ).Elif(self.register_num == 0x05,
+                           NextValue(self.imr, self.data.i[0:4])
                     ).Elif(self.register_num == 0x06,
                            NextValue(self.ier, self.data.i)
                     ).Elif(self.register_num == 0x14,
